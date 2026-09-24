@@ -22,10 +22,13 @@ import static com.android.settingslib.search.SearchIndexable.MOBILE;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
 import com.android.settings.core.SubSettingLauncher;
@@ -67,6 +70,18 @@ public class TopLevelSettings extends DashboardFragment implements
     public void onAttach(Context context) {
         super.onAttach(context);
         use(SupportPreferenceController.class).setActivity(getActivity());
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        final RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
+                savedInstanceState);
+        // The list sits inside the homepage scroll view, which jumps to it whenever the list
+        // itself takes focus. Entering touch mode (a mouse click) with an entry focused would
+        // hand focus to the list, so let the focus drop instead.
+        recyclerView.setFocusableInTouchMode(false);
+        return recyclerView;
     }
 
     @Override

@@ -19,6 +19,7 @@ package com.android.settings.homepage;
 import android.animation.LayoutTransition;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -76,6 +77,34 @@ public class SettingsHomepageActivity extends FragmentActivity {
         showFragment(new TopLevelSettings(), R.id.main_content);
         ((FrameLayout) findViewById(R.id.main_content))
                 .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+
+        focusSettingsList();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        // Launching Settings while it is still running lands here (singleTask).
+        focusSettingsList();
+    }
+
+    /**
+     * The device has no touchscreen, so start with the settings list focused. Otherwise the
+     * d-pad just scrolls the page. Posted so it runs after the list is laid out, and
+     * requestFocusFromTouch() also leaves touch mode, which a mouse click enters. Focus that
+     * is already in the list stays where it is.
+     */
+    private void focusSettingsList() {
+        final View scrollContainer = findViewById(R.id.main_content_scrollable_container);
+        if (scrollContainer == null) {
+            return;
+        }
+        scrollContainer.post(() -> {
+            if (!scrollContainer.hasFocus()) {
+                // Focuses the topmost visible entry.
+                scrollContainer.requestFocusFromTouch();
+            }
+        });
     }
 
     private void showFragment(Fragment fragment, int id) {
@@ -101,9 +130,5 @@ public class SettingsHomepageActivity extends FragmentActivity {
         // The top padding is the height of action bar(48dp) + top/bottom margins(16dp)
         final int paddingTop = searchBarHeight + searchBarMargin * 2;
         view.setPadding(0 /* left */, paddingTop, 0 /* right */, 0 /* bottom */);
-
-        // Prevent inner RecyclerView gets focus and invokes scrolling.
-        view.setFocusableInTouchMode(true);
-        view.requestFocus();
     }
 }
