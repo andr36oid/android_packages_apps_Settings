@@ -4035,6 +4035,8 @@
     <string name="about_settings" product="emulator">About emulated device</string>
     <!-- Main settings screen, setting summary for the user to go into the About phone screen-->
     <string name="about_settings_summary">View legal info, status, software version</string>
+    <!-- Title of the andr36oid release on the About screen [CHAR LIMIT=40] -->
+    <string name="andr36oid_version" translatable="false">Andr36oid version</string>
     <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
     <string name="legal_information">Legal information</string>
     <!-- About phone settings screen, setting option name to see a list of contributors -->

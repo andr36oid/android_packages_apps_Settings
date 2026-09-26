@@ -126,6 +126,16 @@
         android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
+    <!-- andr36oid version -->
+    <Preference
+        android:key="andr36oid_version"
+        android:order="43"
+        android:title="@string/andr36oid_version"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.Andr36oidVersionPreferenceController"/>
+
     <!--IP address -->
     <Preference
         android:key="wifi_ip_address"
