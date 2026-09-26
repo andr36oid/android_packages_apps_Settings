@@ -21,13 +21,18 @@ import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceGroupAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
@@ -35,14 +40,22 @@ import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.support.SupportPreferenceController;
+import com.android.settingslib.Utils;
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.search.SearchIndexable;
+
+import java.util.Arrays;
+import java.util.List;
 
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements
         PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
 
     private static final String TAG = "TopLevelSettings";
+
+    // The console's own entries, drawn on a tinted backdrop so they stand out
+    private static final List<String> CONSOLE_KEYS = Arrays.asList(
+            "top_level_button_mapping", "top_level_joystick_mouse");
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -81,6 +94,7 @@ public class TopLevelSettings extends DashboardFragment implements
         // itself takes focus. Entering touch mode (a mouse click) with an entry focused would
         // hand focus to the list, so let the focus drop instead.
         recyclerView.setFocusableInTouchMode(false);
+        recyclerView.addItemDecoration(new ConsoleEntryBackdrop(recyclerView.getContext()));
         return recyclerView;
     }
 
@@ -112,6 +126,47 @@ public class TopLevelSettings extends DashboardFragment implements
     protected boolean shouldForceRoundedIcon() {
         return getContext().getResources()
                 .getBoolean(R.bool.config_force_rounded_icon_TopLevelSettings);
+    }
+
+    /** Draws a rounded, lightly tinted backdrop behind the console's own entries. */
+    private static class ConsoleEntryBackdrop extends RecyclerView.ItemDecoration {
+        private final Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final RectF mRect = new RectF();
+        private final float mInsetX;
+        private final float mInsetY;
+        private final float mRadius;
+
+        ConsoleEntryBackdrop(Context context) {
+            final int accent = Utils.getColorAccentDefaultColor(context);
+            mPaint.setColor((accent & 0x00FFFFFF) | 0x26000000);
+            final float density = context.getResources().getDisplayMetrics().density;
+            mInsetX = 8 * density;
+            mInsetY = 2 * density;
+            mRadius = 12 * density;
+        }
+
+        @Override
+        public void onDraw(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
+            if (!(parent.getAdapter() instanceof PreferenceGroupAdapter)) {
+                return;
+            }
+            final PreferenceGroupAdapter adapter = (PreferenceGroupAdapter) parent.getAdapter();
+            for (int i = 0; i < parent.getChildCount(); i++) {
+                final View child = parent.getChildAt(i);
+                final int position = parent.getChildAdapterPosition(child);
+                if (position == RecyclerView.NO_POSITION) {
+                    continue;
+                }
+                final Preference preference = adapter.getItem(position);
+                if (preference == null || !CONSOLE_KEYS.contains(preference.getKey())) {
+                    continue;
+                }
+                mRect.set(child.getLeft() + mInsetX, child.getTop() + mInsetY,
+                        child.getRight() - mInsetX, child.getBottom() - mInsetY);
+                mRect.offset(child.getTranslationX(), child.getTranslationY());
+                canvas.drawRoundRect(mRect, mRadius, mRadius, mPaint);
+            }
+        }
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
