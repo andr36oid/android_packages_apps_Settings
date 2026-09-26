@@ -18,7 +18,6 @@ package com.android.settings.applications.appinfo;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
-import android.os.UserManager;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -36,10 +35,8 @@ public class ExternalSourceDetailPreferenceController extends AppInfoPreferenceC
 
     @Override
     public int getAvailabilityStatus() {
-        if (UserManager.get(mContext).isManagedProfile()) {
-            return DISABLED_FOR_USER;
-        }
-        return isPotentialAppSource() ? AVAILABLE : DISABLED_FOR_USER;
+        // Any app may install APKs, see PackageInstaller, so there is nothing to allow here.
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

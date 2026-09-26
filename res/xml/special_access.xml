@@ -113,9 +113,11 @@
         android:fragment="com.android.settings.datausage.UnrestrictedDataAccess"
         settings:controller="com.android.settings.applications.specialaccess.DataSaverController" />
 
+    <!-- Hidden: any app may install APKs, see PackageInstaller -->
     <Preference
         android:key="manage_external_sources"
         android:title="@string/install_other_apps"
+        settings:isPreferenceVisible="false"
         android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
         settings:keywords="@string/keywords_install_other_apps">
         <extra
