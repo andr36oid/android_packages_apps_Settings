@@ -132,7 +132,6 @@
         android:order="43"
         android:title="@string/andr36oid_version"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.Andr36oidVersionPreferenceController"/>
 
