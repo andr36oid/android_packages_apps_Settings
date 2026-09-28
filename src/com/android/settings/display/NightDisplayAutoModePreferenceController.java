@@ -52,15 +52,15 @@ public class NightDisplayAutoModePreferenceController extends BasePreferenceCont
 
         mPreference = screen.findPreference(getPreferenceKey());
 
+        // andr36oid: no sunset to sunrise. It needs a location, and the console is mostly
+        // offline with no location source.
         mPreference.setEntries(new CharSequence[]{
                 mContext.getString(R.string.night_display_auto_mode_never),
-                mContext.getString(R.string.night_display_auto_mode_custom),
-                mContext.getString(R.string.night_display_auto_mode_twilight)
+                mContext.getString(R.string.night_display_auto_mode_custom)
         });
         mPreference.setEntryValues(new CharSequence[]{
                 String.valueOf(ColorDisplayManager.AUTO_MODE_DISABLED),
-                String.valueOf(ColorDisplayManager.AUTO_MODE_CUSTOM_TIME),
-                String.valueOf(ColorDisplayManager.AUTO_MODE_TWILIGHT)
+                String.valueOf(ColorDisplayManager.AUTO_MODE_CUSTOM_TIME)
         });
     }
 
