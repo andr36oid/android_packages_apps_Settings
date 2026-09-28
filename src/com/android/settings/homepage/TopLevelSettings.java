@@ -58,7 +58,8 @@ public class TopLevelSettings extends DashboardFragment implements
             "top_level_quick_start", "top_level_button_mapping", "top_level_joystick_mouse",
             "top_level_cpu_overclock", "top_level_usb_mode", "top_level_controller_test",
             "top_level_perf_overlay", "top_level_play_time", "top_level_beta_apps",
-            "top_level_bios_check", "top_level_game_mode", "top_level_save_backup");
+            "top_level_bios_check", "top_level_game_mode", "top_level_save_backup",
+            "top_level_touch_controls");
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
