@@ -55,7 +55,7 @@ public class TopLevelSettings extends DashboardFragment implements
 
     // The console's own entries, drawn on a tinted backdrop so they stand out
     private static final List<String> CONSOLE_KEYS = Arrays.asList(
-            "top_level_button_mapping", "top_level_joystick_mouse",
+            "top_level_quick_start", "top_level_button_mapping", "top_level_joystick_mouse",
             "top_level_cpu_overclock");
 
     public TopLevelSettings() {
