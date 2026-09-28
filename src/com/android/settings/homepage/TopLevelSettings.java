@@ -57,7 +57,7 @@ public class TopLevelSettings extends DashboardFragment implements
     private static final List<String> CONSOLE_KEYS = Arrays.asList(
             "top_level_quick_start", "top_level_button_mapping", "top_level_joystick_mouse",
             "top_level_cpu_overclock", "top_level_usb_mode", "top_level_controller_test",
-            "top_level_perf_overlay");
+            "top_level_perf_overlay", "top_level_play_time");
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
