@@ -163,6 +163,15 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
     }
 
     /**
+     * Whether the device is a game controller, keyboard, mouse or other peripheral. Those
+     * never read contacts, so the pairing dialog doesn't offer contact sharing for them.
+     */
+    public boolean isPeripheral() {
+        final BluetoothClass cls = mDevice.getBluetoothClass();
+        return cls != null && cls.getMajorDeviceClass() == BluetoothClass.Device.Major.PERIPHERAL;
+    }
+
+    /**
      * A method for querying if the bluetooth device has access to contacts on the device.
      *
      * @return - A boolean indicating if the bluetooth device has permission to access the device

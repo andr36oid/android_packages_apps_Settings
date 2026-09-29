@@ -234,7 +234,7 @@ public class BluetoothPairingDialogFragment extends InstrumentedDialogFragment i
         EditText pairingView = (EditText) view.findViewById(R.id.text);
 
         contactSharing.setVisibility(mPairingController.isProfileReady()
-                ? View.GONE : View.VISIBLE);
+                || mPairingController.isPeripheral() ? View.GONE : View.VISIBLE);
         mPairingController.setContactSharingState();
         contactSharing.setOnCheckedChangeListener(mPairingController);
         contactSharing.setChecked(mPairingController.getContactSharingState());
@@ -290,6 +290,13 @@ public class BluetoothPairingDialogFragment extends InstrumentedDialogFragment i
         }
         mBuilder.setView(createView());
         AlertDialog dialog = mBuilder.create();
+        // Consoles are used with a d-pad: start on Pair, not on the first row of the dialog
+        dialog.setOnShowListener(d -> {
+            final View positive = dialog.findViewById(R.id.positive_button);
+            if (positive != null && positive.getVisibility() == View.VISIBLE) {
+                positive.requestFocus();
+            }
+        });
         return dialog;
     }
 
@@ -332,8 +339,8 @@ public class BluetoothPairingDialogFragment extends InstrumentedDialogFragment i
         contactSharing.setText(getString(R.string.bluetooth_pairing_shares_phonebook,
                 mPairingController.getDeviceName()));
 
-        contactSharing.setVisibility(
-                mPairingController.isProfileReady() ? View.GONE : View.VISIBLE);
+        contactSharing.setVisibility(mPairingController.isProfileReady()
+                || mPairingController.isPeripheral() ? View.GONE : View.VISIBLE);
         mPairingController.setContactSharingState();
         contactSharing.setChecked(mPairingController.getContactSharingState());
         contactSharing.setOnCheckedChangeListener(mPairingController);
