@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Extra dim: darker than the lowest brightness -->
+    <string name="andr36oid_extra_dim_title">Ekstra loş</string>
+    <string-array name="andr36oid_extra_dim_entries">
+        <item>Kapalı</item>
+        <item>Biraz daha koyu</item>
+        <item>Daha koyu</item>
+        <item>Çok daha koyu</item>
+    </string-array>
+    <!-- Screen colors: saturation in the display hardware -->
+    <string name="andr36oid_screen_colors_title">Ekran renkleri</string>
+    <string-array name="andr36oid_screen_colors_entries">
+        <item>Doğal</item>
+        <item>Canlı</item>
+        <item>Çok canlı</item>
+    </string-array>
+</resources>

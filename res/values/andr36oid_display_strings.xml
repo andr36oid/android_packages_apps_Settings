@@ -2,8 +2,8 @@
 <!-- andr36oid: display comfort settings (Settings > Display) -->
 <resources>
     <!-- Extra dim: darker than the lowest brightness -->
-    <string name="andr36oid_extra_dim_title" translatable="false">Extra dim</string>
-    <string-array name="andr36oid_extra_dim_entries" translatable="false">
+    <string name="andr36oid_extra_dim_title">Extra dim</string>
+    <string-array name="andr36oid_extra_dim_entries">
         <item>Off</item>
         <item>A little darker</item>
         <item>Darker</item>
@@ -18,8 +18,8 @@
     </string-array>
 
     <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title" translatable="false">Screen colors</string>
-    <string-array name="andr36oid_screen_colors_entries" translatable="false">
+    <string name="andr36oid_screen_colors_title">Screen colors</string>
+    <string-array name="andr36oid_screen_colors_entries">
         <item>Natural</item>
         <item>Vivid</item>
         <item>Extra vivid</item>
