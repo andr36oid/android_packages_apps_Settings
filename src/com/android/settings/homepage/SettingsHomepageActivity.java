@@ -21,17 +21,23 @@ import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toolbar;
 
 import androidx.annotation.VisibleForTesting;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
 import com.android.settings.accounts.AvatarViewMixin;
@@ -40,6 +46,12 @@ import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 
 public class SettingsHomepageActivity extends FragmentActivity {
+
+    // How long after opening the first entry stays focused at the top. The injected entries
+    // and the cards arrive later and would push a focused entry down the page.
+    private static final long PIN_TOP_MS = 2000;
+    private long mPinTopUntil;
+    private final ViewTreeObserver.OnGlobalLayoutListener mPinTop = this::pinTop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,22 +101,64 @@ public class SettingsHomepageActivity extends FragmentActivity {
     }
 
     /**
-     * The device has no touchscreen, so start with the settings list focused. Otherwise the
-     * d-pad just scrolls the page. Posted so it runs after the list is laid out, and
-     * requestFocusFromTouch() also leaves touch mode, which a mouse click enters. Focus that
-     * is already in the list stays where it is.
+     * The device has no touchscreen, so start with the first entry (Network & internet)
+     * focused, at the top of the page. Otherwise the d-pad just scrolls the page. Until the
+     * user presses a key, every layout in the first seconds puts it back, as entries that
+     * arrive later would push it down the page. requestFocusFromTouch() also leaves touch
+     * mode, which a mouse click enters.
      */
     private void focusSettingsList() {
         final View scrollContainer = findViewById(R.id.main_content_scrollable_container);
         if (scrollContainer == null) {
             return;
         }
-        scrollContainer.post(() -> {
-            if (!scrollContainer.hasFocus()) {
-                // Focuses the topmost visible entry.
-                scrollContainer.requestFocusFromTouch();
+        mPinTopUntil = SystemClock.uptimeMillis() + PIN_TOP_MS;
+        final ViewTreeObserver observer = scrollContainer.getViewTreeObserver();
+        observer.removeOnGlobalLayoutListener(mPinTop);
+        observer.addOnGlobalLayoutListener(mPinTop);
+        scrollContainer.post(this::pinTop);
+    }
+
+    private void pinTop() {
+        final NestedScrollView scrollContainer =
+                findViewById(R.id.main_content_scrollable_container);
+        if (scrollContainer == null) {
+            return;
+        }
+        if (SystemClock.uptimeMillis() > mPinTopUntil) {
+            scrollContainer.getViewTreeObserver().removeOnGlobalLayoutListener(mPinTop);
+            return;
+        }
+        final Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.main_content);
+        if (!(fragment instanceof PreferenceFragmentCompat)) {
+            return;
+        }
+        final RecyclerView list = ((PreferenceFragmentCompat) fragment).getListView();
+        if (list == null || list.getLayoutManager() == null) {
+            return;
+        }
+        for (int i = 0; i < 3; i++) {
+            final View entry = list.getLayoutManager().findViewByPosition(i);
+            if (entry != null && entry.isFocusable()) {
+                if (!entry.isFocused()) {
+                    entry.requestFocusFromTouch();
+                }
+                if (scrollContainer.getScrollY() != 0) {
+                    scrollContainer.scrollTo(0, 0);
+                }
+                return;
             }
-        });
+        }
+    }
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        // The user moves on from here: stop holding the first entry. Not on a key up, which
+        // may still belong to the press that opened Settings.
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            mPinTopUntil = 0;
+        }
+        return super.dispatchKeyEvent(event);
     }
 
     private void showFragment(Fragment fragment, int id) {
