@@ -84,6 +84,8 @@ public interface SearchFeatureProvider {
         // and goes to the search UI. Also set the background to null so there's no ripple.
         final View navView = toolbar.getNavigationView();
         navView.setClickable(false);
+        // Also not focusable: d-pad focus could land on the icon, where A does nothing.
+        navView.setFocusable(false);
         navView.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
         navView.setBackground(null);
 

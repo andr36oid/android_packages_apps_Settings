@@ -49,7 +49,9 @@ public class RegionSearchPicker extends BaseTimeZonePicker {
     private TimeZoneData mTimeZoneData;
 
     public RegionSearchPicker() {
-        super(R.string.date_time_select_region, R.string.date_time_search_region, true, true);
+        // Search stays available as the toolbar icon, but isn't opened with the keyboard up:
+        // on the consoles that hid the region list behind a text field.
+        super(R.string.date_time_select_region, R.string.date_time_search_region, true, false);
     }
 
     @Override
