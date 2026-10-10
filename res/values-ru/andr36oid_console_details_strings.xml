@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="andr36oid_console_details_title">Сведения о консоли</string>
+    <string name="andr36oid_console_details_console">Консоль</string>
+    <string name="andr36oid_console_details_board">Плата</string>
+    <string name="andr36oid_console_details_board_genuine">Оригинальная R36S</string>
+    <string name="andr36oid_console_details_board_ee">Клон, плата EE</string>
+    <string name="andr36oid_console_details_board_soy">Клон, плата Soy Sauce</string>
+    <string name="andr36oid_console_details_board_unknown">Не распознана</string>
+    <string name="andr36oid_console_details_board_id">ID платы</string>
+    <string name="andr36oid_console_details_dtb_folder">Папка DTB</string>
+    <string name="andr36oid_console_details_dtb_custom">Свой DTB, не из папки</string>
+    <string name="andr36oid_console_details_screen">Экран</string>
+    <string name="andr36oid_console_details_screen_value">%1$d x %2$d, %3$s Гц</string>
+    <string name="andr36oid_console_details_processor">Процессор</string>
+    <string name="andr36oid_console_details_processor_value">%1$s, ядер: %2$d, до %3$s ГГц</string>
+    <string name="andr36oid_console_details_memory">Память</string>
+    <string name="andr36oid_console_details_card">Системная карта</string>
+    <string name="andr36oid_console_details_card_made">выпущена %1$s</string>
+    <string name="andr36oid_console_details_kernel">Ядро</string>
+</resources>

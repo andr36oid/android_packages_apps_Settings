@@ -107,6 +107,13 @@
         settings:keywords="@string/keywords_model_and_hardware"
         settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
 
+    <!-- andr36oid: board, screen, chip, memory, card, kernel and U-Boot -->
+    <Preference
+        android:key="andr36oid_console_details"
+        android:order="33"
+        android:title="@string/andr36oid_console_details_title"
+        android:fragment="com.android.settings.deviceinfo.consoledetails.ConsoleDetailsFragment"/>
+
     <!-- IMEI -->
     <Preference
         android:key="imei_info"

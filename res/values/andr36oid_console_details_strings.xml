@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- About console > Console details: the console's hardware -->
+    <string name="andr36oid_console_details_title">Console details</string>
+    <string name="andr36oid_console_details_console">Console</string>
+    <string name="andr36oid_console_details_board">Board</string>
+    <!-- Board: what the DTB hint found at boot -->
+    <string name="andr36oid_console_details_board_genuine">Original R36S</string>
+    <string name="andr36oid_console_details_board_ee">Clone, EE board</string>
+    <string name="andr36oid_console_details_board_soy">Clone, Soy Sauce board</string>
+    <string name="andr36oid_console_details_board_unknown">Not recognised</string>
+    <string name="andr36oid_console_details_board_id">Board ID</string>
+    <!-- DTB folder: the folder on BOOT the console's DTB came from -->
+    <string name="andr36oid_console_details_dtb_folder">DTB folder</string>
+    <string name="andr36oid_console_details_dtb_custom">Own DTB, not from a folder</string>
+    <string name="andr36oid_console_details_screen">Screen</string>
+    <!-- Screen: width x height in pixels, refresh rate -->
+    <string name="andr36oid_console_details_screen_value">%1$d x %2$d, %3$s Hz</string>
+    <string name="andr36oid_console_details_processor">Processor</string>
+    <!-- Processor: chip, number of cores, top clock -->
+    <string name="andr36oid_console_details_processor_value">%1$s, %2$d cores, up to %3$s GHz</string>
+    <string name="andr36oid_console_details_memory">Memory</string>
+    <!-- System card: the SD card Android runs from; e.g. SanDisk SD64G, 64 GB, made 01/2025 -->
+    <string name="andr36oid_console_details_card">System card</string>
+    <!-- The card's make date, month/year -->
+    <string name="andr36oid_console_details_card_made">made %1$s</string>
+    <string name="andr36oid_console_details_kernel">Kernel</string>
+    <string name="andr36oid_console_details_uboot" translatable="false">U-Boot</string>
+</resources>

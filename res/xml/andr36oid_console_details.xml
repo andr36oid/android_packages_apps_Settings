@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2026 The andr36oid Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<!-- About console > Console details: every row uses the same controller, the key says what
+     it shows; rows the console can't fill are hidden -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/andr36oid_console_details_title">
+
+    <Preference
+        android:key="console_details_console"
+        android:title="@string/andr36oid_console_details_console"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_board"
+        android:title="@string/andr36oid_console_details_board"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_board_id"
+        android:title="@string/andr36oid_console_details_board_id"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_dtb_folder"
+        android:title="@string/andr36oid_console_details_dtb_folder"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_screen"
+        android:title="@string/andr36oid_console_details_screen"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_processor"
+        android:title="@string/andr36oid_console_details_processor"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_memory"
+        android:title="@string/andr36oid_console_details_memory"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_card"
+        android:title="@string/andr36oid_console_details_card"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_kernel"
+        android:title="@string/andr36oid_console_details_kernel"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+    <Preference
+        android:key="console_details_uboot"
+        android:title="@string/andr36oid_console_details_uboot"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
+
+</PreferenceScreen>
