@@ -50,6 +50,8 @@ public class SettingsHomepageActivity extends FragmentActivity {
     // How long after opening the first entry stays focused at the top. The injected entries
     // and the cards arrive later and would push a focused entry down the page.
     private static final long PIN_TOP_MS = 2000;
+    // focusSettingsList() ran, the first entry is not laid out yet
+    private static final long PIN_PENDING = Long.MAX_VALUE;
     private long mPinTopUntil;
     private final ViewTreeObserver.OnGlobalLayoutListener mPinTop = this::pinTop;
 
@@ -103,52 +105,70 @@ public class SettingsHomepageActivity extends FragmentActivity {
     /**
      * The device has no touchscreen, so start with the first entry (Network & internet)
      * focused, at the top of the page. Otherwise the d-pad just scrolls the page. Until the
-     * user presses a key, every layout in the first seconds puts it back, as entries that
-     * arrive later would push it down the page. requestFocusFromTouch() also leaves touch
-     * mode, which a mouse click enters.
+     * user presses a key, every layout in the first seconds after the entry shows up puts
+     * the focus back, as entries that arrive later would push it down the page; the clock
+     * starts with the entry, as building the list can take seconds right after boot.
+     * requestFocusFromTouch() also leaves touch mode, which a mouse click enters.
+     *
+     * While the first entry has the focus the page stays at the top, whatever scrolled it
+     * (giving the entry the focus, entries or cards arriving, restored state).
      */
     private void focusSettingsList() {
-        final View scrollContainer = findViewById(R.id.main_content_scrollable_container);
-        if (scrollContainer == null) {
-            return;
-        }
-        mPinTopUntil = SystemClock.uptimeMillis() + PIN_TOP_MS;
-        final ViewTreeObserver observer = scrollContainer.getViewTreeObserver();
-        observer.removeOnGlobalLayoutListener(mPinTop);
-        observer.addOnGlobalLayoutListener(mPinTop);
-        scrollContainer.post(this::pinTop);
-    }
-
-    private void pinTop() {
         final NestedScrollView scrollContainer =
                 findViewById(R.id.main_content_scrollable_container);
         if (scrollContainer == null) {
             return;
         }
-        if (SystemClock.uptimeMillis() > mPinTopUntil) {
-            scrollContainer.getViewTreeObserver().removeOnGlobalLayoutListener(mPinTop);
+        mPinTopUntil = PIN_PENDING;
+        final ViewTreeObserver observer = scrollContainer.getViewTreeObserver();
+        observer.removeOnGlobalLayoutListener(mPinTop);
+        observer.addOnGlobalLayoutListener(mPinTop);
+        scrollContainer.setOnScrollChangeListener(
+                (NestedScrollView.OnScrollChangeListener) (v, x, y, oldX, oldY) -> keepTop());
+        scrollContainer.post(this::pinTop);
+    }
+
+    private void pinTop() {
+        final View entry = firstEntry();
+        if (entry == null) {
             return;
         }
+        if (mPinTopUntil == PIN_PENDING) {
+            mPinTopUntil = SystemClock.uptimeMillis() + PIN_TOP_MS;
+        }
+        if (SystemClock.uptimeMillis() <= mPinTopUntil && !entry.isFocused()) {
+            entry.requestFocusFromTouch();
+        }
+        keepTop();
+    }
+
+    private void keepTop() {
+        final NestedScrollView scrollContainer =
+                findViewById(R.id.main_content_scrollable_container);
+        final View entry = firstEntry();
+        if (scrollContainer != null && entry != null && entry.isFocused()
+                && scrollContainer.getScrollY() != 0) {
+            scrollContainer.scrollTo(0, 0);
+        }
+    }
+
+    /** The first entry of the list that can take the focus, if it is laid out yet. */
+    private View firstEntry() {
         final Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.main_content);
         if (!(fragment instanceof PreferenceFragmentCompat)) {
-            return;
+            return null;
         }
         final RecyclerView list = ((PreferenceFragmentCompat) fragment).getListView();
         if (list == null || list.getLayoutManager() == null) {
-            return;
+            return null;
         }
         for (int i = 0; i < 3; i++) {
             final View entry = list.getLayoutManager().findViewByPosition(i);
             if (entry != null && entry.isFocusable()) {
-                if (!entry.isFocused()) {
-                    entry.requestFocusFromTouch();
-                }
-                if (scrollContainer.getScrollY() != 0) {
-                    scrollContainer.scrollTo(0, 0);
-                }
-                return;
+                return entry;
             }
         }
+        return null;
     }
 
     @Override
