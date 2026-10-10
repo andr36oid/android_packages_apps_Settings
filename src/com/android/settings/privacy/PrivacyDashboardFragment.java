@@ -29,6 +29,7 @@ import com.android.settings.notification.LockScreenNotificationPreferenceControl
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
@@ -46,6 +47,14 @@ public class PrivacyDashboardFragment extends DashboardFragment {
     @Override
     public int getMetricsCategory() {
         return SettingsEnums.TOP_LEVEL_PRIVACY;
+    }
+
+    @Override
+    protected boolean displayTile(Tile tile) {
+        // andr36oid: LineageOS' Trust page (security warnings about the build) has nothing
+        // the console's owner can act on
+        return !"org.lineageos.lineageparts".equals(tile.getPackageName())
+                || !tile.getComponentName().endsWith(".trust.TrustPreferences");
     }
 
     @Override
