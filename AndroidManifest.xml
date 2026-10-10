@@ -2980,10 +2980,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
             </intent-filter>
-            <!-- Mark the activity as a dynamic setting -->
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
+            <!-- andr36oid: no System > Backup entry. The console has no backup
+                 service and the page crashed Settings. -->
             <!-- Tell Settings app which category it belongs to -->
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.system" />
