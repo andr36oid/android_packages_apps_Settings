@@ -16,7 +16,8 @@
   -->
 
 <!-- About console > Console details: every row uses the same controller, the key says what
-     it shows; rows the console can't fill are hidden -->
+     it shows; rows the console can't fill are hidden. Rows are selectable (a press does
+     nothing) so the d-pad can move through the page and scroll it -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
@@ -26,7 +27,6 @@
         android:key="console_details_console"
         android:title="@string/andr36oid_console_details_console"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -34,7 +34,6 @@
         android:key="console_details_board"
         android:title="@string/andr36oid_console_details_board"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -42,7 +41,6 @@
         android:key="console_details_board_id"
         android:title="@string/andr36oid_console_details_board_id"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -50,7 +48,6 @@
         android:key="console_details_dtb_folder"
         android:title="@string/andr36oid_console_details_dtb_folder"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -58,7 +55,6 @@
         android:key="console_details_screen"
         android:title="@string/andr36oid_console_details_screen"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -66,7 +62,6 @@
         android:key="console_details_processor"
         android:title="@string/andr36oid_console_details_processor"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -74,7 +69,6 @@
         android:key="console_details_memory"
         android:title="@string/andr36oid_console_details_memory"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -82,7 +76,6 @@
         android:key="console_details_card"
         android:title="@string/andr36oid_console_details_card"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -90,7 +83,6 @@
         android:key="console_details_kernel"
         android:title="@string/andr36oid_console_details_kernel"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
@@ -98,7 +90,6 @@
         android:key="console_details_uboot"
         android:title="@string/andr36oid_console_details_uboot"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.consoledetails.ConsoleDetailPreferenceController"/>
 
