@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="andr36oid_console_details_title">Detalhes do console</string>
+    <string name="andr36oid_console_details_console">Console</string>
+    <string name="andr36oid_console_details_board">Placa</string>
+    <string name="andr36oid_console_details_board_genuine">R36S original</string>
+    <string name="andr36oid_console_details_board_ee">Clone, placa EE</string>
+    <string name="andr36oid_console_details_board_soy">Clone, placa Soy Sauce</string>
+    <string name="andr36oid_console_details_board_unknown">Não reconhecida</string>
+    <string name="andr36oid_console_details_board_id">ID da placa</string>
+    <string name="andr36oid_console_details_dtb_folder">Pasta do DTB</string>
+    <string name="andr36oid_console_details_dtb_custom">DTB próprio, não de uma pasta</string>
+    <string name="andr36oid_console_details_screen">Tela</string>
+    <string name="andr36oid_console_details_screen_value">%1$d x %2$d, %3$s Hz</string>
+    <string name="andr36oid_console_details_processor">Processador</string>
+    <string name="andr36oid_console_details_processor_value">%1$s, %2$d núcleos, até %3$s GHz</string>
+    <string name="andr36oid_console_details_memory">Memória</string>
+    <string name="andr36oid_console_details_card">Cartão do sistema</string>
+    <string name="andr36oid_console_details_card_made">fabricado em %1$s</string>
+    <string name="andr36oid_console_details_kernel">Kernel</string>
+</resources>
