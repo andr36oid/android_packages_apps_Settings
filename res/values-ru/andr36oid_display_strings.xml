@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Extra dim: darker than the lowest brightness -->
+    <string name="andr36oid_extra_dim_title">Доп. затемнение</string>
+    <string-array name="andr36oid_extra_dim_entries">
+        <item>Выкл.</item>
+        <item>Немного темнее</item>
+        <item>Темнее</item>
+        <item>Намного темнее</item>
+    </string-array>
+    <!-- Screen colors: saturation in the display hardware -->
+    <string name="andr36oid_screen_colors_title">Цвета экрана</string>
+    <string-array name="andr36oid_screen_colors_entries">
+        <item>Натуральные</item>
+        <item>Яркие</item>
+        <item>Очень яркие</item>
+    </string-array>
+</resources>
