@@ -84,6 +84,10 @@ android_app {
     ],
     static_libs: ["Settings-core"],
     resource_dirs: [],
+    // Store only the entries that exist in each configuration (5.9 MB smaller
+    // resources.arsc). Needs the sparse FindEntryByName fix in frameworks/base
+    // libandroidfw.
+    aaptflags: ["--enable-sparse-encoding"],
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
