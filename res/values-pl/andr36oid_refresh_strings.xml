@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Zachować tę częstotliwość odświeżania?</string>
+    <string name="andr36oid_refresh_trial_keep">Zachowaj</string>
+    <string name="andr36oid_refresh_trial_revert">Wróć</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="one">Powrót do %1$s za %2$d sekundę. Zachowaj tylko, jeśli obraz wygląda dobrze.</item>
+        <item quantity="few">Powrót do %1$s za %2$d sekundy. Zachowaj tylko, jeśli obraz wygląda dobrze.</item>
+        <item quantity="many">Powrót do %1$s za %2$d sekund. Zachowaj tylko, jeśli obraz wygląda dobrze.</item>
+        <item quantity="other">Powrót do %1$s za %2$d sekundy. Zachowaj tylko, jeśli obraz wygląda dobrze.</item>
+    </plurals>
+</resources>

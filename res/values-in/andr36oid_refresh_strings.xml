@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Pertahankan kecepatan refresh ini?</string>
+    <string name="andr36oid_refresh_trial_keep">Pertahankan</string>
+    <string name="andr36oid_refresh_trial_revert">Kembali</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="other">Kembali ke %1$s dalam %2$d detik. Pertahankan hanya jika layar terlihat benar.</item>
+    </plurals>
+</resources>
