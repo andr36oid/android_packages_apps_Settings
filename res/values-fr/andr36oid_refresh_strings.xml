@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Garder cette fréquence d\'actualisation ?</string>
+    <string name="andr36oid_refresh_trial_keep">Garder</string>
+    <string name="andr36oid_refresh_trial_revert">Revenir</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="one">Retour à %1$s dans %2$d seconde. Gardez-la seulement si l\'écran s\'affiche bien.</item>
+        <item quantity="many">Retour à %1$s dans %2$d secondes. Gardez-la seulement si l\'écran s\'affiche bien.</item>
+        <item quantity="other">Retour à %1$s dans %2$d secondes. Gardez-la seulement si l\'écran s\'affiche bien.</item>
+    </plurals>
+</resources>

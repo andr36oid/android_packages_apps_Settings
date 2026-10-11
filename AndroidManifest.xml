@@ -3289,6 +3289,16 @@
         <receiver android:name=".fuelgauge.batterytip.AnomalyDetectionReceiver"
                   android:exported="false" />
 
+        <!-- andr36oid: a refresh rate that wasn't kept goes back at start -->
+        <receiver android:name=".display.RefreshRateTrialReceiver"
+                  android:exported="false"
+                  android:directBootAware="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".fuelgauge.batterytip.AnomalyConfigReceiver">
             <intent-filter>
                 <action android:name="android.app.action.STATSD_STARTED"/>

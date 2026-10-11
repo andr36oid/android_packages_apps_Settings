@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Manter esta taxa de atualização?</string>
+    <string name="andr36oid_refresh_trial_keep">Manter</string>
+    <string name="andr36oid_refresh_trial_revert">Voltar</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="one">Volta para %1$s em %2$d segundo. Mantenha só se a tela estiver certa.</item>
+        <item quantity="many">Volta para %1$s em %2$d segundos. Mantenha só se a tela estiver certa.</item>
+        <item quantity="other">Volta para %1$s em %2$d segundos. Mantenha só se a tela estiver certa.</item>
+    </plurals>
+</resources>

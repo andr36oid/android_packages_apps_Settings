@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: trying out a new peak refresh rate (Settings > Display) -->
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Keep this refresh rate?</string>
+    <string name="andr36oid_refresh_trial_keep">Keep</string>
+    <string name="andr36oid_refresh_trial_revert">Go back</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="one">Going back to %1$s in %2$d second. Keep it only if the screen looks right.</item>
+        <item quantity="other">Going back to %1$s in %2$d seconds. Keep it only if the screen looks right.</item>
+    </plurals>
+</resources>

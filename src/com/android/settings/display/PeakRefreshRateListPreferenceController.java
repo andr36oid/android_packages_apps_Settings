@@ -101,7 +101,9 @@ public class PeakRefreshRateListPreferenceController extends BasePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        if (mContext.getResources().getBoolean(R.bool.config_show_peak_refresh_rate_switch)) {
+        // Nothing to pick on a screen with a single refresh rate
+        if (mContext.getResources().getBoolean(R.bool.config_show_peak_refresh_rate_switch)
+                && mValues.size() > 1) {
             return AVAILABLE;
         } else {
             return UNSUPPORTED_ON_DEVICE;
@@ -121,10 +123,17 @@ public class PeakRefreshRateListPreferenceController extends BasePreferenceContr
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Settings.System.putFloat(mContext.getContentResolver(), Settings.System.PEAK_REFRESH_RATE,
-                Float.valueOf((String) newValue));
+        final float oldRate = Settings.System.getFloat(mContext.getContentResolver(),
+                Settings.System.PEAK_REFRESH_RATE, getDefaultPeakRefreshRate());
+        final float newRate = Float.valueOf((String) newValue);
+        if (newRate == oldRate) {
+            return true;
+        }
+        // The panel may not cope with the new rate: it goes back unless the user keeps it
+        RefreshRateTrial.start(preference.getContext(), oldRate, newRate,
+                mListPreference.getSummary().toString(), () -> updateState(preference));
         updateState(preference);
-        return true;
+        return false;
     }
 
     @Override

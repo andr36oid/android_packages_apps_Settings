@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Bu yenileme hızı kalsın mı?</string>
+    <string name="andr36oid_refresh_trial_keep">Kalsın</string>
+    <string name="andr36oid_refresh_trial_revert">Geri al</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="one">%2$d saniye içinde %1$s değerine dönülecek. Yalnızca ekran düzgün görünüyorsa kalsın.</item>
+        <item quantity="other">%2$d saniye içinde %1$s değerine dönülecek. Yalnızca ekran düzgün görünüyorsa kalsın.</item>
+    </plurals>
+</resources>

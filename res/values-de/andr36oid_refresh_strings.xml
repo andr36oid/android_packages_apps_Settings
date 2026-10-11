@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">Diese Bildwiederholrate behalten?</string>
+    <string name="andr36oid_refresh_trial_keep">Behalten</string>
+    <string name="andr36oid_refresh_trial_revert">Zurück</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="one">Zurück zu %1$s in %2$d Sekunde. Nur behalten, wenn das Bild richtig aussieht.</item>
+        <item quantity="other">Zurück zu %1$s in %2$d Sekunden. Nur behalten, wenn das Bild richtig aussieht.</item>
+    </plurals>
+</resources>

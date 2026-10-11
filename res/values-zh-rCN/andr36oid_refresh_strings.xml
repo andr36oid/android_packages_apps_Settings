@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
+    <string name="andr36oid_refresh_trial_title">保留此刷新率？</string>
+    <string name="andr36oid_refresh_trial_keep">保留</string>
+    <string name="andr36oid_refresh_trial_revert">恢复</string>
+    <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="other">%2$d 秒后恢复为 %1$s。仅在画面正常时保留。</item>
+    </plurals>
+</resources>
