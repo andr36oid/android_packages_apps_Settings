@@ -101,7 +101,9 @@ public class PeakRefreshRateListPreferenceController extends BasePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        if (mContext.getResources().getBoolean(R.bool.config_show_peak_refresh_rate_switch)) {
+        // Nothing to pick on a screen with a single refresh rate
+        if (mContext.getResources().getBoolean(R.bool.config_show_peak_refresh_rate_switch)
+                && mValues.size() > 1) {
             return AVAILABLE;
         } else {
             return UNSUPPORTED_ON_DEVICE;
