@@ -205,4 +205,18 @@ public class SettingsHomepageActivity extends FragmentActivity {
         final int paddingTop = searchBarHeight + searchBarMargin * 2;
         view.setPadding(0 /* left */, paddingTop, 0 /* right */, 0 /* bottom */);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        com.android.settings.andr36oid.ParentalGate.check(this);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!com.android.settings.andr36oid.ParentalGate.onResult(this, requestCode,
+                resultCode)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 }

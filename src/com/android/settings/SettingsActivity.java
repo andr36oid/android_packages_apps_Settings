@@ -355,6 +355,10 @@ public class SettingsActivity extends SettingsBaseActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (com.android.settings.andr36oid.ParentalGate.onResult(this, requestCode,
+                resultCode)) {
+            return;
+        }
         final List<Fragment> fragments = getSupportFragmentManager().getFragments();
         if (fragments != null) {
             for (Fragment fragment : fragments) {
@@ -467,6 +471,7 @@ public class SettingsActivity extends SettingsBaseActivity
     @Override
     protected void onResume() {
         super.onResume();
+        com.android.settings.andr36oid.ParentalGate.check(this);
 
         mDevelopmentSettingsListener = new BroadcastReceiver() {
             @Override
