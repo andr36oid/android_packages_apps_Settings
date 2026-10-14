@@ -8,4 +8,5 @@
     <plurals name="andr36oid_refresh_trial_message">
         <item quantity="other">%2$d 秒后恢复为 %1$s。仅在画面正常时保留。</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">已在显示设置中解锁“插入黑帧”菜单</string>
 </resources>

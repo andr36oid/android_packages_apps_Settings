@@ -10,4 +10,5 @@
         <item quantity="many">Volta para %1$s em %2$d segundos. Mantenha só se a tela estiver certa.</item>
         <item quantity="other">Volta para %1$s em %2$d segundos. Mantenha só se a tela estiver certa.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Menu \"Inserção de quadro preto\" desbloqueado nas configurações de Tela</string>
 </resources>

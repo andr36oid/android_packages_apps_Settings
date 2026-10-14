@@ -11,4 +11,5 @@
         <item quantity="many">Powrót do %1$s za %2$d sekund. Zachowaj tylko, jeśli obraz wygląda dobrze.</item>
         <item quantity="other">Powrót do %1$s za %2$d sekundy. Zachowaj tylko, jeśli obraz wygląda dobrze.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Menu „Wstawianie czarnej klatki” odblokowane w ustawieniach wyświetlacza</string>
 </resources>

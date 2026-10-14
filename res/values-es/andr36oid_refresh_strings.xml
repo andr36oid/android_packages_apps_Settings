@@ -10,4 +10,5 @@
         <item quantity="many">Se vuelve a %1$s en %2$d segundos. Mantenla solo si la pantalla se ve bien.</item>
         <item quantity="other">Se vuelve a %1$s en %2$d segundos. Mantenla solo si la pantalla se ve bien.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Menú «Inserción de fotograma negro» desbloqueado en los ajustes de Pantalla</string>
 </resources>

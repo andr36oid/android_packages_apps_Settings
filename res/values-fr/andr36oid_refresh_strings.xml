@@ -10,4 +10,5 @@
         <item quantity="many">Retour à %1$s dans %2$d secondes. Gardez-la seulement si l\'écran s\'affiche bien.</item>
         <item quantity="other">Retour à %1$s dans %2$d secondes. Gardez-la seulement si l\'écran s\'affiche bien.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Menu « Insertion d\'image noire » débloqué dans les paramètres d\'affichage</string>
 </resources>

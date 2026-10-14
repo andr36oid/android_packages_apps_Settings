@@ -8,4 +8,5 @@
     <plurals name="andr36oid_refresh_trial_message">
         <item quantity="other">Kembali ke %1$s dalam %2$d detik. Pertahankan hanya jika layar terlihat benar.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Menu Penyisipan frame hitam dibuka di pengaturan Tampilan</string>
 </resources>

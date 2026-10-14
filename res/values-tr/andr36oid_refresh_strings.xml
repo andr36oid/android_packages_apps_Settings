@@ -9,4 +9,5 @@
         <item quantity="one">%2$d saniye içinde %1$s değerine dönülecek. Yalnızca ekran düzgün görünüyorsa kalsın.</item>
         <item quantity="other">%2$d saniye içinde %1$s değerine dönülecek. Yalnızca ekran düzgün görünüyorsa kalsın.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Siyah kare ekleme menüsü Ekran ayarlarında açıldı</string>
 </resources>

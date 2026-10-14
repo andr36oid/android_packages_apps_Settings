@@ -10,4 +10,5 @@
         <item quantity="many">Volta a %1$s em %2$d segundos. Mantenha só se o ecrã estiver bem.</item>
         <item quantity="other">Volta a %1$s em %2$d segundos. Mantenha só se o ecrã estiver bem.</item>
     </plurals>
+    <string name="andr36oid_bfi_unlocked">Menu «Inserção de fotograma preto» desbloqueado nas definições de Ecrã</string>
 </resources>
