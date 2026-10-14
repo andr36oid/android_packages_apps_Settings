@@ -532,6 +532,11 @@ public class AppButtonsPreferenceController extends BasePreferenceController imp
             // User can't force stop device admin.
             Log.w(TAG, "User can't force stop device admin");
             updateForceStopButtonInner(false /* enabled */);
+        } else if ("org.andr36oid.playtime".equals(mPackageInfo.packageName)
+                && android.provider.Settings.Global.getInt(mActivity.getContentResolver(),
+                        "andr36oid_parental_controls", 0) != 0) {
+            // andr36oid: parental controls count the play time there, turned off with the PIN
+            updateForceStopButtonInner(false /* enabled */);
         } else if ((mAppEntry.info.flags & ApplicationInfo.FLAG_STOPPED) == 0) {
             // If the app isn't explicitly stopped, then always show the
             // force stop button.
