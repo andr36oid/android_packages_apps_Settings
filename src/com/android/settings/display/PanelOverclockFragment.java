@@ -34,6 +34,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -419,7 +420,7 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
         unit.setText(" Hz");
         row.addView(unit);
 
-        new AlertDialog.Builder(c)
+        final AlertDialog dialog = new AlertDialog.Builder(c)
                 .setTitle(R.string.andr36oid_panel_overclock_custom_title)
                 .setMessage(R.string.andr36oid_panel_overclock_custom_message)
                 .setView(row)
@@ -437,6 +438,21 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();
+        // the wheels keep up and down for themselves: A, or right past the last digit, goes
+        // on to the buttons (up from there comes back)
+        final View add = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        for (int i = 0; i < digits.length; i++) {
+            final boolean last = i == digits.length - 1;
+            digits[i].setOnKeyListener((v, code, event) -> {
+                if (code == KeyEvent.KEYCODE_DPAD_CENTER || code == KeyEvent.KEYCODE_ENTER
+                        || code == KeyEvent.KEYCODE_BUTTON_A
+                        || (last && code == KeyEvent.KEYCODE_DPAD_RIGHT)) {
+                    if (event.getAction() == KeyEvent.ACTION_DOWN) add.requestFocus();
+                    return true;
+                }
+                return false;
+            });
+        }
         // start on the tens: that's the digit people change most
         digits[1].requestFocus();
     }
