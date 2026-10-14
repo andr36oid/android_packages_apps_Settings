@@ -26,7 +26,7 @@
     <string name="andr36oid_panel_overclock_full">Já são 16 taxas. Remove uma primeiro.</string>
     <string name="andr36oid_panel_overclock_custom">Taxa personalizada…</string>
     <string name="andr36oid_panel_overclock_custom_title">Taxa personalizada</string>
-    <string name="andr36oid_panel_overclock_custom_message">De 30 a 150 Hz. Cima e baixo mudam um número, esquerda e direita passam entre eles.</string>
+    <string name="andr36oid_panel_overclock_custom_message">De 30 a 300 Hz. Cima e baixo mudam um número, esquerda e direita passam entre eles.</string>
     <string name="andr36oid_panel_overclock_custom_add">Adicionar</string>
 
     <!-- The warning before the first rate is added -->

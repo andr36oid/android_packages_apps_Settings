@@ -95,10 +95,10 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
 
     /** the list to pick from, minus the rates the screen offers already */
     private static final int[] PRESETS = {500, 550, 650, 700, 750, 800, 850, 900, 1000, 1100,
-            1200};
-    /** the kernel's limits: 30 to 150 Hz, 16 rates */
+            1200, 1440, 1500, 1650, 1800, 2000, 2400};
+    /** the kernel's limits: 30 to 300 Hz (less where the DSI lanes can't carry it), 16 rates */
     private static final int MIN = 300;
-    private static final int MAX = 1500;
+    private static final int MAX = 3000;
     private static final int MAX_RATES = 16;
     /** a preset this close to an offered rate isn't offered */
     private static final float PRESET_NEAR_HZ = 0.5f;

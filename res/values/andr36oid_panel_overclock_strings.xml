@@ -26,7 +26,7 @@
     <string name="andr36oid_panel_overclock_full">That\'s 16 rates already. Remove one first.</string>
     <string name="andr36oid_panel_overclock_custom">Custom rate…</string>
     <string name="andr36oid_panel_overclock_custom_title">Custom rate</string>
-    <string name="andr36oid_panel_overclock_custom_message">30 to 150 Hz. Up and down change a number, left and right move between them.</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 to 300 Hz. Up and down change a number, left and right move between them.</string>
     <string name="andr36oid_panel_overclock_custom_add">Add</string>
 
     <!-- The warning before the first rate is added -->
