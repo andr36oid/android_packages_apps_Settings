@@ -60,7 +60,7 @@ public class TopLevelSettings extends DashboardFragment implements
             "top_level_stick_calibration",
             "top_level_perf_overlay", "top_level_play_time", "top_level_beta_apps",
             "top_level_bios_check", "top_level_game_mode", "top_level_save_backup",
-            "top_level_touch_controls", "top_level_controllers");
+            "top_level_touch_controls", "top_level_controllers", "top_level_card_check");
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
