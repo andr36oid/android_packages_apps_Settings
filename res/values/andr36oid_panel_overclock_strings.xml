@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
+<resources>
+    <string name="andr36oid_panel_overclock_title">Panel overclocking</string>
+    <string name="andr36oid_panel_overclock_summary">Try refresh rates your screen wasn\'t set up for</string>
+    <string name="andr36oid_panel_overclock_intro">Add rates to try and restart. Then pick one in Peak refresh rate. If the screen goes dark or garbled, wait 15 seconds and the old rate comes back. A rate that shows a picture can still skip frames, check it with the smoothness test.</string>
+    <!-- Always on the page, also at the end of the restart question -->
+    <string name="andr36oid_panel_overclock_warning_line">Running the screen at rates it wasn\'t made for can damage it permanently. You do this at your own risk.</string>
+
+    <string name="andr36oid_panel_overclock_screen_title">This screen</string>
+    <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
+    <string name="andr36oid_panel_overclock_screen_summary">Made for %1$s Hz. Offered now: %2$s Hz</string>
+    <string name="andr36oid_panel_overclock_paused">Kernel Tweaks are switched off (System > Kernel Tweaks), so a restart doesn\'t add the extra rates.</string>
+
+    <string name="andr36oid_panel_overclock_rates">Extra rates</string>
+    <string name="andr36oid_panel_overclock_rates_none">None yet</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Offered now. Select to remove it.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Added at the next restart. Select to remove it.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Not offered: the screen link can\'t carry it, or the screen has a rate this close already. Select to remove it.</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_remove_one">Remove %1$s Hz?</string>
+    <string name="andr36oid_panel_overclock_remove">Remove</string>
+
+    <string name="andr36oid_panel_overclock_add">Add rates</string>
+    <string name="andr36oid_panel_overclock_add_summary">Pick from a list or set your own, up to 16</string>
+    <string name="andr36oid_panel_overclock_full">That\'s 16 rates already. Remove one first.</string>
+    <string name="andr36oid_panel_overclock_custom">Custom rate…</string>
+    <string name="andr36oid_panel_overclock_custom_title">Custom rate</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 to 150 Hz. Up and down change a number, left and right move between them.</string>
+    <string name="andr36oid_panel_overclock_custom_add">Add</string>
+
+    <!-- The warning before the first rate is added -->
+    <string name="andr36oid_panel_overclock_warning_title">Before you start</string>
+    <string name="andr36oid_panel_overclock_warning">Running the screen at rates it wasn\'t made for can damage it permanently. andr36oid can\'t know your panel\'s limit. You do this at your own risk.</string>
+    <string name="andr36oid_panel_overclock_warning_check">I understand the risk</string>
+    <string name="andr36oid_panel_overclock_warning_accept">I understand, continue</string>
+
+    <string name="andr36oid_panel_overclock_restart_add">Restart to add them</string>
+    <string name="andr36oid_panel_overclock_restart_remove">Restart to remove them</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">The rates are as saved</string>
+    <string name="andr36oid_panel_overclock_restart_question">Restart now?</string>
+    <!-- %1$s: andr36oid_panel_overclock_warning_line -->
+    <string name="andr36oid_panel_overclock_restart_message">The console restarts with the new rates. Then pick one in Peak refresh rate. If the screen goes dark or garbled, wait 15 seconds.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart">Restart</string>
+    <string name="andr36oid_panel_overclock_save_failed">The rates couldn\'t be saved to the BOOT partition</string>
+
+    <string name="andr36oid_panel_overclock_remove_all">Remove extra rates</string>
+    <string name="andr36oid_panel_overclock_remove_all_summary">The screen gets only its own rates again after a restart</string>
+
+    <string name="andr36oid_panel_overclock_test">Smoothness test</string>
+    <string name="andr36oid_panel_overclock_test_summary">A moving block and the frame rate the screen really reaches</string>
+</resources>

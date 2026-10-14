@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2026 The andr36oid Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<!-- Display > Panel overclocking, filled in by PanelOverclockFragment. The text rows are
+     selectable (a press does nothing) so the d-pad can move through the page and scroll it -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/andr36oid_panel_overclock_title">
+
+    <Preference
+        android:key="intro"
+        android:summary="@string/andr36oid_panel_overclock_intro" />
+
+    <Preference
+        android:key="warning"
+        android:icon="@drawable/ic_warning_24dp"
+        android:summary="@string/andr36oid_panel_overclock_warning_line" />
+
+    <Preference
+        android:key="screen"
+        android:title="@string/andr36oid_panel_overclock_screen_title" />
+
+    <PreferenceCategory
+        android:key="rates"
+        android:title="@string/andr36oid_panel_overclock_rates" />
+
+    <Preference
+        android:key="add"
+        android:title="@string/andr36oid_panel_overclock_add"
+        android:summary="@string/andr36oid_panel_overclock_add_summary" />
+
+    <Preference
+        android:key="restart" />
+
+    <Preference
+        android:key="remove_all"
+        android:title="@string/andr36oid_panel_overclock_remove_all"
+        android:summary="@string/andr36oid_panel_overclock_remove_all_summary" />
+
+    <Preference
+        android:key="test"
+        android:title="@string/andr36oid_panel_overclock_test"
+        android:summary="@string/andr36oid_panel_overclock_test_summary" />
+</PreferenceScreen>

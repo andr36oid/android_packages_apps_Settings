@@ -123,6 +123,13 @@
         android:title="@string/peak_refresh_rate_title"
         settings:controller="com.android.settings.display.PeakRefreshRatePreferenceController" />
 
+    <!-- andr36oid: extra refresh rates to try, on every console -->
+    <Preference
+        android:key="panel_overclock"
+        android:title="@string/andr36oid_panel_overclock_title"
+        android:summary="@string/andr36oid_panel_overclock_summary"
+        android:fragment="com.android.settings.display.PanelOverclockFragment" />
+
     <Preference
         android:key="font_size"
         android:title="@string/title_font_size"
