@@ -10,4 +10,6 @@
         <item quantity="one">Going back to %1$s in %2$d second. Keep it only if the screen looks right.</item>
         <item quantity="other">Going back to %1$s in %2$d seconds. Keep it only if the screen looks right.</item>
     </plurals>
+    <!-- Toast when a refresh rate of 100 Hz or more is kept -->
+    <string name="andr36oid_bfi_unlocked">Black Frame Insertion menu unlocked in Display settings</string>
 </resources>

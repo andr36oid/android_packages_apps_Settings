@@ -75,6 +75,7 @@ final class RefreshRateTrial {
                 setRate(context, oldRate);
             }
             clear(context);
+            BlackFrameEntry.sync(context);
             listener.onTrialDone();
         };
         final Runnable tick = new Runnable() {
@@ -117,6 +118,7 @@ final class RefreshRateTrial {
         Log.i(TAG, "Refresh rate trial didn't finish, back to " + oldRate + " Hz");
         setRate(context, oldRate);
         clear(context);
+        BlackFrameEntry.sync(context);
     }
 
     private static CharSequence message(Context context, String oldName, int seconds) {
