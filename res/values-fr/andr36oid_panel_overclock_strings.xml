@@ -26,7 +26,7 @@
     <string name="andr36oid_panel_overclock_full">Ce sont déjà 16 fréquences. Retires-en une d\'abord.</string>
     <string name="andr36oid_panel_overclock_custom">Fréquence personnalisée…</string>
     <string name="andr36oid_panel_overclock_custom_title">Fréquence personnalisée</string>
-    <string name="andr36oid_panel_overclock_custom_message">De 30 à 300 Hz. Haut et bas changent un chiffre, gauche et droite passent d\'un chiffre à l\'autre.</string>
+    <string name="andr36oid_panel_overclock_custom_message">De 30 à 300 Hz. Haut et bas changent un chiffre, gauche et droite passent d\'un chiffre à l\'autre. A va aux boutons, B annule.</string>
     <string name="andr36oid_panel_overclock_custom_add">Ajouter</string>
 
     <!-- The warning before the first rate is added -->

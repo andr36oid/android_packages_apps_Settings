@@ -26,7 +26,7 @@
     <string name="andr36oid_panel_overclock_full">Уже 16 частот. Сначала удали одну.</string>
     <string name="andr36oid_panel_overclock_custom">Своя частота…</string>
     <string name="andr36oid_panel_overclock_custom_title">Своя частота</string>
-    <string name="andr36oid_panel_overclock_custom_message">От 30 до 300 Hz. Вверх и вниз меняют число, влево и вправо переходят между числами.</string>
+    <string name="andr36oid_panel_overclock_custom_message">От 30 до 300 Hz. Вверх и вниз меняют цифру, влево и вправо переходят между цифрами. A переходит к кнопкам, B отменяет.</string>
     <string name="andr36oid_panel_overclock_custom_add">Добавить</string>
 
     <!-- The warning before the first rate is added -->

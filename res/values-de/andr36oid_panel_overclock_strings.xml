@@ -26,7 +26,7 @@
     <string name="andr36oid_panel_overclock_full">Das sind schon 16 Raten. Entferne zuerst eine.</string>
     <string name="andr36oid_panel_overclock_custom">Eigene Rate…</string>
     <string name="andr36oid_panel_overclock_custom_title">Eigene Rate</string>
-    <string name="andr36oid_panel_overclock_custom_message">30 bis 300 Hz. Hoch und runter ändern eine Zahl, links und rechts wechseln zwischen den Zahlen.</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 bis 300 Hz. Hoch und runter ändern eine Ziffer, links und rechts wechseln zwischen den Ziffern. A springt zu den Schaltflächen, B bricht ab.</string>
     <string name="andr36oid_panel_overclock_custom_add">Hinzufügen</string>
 
     <!-- The warning before the first rate is added -->

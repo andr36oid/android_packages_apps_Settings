@@ -26,7 +26,7 @@
     <string name="andr36oid_panel_overclock_full">已经有 16 个刷新率了，请先移除一个。</string>
     <string name="andr36oid_panel_overclock_custom">自定义刷新率…</string>
     <string name="andr36oid_panel_overclock_custom_title">自定义刷新率</string>
-    <string name="andr36oid_panel_overclock_custom_message">30 到 300 Hz。上下键改变数字，左右键在各位数字之间移动。</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 到 300 Hz。上下键改变数字，左右键在各位数字之间移动。A 键切换到按钮，B 键取消。</string>
     <string name="andr36oid_panel_overclock_custom_add">添加</string>
 
     <!-- The warning before the first rate is added -->
