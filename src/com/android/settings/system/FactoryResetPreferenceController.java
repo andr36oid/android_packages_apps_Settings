@@ -19,7 +19,6 @@ import android.content.Context;
 import android.os.UserManager;
 
 import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
@@ -38,7 +37,8 @@ public class FactoryResetPreferenceController extends AbstractPreferenceControll
     /** Hide "Factory reset" settings for secondary users, except demo users. */
     @Override
     public boolean isAvailable() {
-        return mUm.isAdminUser() || Utils.isDemoUser(mContext);
+        // andr36oid: it didn't work from here; the recovery (FN at power-on) resets the card
+        return false;
     }
 
     @Override
