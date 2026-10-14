@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
+<resources>
+    <string name="andr36oid_panel_overclock_title">Panel-Übertaktung</string>
+    <string name="andr36oid_panel_overclock_summary">Bildwiederholraten testen, für die dein Bildschirm nicht eingerichtet ist</string>
+    <string name="andr36oid_panel_overclock_intro">Füge Raten zum Testen hinzu und starte neu. Wähle dann eine unter „Maximale Aktualisierungsrate“. Wird der Bildschirm dunkel oder verzerrt, warte 15 Sekunden, dann kommt die alte Rate zurück. Eine Rate, die ein Bild zeigt, kann trotzdem Bilder auslassen, prüfe sie mit dem Flüssigkeitstest. Um eine Rate vorher zu sehen, zeige sie 5 Sekunden lang in der Vorschau, ohne Neustart.</string>
+    <!-- Always on the page, also at the end of the restart question -->
+    <string name="andr36oid_panel_overclock_warning_line">Den Bildschirm mit Raten zu betreiben, für die er nicht gebaut wurde, kann ihn dauerhaft beschädigen. Du machst das auf eigene Gefahr.</string>
+
+    <string name="andr36oid_panel_overclock_screen_title">Dieser Bildschirm</string>
+    <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
+    <string name="andr36oid_panel_overclock_screen_summary">Ausgelegt für %1$s Hz. Jetzt angeboten: %2$s Hz</string>
+    <string name="andr36oid_panel_overclock_paused">Kernel-Tweaks sind ausgeschaltet (System > Kernel-Tweaks), deshalb fügt ein Neustart keine Extra-Raten hinzu.</string>
+
+    <string name="andr36oid_panel_overclock_rates">Extra-Raten</string>
+    <string name="andr36oid_panel_overclock_rates_none">Noch keine</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Jetzt angeboten. Auswählen, um sie in der Vorschau zu sehen oder zu entfernen.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Wird beim nächsten Neustart hinzugefügt. Auswählen, um sie in der Vorschau zu sehen oder zu entfernen.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Nicht angeboten: Die Bildschirmverbindung kann sie nicht übertragen, oder der Bildschirm hat schon eine Rate so nah dran. Auswählen, um sie in der Vorschau zu sehen oder zu entfernen.</string>
+    <string name="andr36oid_panel_overclock_remove">Entfernen</string>
+
+    <string name="andr36oid_panel_overclock_add">Raten hinzufügen</string>
+    <string name="andr36oid_panel_overclock_add_summary">Aus einer Liste wählen oder eigene festlegen, bis zu 16</string>
+    <string name="andr36oid_panel_overclock_full">Das sind schon 16 Raten. Entferne zuerst eine.</string>
+    <string name="andr36oid_panel_overclock_custom">Eigene Rate…</string>
+    <string name="andr36oid_panel_overclock_custom_title">Eigene Rate</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 bis 150 Hz. Hoch und runter ändern eine Zahl, links und rechts wechseln zwischen den Zahlen.</string>
+    <string name="andr36oid_panel_overclock_custom_add">Hinzufügen</string>
+
+    <!-- The warning before the first rate is added -->
+    <string name="andr36oid_panel_overclock_warning_title">Bevor du anfängst</string>
+    <string name="andr36oid_panel_overclock_warning">Den Bildschirm mit Raten zu betreiben, für die er nicht gebaut wurde, kann ihn dauerhaft beschädigen. andr36oid kann die Grenze deines Panels nicht kennen. Du machst das auf eigene Gefahr.</string>
+    <string name="andr36oid_panel_overclock_warning_check">Ich verstehe das Risiko</string>
+    <string name="andr36oid_panel_overclock_warning_accept">Ich verstehe, weiter</string>
+
+    <string name="andr36oid_panel_overclock_restart_add">Zum Hinzufügen neu starten</string>
+    <string name="andr36oid_panel_overclock_restart_remove">Zum Entfernen neu starten</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">Die Raten sind wie gespeichert</string>
+    <string name="andr36oid_panel_overclock_restart_question">Jetzt neu starten?</string>
+    <!-- %1$s: andr36oid_panel_overclock_warning_line -->
+    <string name="andr36oid_panel_overclock_restart_message">Die Konsole startet mit den neuen Raten neu. Wähle dann eine unter „Maximale Aktualisierungsrate“. Wird der Bildschirm dunkel oder verzerrt, warte 15 Sekunden.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart">Neu starten</string>
+    <string name="andr36oid_panel_overclock_save_failed">Die Raten konnten nicht auf der BOOT-Partition gespeichert werden</string>
+
+    <string name="andr36oid_panel_overclock_remove_all">Extra-Raten entfernen</string>
+    <string name="andr36oid_panel_overclock_remove_all_summary">Der Bildschirm bekommt nach einem Neustart nur noch seine eigenen Raten</string>
+
+    <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
+    <string name="andr36oid_panel_overclock_preview">5 Sekunden in der Vorschau</string>
+    <!-- %1$s: a rate, like 77.5; %2$d: seconds left, 5 to 1 -->
+    <string name="andr36oid_panel_overclock_previewing">Vorschau von %1$s Hz, zurück in %2$d s</string>
+    <string name="andr36oid_panel_overclock_preview_end">Jetzt zurück</string>
+    <string name="andr36oid_panel_overclock_preview_question">Sah das Bild richtig aus?</string>
+    <string name="andr36oid_panel_overclock_preview_yes">Ja</string>
+    <string name="andr36oid_panel_overclock_preview_no">Nein</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_offer">%1$s Hz zu deinen Raten hinzufügen?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">Sie wird nach einem Neustart angeboten. Eine Rate, die richtig aussah, kann trotzdem Bilder auslassen, prüfe sie mit dem Flüssigkeitstest.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">Eine Vorschau ist gerade zu Ende. Versuch es gleich noch mal.</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_range">Die Bildschirmverbindung kann %1$s Hz nicht übertragen</string>
+    <string name="andr36oid_panel_overclock_preview_off">Der Bildschirm muss für eine Vorschau an sein</string>
+    <string name="andr36oid_panel_overclock_preview_missing">Dieses System kann Raten noch nicht in der Vorschau zeigen</string>
+    <string name="andr36oid_panel_overclock_preview_failed">Die Vorschau konnte nicht starten</string>
+
+    <string name="andr36oid_panel_overclock_test">Flüssigkeitstest</string>
+    <string name="andr36oid_panel_overclock_test_summary">Ein bewegter Block und die Bildrate, die der Bildschirm wirklich erreicht</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
+<resources>
+    <string name="andr36oid_panel_overclock_title">面板超频</string>
+    <string name="andr36oid_panel_overclock_summary">尝试屏幕没有为其设置的刷新率</string>
+    <string name="andr36oid_panel_overclock_intro">添加要尝试的刷新率然后重启，再在“最高刷新率”中选一个。如果屏幕变黑或出现花屏，等 15 秒，旧的刷新率会恢复。能显示画面的刷新率仍可能丢帧，请用流畅度测试检查。若想先看看某个刷新率，可以预览 5 秒，无需重启。</string>
+    <!-- Always on the page, also at the end of the restart question -->
+    <string name="andr36oid_panel_overclock_warning_line">让屏幕以它不是为之设计的刷新率运行，可能会永久损坏屏幕。风险由你自行承担。</string>
+
+    <string name="andr36oid_panel_overclock_screen_title">本屏幕</string>
+    <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
+    <string name="andr36oid_panel_overclock_screen_summary">设计刷新率为 %1$s Hz。当前提供：%2$s Hz</string>
+    <string name="andr36oid_panel_overclock_paused">内核调整已关闭（系统 > 内核调整），因此重启不会添加额外刷新率。</string>
+
+    <string name="andr36oid_panel_overclock_rates">额外刷新率</string>
+    <string name="andr36oid_panel_overclock_rates_none">暂无</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
+    <string name="andr36oid_panel_overclock_rate_offered">当前提供。选择即可预览或移除。</string>
+    <string name="andr36oid_panel_overclock_rate_pending">将在下次重启时添加。选择即可预览或移除。</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">未提供：屏幕连接无法承载该刷新率，或屏幕已有非常接近的刷新率。选择即可预览或移除。</string>
+    <string name="andr36oid_panel_overclock_remove">移除</string>
+
+    <string name="andr36oid_panel_overclock_add">添加刷新率</string>
+    <string name="andr36oid_panel_overclock_add_summary">从列表中选择或自定义，最多 16 个</string>
+    <string name="andr36oid_panel_overclock_full">已经有 16 个刷新率了，请先移除一个。</string>
+    <string name="andr36oid_panel_overclock_custom">自定义刷新率…</string>
+    <string name="andr36oid_panel_overclock_custom_title">自定义刷新率</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 到 150 Hz。上下键改变数字，左右键在各位数字之间移动。</string>
+    <string name="andr36oid_panel_overclock_custom_add">添加</string>
+
+    <!-- The warning before the first rate is added -->
+    <string name="andr36oid_panel_overclock_warning_title">开始之前</string>
+    <string name="andr36oid_panel_overclock_warning">让屏幕以它不是为之设计的刷新率运行，可能会永久损坏屏幕。andr36oid 无法知道你面板的极限。风险由你自行承担。</string>
+    <string name="andr36oid_panel_overclock_warning_check">我了解风险</string>
+    <string name="andr36oid_panel_overclock_warning_accept">我了解，继续</string>
+
+    <string name="andr36oid_panel_overclock_restart_add">重启以添加</string>
+    <string name="andr36oid_panel_overclock_restart_remove">重启以移除</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">刷新率与已保存的一致</string>
+    <string name="andr36oid_panel_overclock_restart_question">立即重启？</string>
+    <!-- %1$s: andr36oid_panel_overclock_warning_line -->
+    <string name="andr36oid_panel_overclock_restart_message">主机将以新的刷新率重启。然后在“最高刷新率”中选一个。如果屏幕变黑或出现花屏，请等待 15 秒。\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart">重启</string>
+    <string name="andr36oid_panel_overclock_save_failed">无法将刷新率保存到 BOOT 分区</string>
+
+    <string name="andr36oid_panel_overclock_remove_all">移除额外刷新率</string>
+    <string name="andr36oid_panel_overclock_remove_all_summary">重启后，屏幕将只恢复其自身的刷新率</string>
+
+    <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
+    <string name="andr36oid_panel_overclock_preview">预览 5 秒</string>
+    <!-- %1$s: a rate, like 77.5; %2$d: seconds left, 5 to 1 -->
+    <string name="andr36oid_panel_overclock_previewing">正在预览 %1$s Hz，%2$d 秒后恢复</string>
+    <string name="andr36oid_panel_overclock_preview_end">立即恢复</string>
+    <string name="andr36oid_panel_overclock_preview_question">画面显示正常吗？</string>
+    <string name="andr36oid_panel_overclock_preview_yes">是</string>
+    <string name="andr36oid_panel_overclock_preview_no">否</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_offer">将 %1$s Hz 添加到你的刷新率中？</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">该刷新率会在重启后提供。显示正常的刷新率仍可能丢帧，请用流畅度测试检查。</string>
+    <string name="andr36oid_panel_overclock_preview_busy">刚刚结束了一次预览，请稍后再试。</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_range">屏幕连接无法承载 %1$s Hz</string>
+    <string name="andr36oid_panel_overclock_preview_off">预览需要屏幕处于开启状态</string>
+    <string name="andr36oid_panel_overclock_preview_missing">此系统暂时无法预览刷新率</string>
+    <string name="andr36oid_panel_overclock_preview_failed">预览未能开始</string>
+
+    <string name="andr36oid_panel_overclock_test">流畅度测试</string>
+    <string name="andr36oid_panel_overclock_test_summary">一个移动的方块，以及屏幕实际达到的帧率</string>
+</resources>

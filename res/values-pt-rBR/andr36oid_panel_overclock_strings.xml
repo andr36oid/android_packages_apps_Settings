@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
+<resources>
+    <string name="andr36oid_panel_overclock_title">Overclock do painel</string>
+    <string name="andr36oid_panel_overclock_summary">Testa taxas de atualização para as quais a tela não foi preparada</string>
+    <string name="andr36oid_panel_overclock_intro">Adicione taxas para testar e reinicie. Depois escolha uma em Peak refresh rate. Se a tela escurecer ou ficar com falhas, espere 15 segundos e a taxa antiga volta. Uma taxa que mostra imagem pode mesmo assim pular quadros; teste com o teste de fluidez. Para ver uma taxa antes, pré-visualize por 5 segundos, sem reiniciar.</string>
+    <!-- Always on the page, also at the end of the restart question -->
+    <string name="andr36oid_panel_overclock_warning_line">Fazer a tela rodar em taxas para as quais ela não foi feita pode danificá-la de forma permanente. Você faz isso por sua conta e risco.</string>
+
+    <string name="andr36oid_panel_overclock_screen_title">Esta tela</string>
+    <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
+    <string name="andr36oid_panel_overclock_screen_summary">Feita para %1$s Hz. Oferecidas agora: %2$s Hz</string>
+    <string name="andr36oid_panel_overclock_paused">Os Ajustes do kernel estão desativados (Sistema > Ajustes do kernel), então um reinício não adiciona as taxas extras.</string>
+
+    <string name="andr36oid_panel_overclock_rates">Taxas extras</string>
+    <string name="andr36oid_panel_overclock_rates_none">Nenhuma ainda</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Oferecida agora. Selecione para pré-visualizar ou remover.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Adicionada no próximo reinício. Selecione para pré-visualizar ou remover.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Não oferecida: a conexão da tela não consegue transportá-la, ou a tela já tem uma taxa tão próxima. Selecione para pré-visualizar ou remover.</string>
+    <string name="andr36oid_panel_overclock_remove">Remover</string>
+
+    <string name="andr36oid_panel_overclock_add">Adicionar taxas</string>
+    <string name="andr36oid_panel_overclock_add_summary">Escolha numa lista ou defina as suas, até 16</string>
+    <string name="andr36oid_panel_overclock_full">Já são 16 taxas. Remova uma primeiro.</string>
+    <string name="andr36oid_panel_overclock_custom">Taxa personalizada…</string>
+    <string name="andr36oid_panel_overclock_custom_title">Taxa personalizada</string>
+    <string name="andr36oid_panel_overclock_custom_message">De 30 a 150 Hz. Cima e baixo mudam um número, esquerda e direita passam entre eles.</string>
+    <string name="andr36oid_panel_overclock_custom_add">Adicionar</string>
+
+    <!-- The warning before the first rate is added -->
+    <string name="andr36oid_panel_overclock_warning_title">Antes de começar</string>
+    <string name="andr36oid_panel_overclock_warning">Fazer a tela rodar em taxas para as quais ela não foi feita pode danificá-la de forma permanente. O andr36oid não consegue saber o limite do seu painel. Você faz isso por sua conta e risco.</string>
+    <string name="andr36oid_panel_overclock_warning_check">Entendo o risco</string>
+    <string name="andr36oid_panel_overclock_warning_accept">Entendo, continuar</string>
+
+    <string name="andr36oid_panel_overclock_restart_add">Reinicie para adicioná-las</string>
+    <string name="andr36oid_panel_overclock_restart_remove">Reinicie para removê-las</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">As taxas estão como foram salvas</string>
+    <string name="andr36oid_panel_overclock_restart_question">Reiniciar agora?</string>
+    <!-- %1$s: andr36oid_panel_overclock_warning_line -->
+    <string name="andr36oid_panel_overclock_restart_message">O console reinicia com as novas taxas. Depois escolha uma em Peak refresh rate. Se a tela escurecer ou ficar com falhas, espere 15 segundos.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart">Reiniciar</string>
+    <string name="andr36oid_panel_overclock_save_failed">Não foi possível salvar as taxas na partição BOOT</string>
+
+    <string name="andr36oid_panel_overclock_remove_all">Remover taxas extras</string>
+    <string name="andr36oid_panel_overclock_remove_all_summary">Depois de um reinício, a tela volta a ter só as próprias taxas</string>
+
+    <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
+    <string name="andr36oid_panel_overclock_preview">Visualizar por 5 segundos</string>
+    <!-- %1$s: a rate, like 77.5; %2$d: seconds left, 5 to 1 -->
+    <string name="andr36oid_panel_overclock_previewing">Visualizando %1$s Hz, volta em %2$d s</string>
+    <string name="andr36oid_panel_overclock_preview_end">Voltar agora</string>
+    <string name="andr36oid_panel_overclock_preview_question">A imagem ficou certa?</string>
+    <string name="andr36oid_panel_overclock_preview_yes">Sim</string>
+    <string name="andr36oid_panel_overclock_preview_no">Não</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_offer">Adicionar %1$s Hz às suas taxas?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">Ela é oferecida depois de um reinício. Uma taxa que pareceu certa pode mesmo assim pular quadros; teste com o teste de fluidez.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">Uma visualização acabou de terminar. Tente de novo daqui a pouco.</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_range">A conexão da tela não consegue transportar %1$s Hz</string>
+    <string name="andr36oid_panel_overclock_preview_off">A tela precisa estar ligada para visualizar</string>
+    <string name="andr36oid_panel_overclock_preview_missing">Este sistema ainda não consegue visualizar taxas</string>
+    <string name="andr36oid_panel_overclock_preview_failed">A visualização não conseguiu começar</string>
+
+    <string name="andr36oid_panel_overclock_test">Teste de fluidez</string>
+    <string name="andr36oid_panel_overclock_test_summary">Um bloco em movimento e a taxa de quadros que a tela realmente alcança</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
+<resources>
+    <string name="andr36oid_panel_overclock_title">Overclock panel</string>
+    <string name="andr36oid_panel_overclock_summary">Coba laju refresh yang tidak disiapkan untuk layarmu</string>
+    <string name="andr36oid_panel_overclock_intro">Tambahkan laju untuk dicoba lalu mulai ulang. Pilih salah satu di Peak refresh rate. Jika layar menjadi gelap atau kacau, tunggu 15 detik dan laju lama akan kembali. Laju yang menampilkan gambar tetap bisa melewatkan frame, periksa dengan tes kehalusan. Untuk melihat laju dulu, pratinjau selama 5 detik, tanpa perlu mulai ulang.</string>
+    <!-- Always on the page, also at the end of the restart question -->
+    <string name="andr36oid_panel_overclock_warning_line">Menjalankan layar pada laju yang tidak dibuat untuknya bisa merusaknya secara permanen. Kamu melakukannya atas risiko sendiri.</string>
+
+    <string name="andr36oid_panel_overclock_screen_title">Layar ini</string>
+    <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
+    <string name="andr36oid_panel_overclock_screen_summary">Dibuat untuk %1$s Hz. Ditawarkan sekarang: %2$s Hz</string>
+    <string name="andr36oid_panel_overclock_paused">Kernel Tweaks sedang dimatikan (Sistem > Kernel Tweaks), jadi mulai ulang tidak menambahkan laju ekstra.</string>
+
+    <string name="andr36oid_panel_overclock_rates">Laju ekstra</string>
+    <string name="andr36oid_panel_overclock_rates_none">Belum ada</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Ditawarkan sekarang. Pilih untuk pratinjau atau hapus.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Ditambahkan saat mulai ulang berikutnya. Pilih untuk pratinjau atau hapus.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Tidak ditawarkan: tautan layar tidak bisa membawanya, atau layar sudah punya laju yang sedekat ini. Pilih untuk pratinjau atau hapus.</string>
+    <string name="andr36oid_panel_overclock_remove">Hapus</string>
+
+    <string name="andr36oid_panel_overclock_add">Tambah laju</string>
+    <string name="andr36oid_panel_overclock_add_summary">Pilih dari daftar atau atur sendiri, hingga 16</string>
+    <string name="andr36oid_panel_overclock_full">Sudah 16 laju. Hapus satu dulu.</string>
+    <string name="andr36oid_panel_overclock_custom">Laju kustom…</string>
+    <string name="andr36oid_panel_overclock_custom_title">Laju kustom</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 sampai 150 Hz. Atas dan bawah mengubah angka, kiri dan kanan berpindah antar angka.</string>
+    <string name="andr36oid_panel_overclock_custom_add">Tambah</string>
+
+    <!-- The warning before the first rate is added -->
+    <string name="andr36oid_panel_overclock_warning_title">Sebelum mulai</string>
+    <string name="andr36oid_panel_overclock_warning">Menjalankan layar pada laju yang tidak dibuat untuknya bisa merusaknya secara permanen. andr36oid tidak bisa mengetahui batas panelmu. Kamu melakukannya atas risiko sendiri.</string>
+    <string name="andr36oid_panel_overclock_warning_check">Saya mengerti risikonya</string>
+    <string name="andr36oid_panel_overclock_warning_accept">Saya mengerti, lanjutkan</string>
+
+    <string name="andr36oid_panel_overclock_restart_add">Mulai ulang untuk menambahkannya</string>
+    <string name="andr36oid_panel_overclock_restart_remove">Mulai ulang untuk menghapusnya</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">Laju sama seperti yang tersimpan</string>
+    <string name="andr36oid_panel_overclock_restart_question">Mulai ulang sekarang?</string>
+    <!-- %1$s: andr36oid_panel_overclock_warning_line -->
+    <string name="andr36oid_panel_overclock_restart_message">Konsol akan mulai ulang dengan laju baru. Lalu pilih salah satu di Peak refresh rate. Jika layar menjadi gelap atau kacau, tunggu 15 detik.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart">Mulai ulang</string>
+    <string name="andr36oid_panel_overclock_save_failed">Laju tidak bisa disimpan ke partisi BOOT</string>
+
+    <string name="andr36oid_panel_overclock_remove_all">Hapus laju ekstra</string>
+    <string name="andr36oid_panel_overclock_remove_all_summary">Setelah mulai ulang, layar hanya mendapat laju bawaannya lagi</string>
+
+    <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
+    <string name="andr36oid_panel_overclock_preview">Pratinjau 5 detik</string>
+    <!-- %1$s: a rate, like 77.5; %2$d: seconds left, 5 to 1 -->
+    <string name="andr36oid_panel_overclock_previewing">Pratinjau %1$s Hz, kembali dalam %2$d dtk</string>
+    <string name="andr36oid_panel_overclock_preview_end">Kembali sekarang</string>
+    <string name="andr36oid_panel_overclock_preview_question">Apakah gambarnya terlihat benar?</string>
+    <string name="andr36oid_panel_overclock_preview_yes">Ya</string>
+    <string name="andr36oid_panel_overclock_preview_no">Tidak</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_offer">Tambahkan %1$s Hz ke laju kamu?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">Laju ini ditawarkan setelah mulai ulang. Laju yang terlihat benar tetap bisa melewatkan frame, periksa dengan tes kehalusan.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">Pratinjau baru saja selesai. Coba lagi sebentar lagi.</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_range">Tautan layar tidak bisa membawa %1$s Hz</string>
+    <string name="andr36oid_panel_overclock_preview_off">Layar harus menyala untuk pratinjau</string>
+    <string name="andr36oid_panel_overclock_preview_missing">Sistem ini belum bisa pratinjau laju</string>
+    <string name="andr36oid_panel_overclock_preview_failed">Pratinjau tidak bisa dimulai</string>
+
+    <string name="andr36oid_panel_overclock_test">Tes kehalusan</string>
+    <string name="andr36oid_panel_overclock_test_summary">Blok yang bergerak dan laju frame yang benar-benar dicapai layar</string>
+</resources>
