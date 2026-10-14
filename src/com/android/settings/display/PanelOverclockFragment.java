@@ -390,30 +390,31 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
                 .show();
     }
 
-    /** a rate of their own: whole Hz and tenths, set with the d-pad */
+    /**
+     * a rate of their own, set with the d-pad one digit at a time (hundreds, tens, ones,
+     * tenths): 150 Hz is a few presses, not 120
+     */
     private void showCustom() {
         final Context c = getContext();
-        final NumberPicker whole = new NumberPicker(c);
-        whole.setMinValue(MIN / 10);
-        whole.setMaxValue(MAX / 10);
-        whole.setValue(mLastCustom / 10);
-        whole.setWrapSelectorWheel(false);
-        final NumberPicker tenth = new NumberPicker(c);
-        tenth.setMinValue(0);
-        tenth.setMaxValue(9);
-        tenth.setValue(mLastCustom % 10);
-        // the pickers move with up and down, not through a keyboard
-        whole.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
-        tenth.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+        final int start = mLastCustom;
+        final NumberPicker[] digits = {
+            digit(c, MAX / 1000, start / 1000),
+            digit(c, 9, start / 100 % 10),
+            digit(c, 9, start / 10 % 10),
+            digit(c, 9, start % 10),
+        };
 
         final LinearLayout row = new LinearLayout(c);
         row.setOrientation(LinearLayout.HORIZONTAL);
         row.setGravity(Gravity.CENTER);
-        row.addView(whole);
-        final TextView dot = new TextView(c);
-        dot.setText(String.valueOf(new DecimalFormatSymbols().getDecimalSeparator()));
-        row.addView(dot);
-        row.addView(tenth);
+        for (int i = 0; i < digits.length; i++) {
+            if (i == 3) {
+                final TextView dot = new TextView(c);
+                dot.setText(String.valueOf(new DecimalFormatSymbols().getDecimalSeparator()));
+                row.addView(dot);
+            }
+            row.addView(digits[i]);
+        }
         final TextView unit = new TextView(c);
         unit.setText(" Hz");
         row.addView(unit);
@@ -423,20 +424,39 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
                 .setMessage(R.string.andr36oid_panel_overclock_custom_message)
                 .setView(row)
                 .setPositiveButton(R.string.andr36oid_panel_overclock_custom_add, (d, w) -> {
-                    final int t = Math.min(MAX, whole.getValue() * 10 + tenth.getValue());
+                    final int t = customValue(digits);
                     mLastCustom = t;
                     final TreeSet<Integer> next = saved();
                     next.add(t);
                     saveChecked(next);
                 })
                 .setNeutralButton(R.string.andr36oid_panel_overclock_preview, (d, w) -> {
-                    final int t = Math.min(MAX, whole.getValue() * 10 + tenth.getValue());
+                    final int t = customValue(digits);
                     mLastCustom = t;
                     warnFirst(() -> preview(t));
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();
-        whole.requestFocus();
+        // start on the tens: that's the digit people change most
+        digits[1].requestFocus();
+    }
+
+    /** one digit 0..max that wraps around, moved with up and down, not a keyboard */
+    private static NumberPicker digit(Context c, int max, int value) {
+        final NumberPicker p = new NumberPicker(c);
+        p.setMinValue(0);
+        p.setMaxValue(max);
+        p.setValue(Math.max(0, Math.min(max, value)));
+        p.setWrapSelectorWheel(true);
+        p.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+        return p;
+    }
+
+    /** the digits as tenths of Hz, kept within the kernel's limits */
+    private static int customValue(NumberPicker[] digits) {
+        final int t = digits[0].getValue() * 1000 + digits[1].getValue() * 100
+                + digits[2].getValue() * 10 + digits[3].getValue();
+        return Math.max(MIN, Math.min(MAX, t));
     }
 
     /** save, unless that's more rates than the kernel takes */
