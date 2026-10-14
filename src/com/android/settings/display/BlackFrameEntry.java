@@ -18,13 +18,15 @@ package com.android.settings.display;
 
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.android.settings.R;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Settings > Display > Black frame insertion (the BlackFrameInsertion app) only shows while
@@ -37,6 +39,8 @@ final class BlackFrameEntry {
     private static final ComponentName ENTRY =
             new ComponentName(PACKAGE, PACKAGE + ".BfiActivity");
     private static final float MIN_HZ = 99.5f;
+    /** the display controller's black frames (kernel rockchip_drm_vop.c) */
+    private static final String BFI_PARAM = "/sys/module/rockchipdrm/parameters/bfi";
 
     private BlackFrameEntry() {}
 
@@ -69,7 +73,11 @@ final class BlackFrameEntry {
             Toast.makeText(context, R.string.andr36oid_bfi_unlocked, Toast.LENGTH_LONG).show();
         } else {
             // the black frames would only flicker now
-            context.stopService(new Intent().setClassName(PACKAGE, PACKAGE + ".BfiService"));
+            try (FileOutputStream out = new FileOutputStream(BFI_PARAM)) {
+                out.write('0');
+            } catch (IOException e) {
+                Log.w(TAG, "Can't turn black frame insertion off", e);
+            }
         }
     }
 }
