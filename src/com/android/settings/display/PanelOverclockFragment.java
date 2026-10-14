@@ -62,7 +62,9 @@ import java.util.function.Consumer;
  * Tweaks helper puts them on the kernel command line for the next start
  * (panel_simple.extra_rates), and the panel driver adds a mode per rate. They are then
  * picked in Peak refresh rate, whose 15 second trial brings back a rate that doesn't show.
- * Rates are kept in tenths of a Hz here.
+ * A rate can also be previewed for 5 seconds without a restart: the andr36oid-hz-preview
+ * root helper passes it to the kernel (preview_rate of the DSI host), and the kernel puts
+ * the old rate back by itself after 5 seconds. Rates are kept in tenths of a Hz here.
  */
 public class PanelOverclockFragment extends SettingsPreferenceFragment {
 
@@ -77,6 +79,14 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
     private static final String DONE_PROP = "sys.andr36oid.kt.done";
     private static final String FAILED_PROP = "sys.andr36oid.kt.failed";
     private static final String SERVICE = "andr36oid-ktweaks";
+    /** the 5 second preview: rate and request in, "<request> <answer>" out */
+    private static final String PREVIEW_RATE_PROP = "sys.andr36oid.hzp.rate";
+    private static final String PREVIEW_REQUEST_PROP = "sys.andr36oid.hzp.request";
+    private static final String PREVIEW_RESULT_PROP = "sys.andr36oid.hzp.result";
+    private static final String PREVIEW_SERVICE = "andr36oid-hz-preview";
+    /** the kernel's preview time, and how long the helper gets to answer */
+    private static final int PREVIEW_S = 5;
+    private static final long PREVIEW_WAIT_MS = 3000;
     /** Settings.Global, 1 once the damage warning was accepted */
     private static final String WARNED = "andr36oid_panel_overclock_warned";
 
@@ -99,6 +109,8 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
     private static final int WARN_DELAY_S = 3;
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
+    /** apart from mHandler, whose callbacks apply() clears */
+    private final Handler mPreviewHandler = new Handler(Looper.getMainLooper());
     private Preference mScreen;
     private PreferenceCategory mRates;
     private Preference mAdd;
@@ -128,11 +140,7 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
         mTest = findPreference("test");
 
         mAdd.setOnPreferenceClickListener(p -> {
-            if (Settings.Global.getInt(getContentResolver(), WARNED, 0) == 1) {
-                showAdd();
-            } else {
-                showWarning();
-            }
+            warnFirst(this::showAdd);
             return true;
         });
         mRestart.setOnPreferenceClickListener(p -> {
@@ -162,6 +170,7 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
     @Override
     public void onDestroy() {
         mHandler.removeCallbacksAndMessages(null);
+        mPreviewHandler.removeCallbacksAndMessages(null);
         super.onDestroy();
     }
 
@@ -269,7 +278,7 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
                 row.setSummary(R.string.andr36oid_panel_overclock_rate_left_out);
             }
             row.setOnPreferenceClickListener(p -> {
-                confirmRemove(t);
+                showRate(t);
                 return true;
             });
             mRates.addPreference(row);
@@ -314,8 +323,17 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
 
     // ----------------------------------------------------------------------------- dialogs
 
+    /** the damage warning unless it was accepted before, then next */
+    private void warnFirst(Runnable next) {
+        if (Settings.Global.getInt(getContentResolver(), WARNED, 0) == 1) {
+            next.run();
+        } else {
+            showWarning(next);
+        }
+    }
+
     /** the damage warning, once: accept only after ticking the box */
-    private void showWarning() {
+    private void showWarning(Runnable next) {
         final Context c = getContext();
         final CheckBox box = new CheckBox(c);
         box.setText(R.string.andr36oid_panel_overclock_warning_check);
@@ -329,7 +347,7 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
                 .setView(frame)
                 .setPositiveButton(R.string.andr36oid_panel_overclock_warning_accept, (d, w) -> {
                     Settings.Global.putInt(getContentResolver(), WARNED, 1);
-                    showAdd();
+                    next.run();
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .create();
@@ -411,6 +429,11 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
                     next.add(t);
                     saveChecked(next);
                 })
+                .setNeutralButton(R.string.andr36oid_panel_overclock_preview, (d, w) -> {
+                    final int t = Math.min(MAX, whole.getValue() * 10 + tenth.getValue());
+                    mLastCustom = t;
+                    warnFirst(() -> preview(t));
+                })
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();
         whole.requestFocus();
@@ -426,14 +449,136 @@ public class PanelOverclockFragment extends SettingsPreferenceFragment {
         save(rates);
     }
 
-    private void confirmRemove(int tenths) {
+    /** a saved rate: preview it or remove it */
+    private void showRate(int tenths) {
         new AlertDialog.Builder(getContext())
-                .setTitle(getString(R.string.andr36oid_panel_overclock_remove_one,
+                .setTitle(getString(R.string.andr36oid_panel_overclock_rate,
                         label(tenths / 10f)))
-                .setPositiveButton(R.string.andr36oid_panel_overclock_remove, (d, w) -> {
+                .setPositiveButton(R.string.andr36oid_panel_overclock_preview,
+                        (d, w) -> warnFirst(() -> preview(tenths)))
+                .setNeutralButton(R.string.andr36oid_panel_overclock_remove, (d, w) -> {
                     final TreeSet<Integer> next = saved();
                     next.remove(tenths);
                     save(next);
+                })
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+    }
+
+    // ----------------------------------------------------------------------------- preview
+
+    /** have the root helper pass a rate (or 0, back now) to the kernel; done(its answer) */
+    private void askPreview(String rate, Consumer<String> done) {
+        final String request = Long.toString(SystemClock.elapsedRealtime());
+        final long until = SystemClock.uptimeMillis() + PREVIEW_WAIT_MS;
+        SystemProperties.set(PREVIEW_RATE_PROP, rate);
+        SystemProperties.set(PREVIEW_REQUEST_PROP, request);
+        SystemProperties.set("ctl.start", PREVIEW_SERVICE);
+        mPreviewHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final String result = SystemProperties.get(PREVIEW_RESULT_PROP, "");
+                final boolean answered = result.startsWith(request + " ");
+                if (answered || SystemClock.uptimeMillis() > until) {
+                    if (getActivity() != null) {
+                        done.accept(answered ? result.substring(request.length() + 1)
+                                : "failed");
+                    }
+                    return;
+                }
+                mPreviewHandler.postDelayed(this, POLL_MS);
+            }
+        }, POLL_MS);
+    }
+
+    /** show a rate for 5 seconds; the kernel puts the old one back by itself */
+    private void preview(int tenths) {
+        final String name = label(tenths / 10f);
+        askPreview(value(tenths), answer -> {
+            final int error;
+            switch (answer) {
+                case "ok":
+                    showCountdown(tenths);
+                    return;
+                case "busy":
+                    error = R.string.andr36oid_panel_overclock_preview_busy;
+                    break;
+                case "range":
+                    error = R.string.andr36oid_panel_overclock_preview_range;
+                    break;
+                case "off":
+                    error = R.string.andr36oid_panel_overclock_preview_off;
+                    break;
+                case "missing":
+                    error = R.string.andr36oid_panel_overclock_preview_missing;
+                    break;
+                default:
+                    error = R.string.andr36oid_panel_overclock_preview_failed;
+                    break;
+            }
+            Toast.makeText(getContext(), getString(error, name), Toast.LENGTH_LONG).show();
+        });
+    }
+
+    /** "Previewing 78 Hz, back in 5 s", counting down; then the question */
+    private void showCountdown(int tenths) {
+        final String name = label(tenths / 10f);
+        final long end = SystemClock.uptimeMillis() + PREVIEW_S * 1000L;
+        final AlertDialog dialog = new AlertDialog.Builder(getContext())
+                .setMessage(getString(R.string.andr36oid_panel_overclock_previewing, name,
+                        PREVIEW_S))
+                .setCancelable(false)
+                .setNegativeButton(R.string.andr36oid_panel_overclock_preview_end, null)
+                .create();
+        final Runnable tick = new Runnable() {
+            @Override
+            public void run() {
+                if (getActivity() == null) return;
+                final long left = end - SystemClock.uptimeMillis();
+                if (left <= 0) {
+                    dialog.dismiss();
+                    askLookedRight(tenths);
+                    return;
+                }
+                dialog.setMessage(getString(R.string.andr36oid_panel_overclock_previewing, name,
+                        (int) ((left + 999) / 1000)));
+                mPreviewHandler.postDelayed(this, Math.min(left, (left - 1) % 1000 + 1));
+            }
+        };
+        dialog.show();
+        // back now: the kernel ends the preview at once, the dialog stays until it answered
+        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setOnClickListener(v -> {
+            v.setEnabled(false);
+            mPreviewHandler.removeCallbacks(tick);
+            askPreview("0", answer -> {
+                dialog.dismiss();
+                askLookedRight(tenths);
+            });
+        });
+        mPreviewHandler.postDelayed(tick, 1000);
+    }
+
+    /** purely for them: yes offers to add the rate when it isn't saved yet */
+    private void askLookedRight(int tenths) {
+        final boolean saved = saved().contains(tenths);
+        new AlertDialog.Builder(getContext())
+                .setTitle(R.string.andr36oid_panel_overclock_preview_question)
+                .setPositiveButton(R.string.andr36oid_panel_overclock_preview_yes, (d, w) -> {
+                    if (!saved) offerAdd(tenths);
+                })
+                .setNegativeButton(R.string.andr36oid_panel_overclock_preview_no, null)
+                .show();
+    }
+
+    private void offerAdd(int tenths) {
+        new AlertDialog.Builder(getContext())
+                .setTitle(getString(R.string.andr36oid_panel_overclock_preview_offer,
+                        label(tenths / 10f)))
+                .setMessage(R.string.andr36oid_panel_overclock_preview_offer_message)
+                .setPositiveButton(R.string.andr36oid_panel_overclock_custom_add, (d, w) -> {
+                    final TreeSet<Integer> next = saved();
+                    next.add(tenths);
+                    saveChecked(next);
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();

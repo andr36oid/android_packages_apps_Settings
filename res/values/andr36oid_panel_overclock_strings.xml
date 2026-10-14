@@ -3,7 +3,7 @@
 <resources>
     <string name="andr36oid_panel_overclock_title">Panel overclocking</string>
     <string name="andr36oid_panel_overclock_summary">Try refresh rates your screen wasn\'t set up for</string>
-    <string name="andr36oid_panel_overclock_intro">Add rates to try and restart. Then pick one in Peak refresh rate. If the screen goes dark or garbled, wait 15 seconds and the old rate comes back. A rate that shows a picture can still skip frames, check it with the smoothness test.</string>
+    <string name="andr36oid_panel_overclock_intro">Add rates to try and restart. Then pick one in Peak refresh rate. If the screen goes dark or garbled, wait 15 seconds and the old rate comes back. A rate that shows a picture can still skip frames, check it with the smoothness test. To see a rate first, preview it for 5 seconds, no restart needed.</string>
     <!-- Always on the page, also at the end of the restart question -->
     <string name="andr36oid_panel_overclock_warning_line">Running the screen at rates it wasn\'t made for can damage it permanently. You do this at your own risk.</string>
 
@@ -16,11 +16,9 @@
     <string name="andr36oid_panel_overclock_rates_none">None yet</string>
     <!-- %1$s: a rate, like 77.5 -->
     <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
-    <string name="andr36oid_panel_overclock_rate_offered">Offered now. Select to remove it.</string>
-    <string name="andr36oid_panel_overclock_rate_pending">Added at the next restart. Select to remove it.</string>
-    <string name="andr36oid_panel_overclock_rate_left_out">Not offered: the screen link can\'t carry it, or the screen has a rate this close already. Select to remove it.</string>
-    <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_remove_one">Remove %1$s Hz?</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Offered now. Select to preview or remove it.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Added at the next restart. Select to preview or remove it.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Not offered: the screen link can\'t carry it, or the screen has a rate this close already. Select to preview or remove it.</string>
     <string name="andr36oid_panel_overclock_remove">Remove</string>
 
     <string name="andr36oid_panel_overclock_add">Add rates</string>
@@ -48,6 +46,24 @@
 
     <string name="andr36oid_panel_overclock_remove_all">Remove extra rates</string>
     <string name="andr36oid_panel_overclock_remove_all_summary">The screen gets only its own rates again after a restart</string>
+
+    <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
+    <string name="andr36oid_panel_overclock_preview">Preview for 5 seconds</string>
+    <!-- %1$s: a rate, like 77.5; %2$d: seconds left, 5 to 1 -->
+    <string name="andr36oid_panel_overclock_previewing">Previewing %1$s Hz, back in %2$d s</string>
+    <string name="andr36oid_panel_overclock_preview_end">Back now</string>
+    <string name="andr36oid_panel_overclock_preview_question">Did the picture look right?</string>
+    <string name="andr36oid_panel_overclock_preview_yes">Yes</string>
+    <string name="andr36oid_panel_overclock_preview_no">No</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_offer">Add %1$s Hz to your rates?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">It\'s offered after a restart. A rate that looked right can still skip frames, check it with the smoothness test.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">A preview just ended. Try again in a moment.</string>
+    <!-- %1$s: a rate, like 77.5 -->
+    <string name="andr36oid_panel_overclock_preview_range">The screen link can\'t carry %1$s Hz</string>
+    <string name="andr36oid_panel_overclock_preview_off">The screen has to be on for a preview</string>
+    <string name="andr36oid_panel_overclock_preview_missing">This system can\'t preview rates yet</string>
+    <string name="andr36oid_panel_overclock_preview_failed">The preview didn\'t start</string>
 
     <string name="andr36oid_panel_overclock_test">Smoothness test</string>
     <string name="andr36oid_panel_overclock_test_summary">A moving block and the frame rate the screen really reaches</string>
