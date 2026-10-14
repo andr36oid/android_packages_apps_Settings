@@ -501,6 +501,13 @@ public class AppButtonsPreferenceController extends BasePreferenceController imp
             }
         }
 
+        // andr36oid: parental controls live in Play time, turned off with their PIN
+        if ("org.andr36oid.playtime".equals(mPackageInfo.packageName)
+                && android.provider.Settings.Global.getInt(mActivity.getContentResolver(),
+                        "andr36oid_parental_controls", 0) != 0) {
+            enabled = false;
+        }
+
         mButtonsPref.setButton2Enabled(enabled);
     }
 
