@@ -41,11 +41,17 @@ public final class ParentalGate {
         }
     }
 
-    /** From onActivityResult: true if it was the PIN's; without the PIN Settings closes. */
-    public static boolean onResult(Activity activity, int requestCode, int resultCode) {
+    /**
+     * From onActivityResult: true if it was the PIN's. Backing out of the PIN closes Settings;
+     * if the PIN page was only cleared away (Settings opened again from the quick settings),
+     * onResume asks again.
+     */
+    public static boolean onResult(Activity activity, int requestCode, int resultCode,
+            Intent data) {
         if (requestCode != REQUEST_PIN) return false;
         sAsking = false;
-        if (resultCode != Activity.RESULT_OK) {
+        if (resultCode != Activity.RESULT_OK && data != null
+                && data.getBooleanExtra("cancelled_by_user", false)) {
             activity.finishAffinity();
         }
         return true;

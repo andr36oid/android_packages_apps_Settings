@@ -214,8 +214,8 @@ public class SettingsHomepageActivity extends FragmentActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!com.android.settings.andr36oid.ParentalGate.onResult(this, requestCode,
-                resultCode)) {
+        if (!com.android.settings.andr36oid.ParentalGate.onResult(this, requestCode, resultCode,
+                data)) {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }

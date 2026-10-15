@@ -355,8 +355,8 @@ public class SettingsActivity extends SettingsBaseActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (com.android.settings.andr36oid.ParentalGate.onResult(this, requestCode,
-                resultCode)) {
+        if (com.android.settings.andr36oid.ParentalGate.onResult(this, requestCode, resultCode,
+                data)) {
             return;
         }
         final List<Fragment> fragments = getSupportFragmentManager().getFragments();
