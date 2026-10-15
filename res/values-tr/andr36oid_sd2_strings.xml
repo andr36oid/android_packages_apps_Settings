@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
+    <string name="andr36oid_sd2_mount_title">İkinci SD kart</string>
+    <!-- Settings > Storage: what the second SD card switch does -->
+    <string name="andr36oid_sd2_mount_summary">İkinci yuvadaki kartı kullan. Kapalıyken kart bağlanmaz, yeniden başlatmadan sonra da böyle kalır.</string>
+</resources>

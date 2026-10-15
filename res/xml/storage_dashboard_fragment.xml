@@ -70,6 +70,15 @@
         android:title="@string/storage_detail_system"
         android:icon="@drawable/ic_system_update"
         android:order="100" />
+    <!-- andr36oid: whether a card in the second SD slot is mounted -->
+    <SwitchPreference
+        android:key="andr36oid_sd2_mount"
+        android:title="@string/andr36oid_sd2_mount_title"
+        android:summary="@string/andr36oid_sd2_mount_summary"
+        android:icon="@drawable/ic_sd_card"
+        android:order="150"
+        settings:allowDividerAbove="true"
+        settings:controller="com.android.settings.deviceinfo.storage.SecondSdCardPreferenceController" />
     <PreferenceCategory
         android:key="pref_secondary_users"
         android:title="@string/storage_other_users"
