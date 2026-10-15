@@ -21,10 +21,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.Looper;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Button;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.android.settings.R;
 
@@ -35,6 +39,11 @@ import com.android.settings.R;
  * left, the old rate comes back when the time is up.
  * The old rate is written to storage first, so a restart during the trial also goes back
  * (RefreshRateTrialReceiver).
+ *
+ * A rate the screen can't show stalls the display: nothing gets drawn, and this page's UI
+ * thread then waits for frames that never finish. So the time-out runs on a thread of its
+ * own, and the old rate is also in persist.andr36oid.refresh_trial_old, which the display
+ * service reads at start before it picks any mode (DisplayModeDirector).
  */
 final class RefreshRateTrial {
 
@@ -42,6 +51,8 @@ final class RefreshRateTrial {
     private static final String PREFS = "andr36oid_refresh_rate_trial";
     private static final String KEY_OLD_RATE = "old_rate";
     private static final int TIMEOUT_S = 15;
+    private static final String PROP_OLD_RATE = "persist.andr36oid.refresh_trial_old";
+    private static Handler sTimeoutHandler;
 
     interface Listener {
         /** The trial ended, the rate is now whatever was kept or restored. */
@@ -53,30 +64,42 @@ final class RefreshRateTrial {
     static void start(Context context, float oldRate, float newRate, String oldName,
             Listener listener) {
         prefs(context).edit().putFloat(KEY_OLD_RATE, oldRate).commit();
+        SystemProperties.set(PROP_OLD_RATE, Float.toString(oldRate));
+        final Context app = context.getApplicationContext();
         setRate(context, newRate);
 
         final Handler handler = new Handler(Looper.getMainLooper());
-        final boolean[] kept = {false};
-        final boolean[] done = {false};
+        final AtomicBoolean kept = new AtomicBoolean();
+        final AtomicBoolean done = new AtomicBoolean();
         final int[] left = {TIMEOUT_S};
         final AlertDialog dialog = new AlertDialog.Builder(context)
                 .setTitle(R.string.andr36oid_refresh_trial_title)
                 .setMessage(message(context, oldName, left[0]))
                 .setPositiveButton(R.string.andr36oid_refresh_trial_keep,
-                        (d, which) -> kept[0] = true)
+                        (d, which) -> kept.set(true))
                 .setNegativeButton(R.string.andr36oid_refresh_trial_revert, null)
                 .create();
+        // From the UI thread or the time-out thread, whichever is first
         final Runnable finish = () -> {
-            if (done[0]) {
+            if (done.getAndSet(true)) {
                 return;
             }
-            done[0] = true;
-            if (!kept[0]) {
-                setRate(context, oldRate);
+            if (!kept.get()) {
+                setRate(app, oldRate);
             }
-            clear(context);
-            BlackFrameEntry.sync(context);
-            listener.onTrialDone();
+            clear(app);
+            BlackFrameEntry.sync(app);
+            handler.post(listener::onTrialDone);
+        };
+        final Runnable timeout = () -> {
+            finish.run();
+            handler.post(() -> {
+                try {
+                    dialog.dismiss();
+                } catch (RuntimeException e) {
+                    Log.w(TAG, "Dialog already gone", e);
+                }
+            });
         };
         final Runnable tick = new Runnable() {
             @Override
@@ -97,6 +120,7 @@ final class RefreshRateTrial {
         };
         dialog.setOnDismissListener((DialogInterface d) -> {
             handler.removeCallbacks(tick);
+            timeoutHandler().removeCallbacks(timeout);
             finish.run();
         });
         dialog.show();
@@ -106,6 +130,16 @@ final class RefreshRateTrial {
             revert.requestFocus();
         }
         handler.postDelayed(tick, 1000);
+        timeoutHandler().postDelayed(timeout, TIMEOUT_S * 1000L);
+    }
+
+    private static synchronized Handler timeoutHandler() {
+        if (sTimeoutHandler == null) {
+            final HandlerThread thread = new HandlerThread("RefreshRateTrial");
+            thread.start();
+            sTimeoutHandler = new Handler(thread.getLooper());
+        }
+        return sTimeoutHandler;
     }
 
     /** Puts the old rate back if a trial was still running when the console restarted. */
@@ -132,6 +166,7 @@ final class RefreshRateTrial {
     }
 
     private static void clear(Context context) {
+        SystemProperties.set(PROP_OLD_RATE, "");
         prefs(context).edit().remove(KEY_OLD_RATE).commit();
     }
 
