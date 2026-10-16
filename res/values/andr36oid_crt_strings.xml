@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: Settings > Display > CRT effect, dark lines like an old TV drawn by the display hardware -->
+<resources>
+    <string name="andr36oid_crt_title">CRT effect</string>
+    <string name="andr36oid_crt_summary">Dark lines like an old TV, without slowing games down</string>
+    <string name="andr36oid_crt_intro">The lines are drawn by the screen hardware, not the graphics chip, so games run as fast as before. They cover everything on screen, menus too. Curved glass and glow aren\'t possible this way.</string>
+
+    <string name="andr36oid_crt_enable">Use CRT effect</string>
+
+    <string name="andr36oid_crt_style">Style</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Scanlines</item>
+        <item>Scanlines and aperture grille</item>
+        <item>Slot mask</item>
+        <item>Aperture grille only</item>
+    </string-array>
+    <!-- persist.andr36oid.crt.style, read by the hardware composer -->
+    <string-array name="andr36oid_crt_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="andr36oid_crt_strength">Strength</string>
+
+    <string name="andr36oid_crt_pitch">Line spacing</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Auto, for 240-line games</item>
+        <item>Every 2nd row</item>
+        <item>Every 3rd row</item>
+        <item>Every 4th row</item>
+    </string-array>
+    <!-- persist.andr36oid.crt.pitch: screen rows per line, 0 = auto -->
+    <string-array name="andr36oid_crt_pitch_values" translatable="false">
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="andr36oid_crt_phase">Move lines down one row</string>
+    <string name="andr36oid_crt_phase_summary">Try this if the lines cut through the game\'s pixels unevenly</string>
+
+    <string name="andr36oid_crt_layers_note">The effect takes one of the screen\'s three hardware layers. Games need one or two, so they aren\'t affected. Screens with many layers at once, like a menu over a video, can take a little more work from the graphics chip.</string>
+</resources>
