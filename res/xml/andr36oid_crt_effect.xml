@@ -16,12 +16,19 @@
   -->
 
 <!-- Display > CRT effect, run by CrtEffectFragment. Nothing is saved here: every row writes
-     a persist.andr36oid.crt.* property that the hardware composer reads each frame. The
-     strength slider moves with left and right on the d-pad, and the page shows the change
-     at once. The text rows are selectable (a press does nothing) so the d-pad can scroll. -->
+     a persist.andr36oid.crt.* property. The hardware composer reads the line settings each
+     frame, SurfaceFlinger the GPU ones. Sliders move with left and right on the d-pad and
+     the screen changes at once. The text rows are selectable (a press does nothing) so the
+     d-pad can scroll the page. -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/andr36oid_crt_title">
+
+    <Preference
+        android:key="warning"
+        android:icon="@drawable/ic_warning_24dp"
+        android:title="@string/andr36oid_crt_warning_title"
+        android:summary="@string/andr36oid_crt_warning" />
 
     <Preference
         android:key="intro"
@@ -32,36 +39,76 @@
         android:persistent="false"
         android:title="@string/andr36oid_crt_enable" />
 
-    <ListPreference
-        android:key="style"
-        android:persistent="false"
-        android:title="@string/andr36oid_crt_style"
-        android:summary="%s"
-        android:entries="@array/andr36oid_crt_style_entries"
-        android:entryValues="@array/andr36oid_crt_style_values" />
+    <PreferenceCategory
+        android:key="lines_category"
+        android:title="@string/andr36oid_crt_lines_category">
 
-    <com.android.settings.widget.SeekBarPreference
-        android:key="strength"
-        android:persistent="false"
-        android:title="@string/andr36oid_crt_strength"
-        android:min="10"
-        android:max="100" />
+        <SwitchPreference
+            android:key="lines"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_lines"
+            android:summary="@string/andr36oid_crt_lines_summary" />
 
-    <ListPreference
-        android:key="pitch"
-        android:persistent="false"
-        android:title="@string/andr36oid_crt_pitch"
-        android:summary="%s"
-        android:entries="@array/andr36oid_crt_pitch_entries"
-        android:entryValues="@array/andr36oid_crt_pitch_values" />
+        <ListPreference
+            android:key="style"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_style"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crt_style_entries"
+            android:entryValues="@array/andr36oid_crt_style_values" />
 
-    <SwitchPreference
-        android:key="phase"
-        android:persistent="false"
-        android:title="@string/andr36oid_crt_phase"
-        android:summary="@string/andr36oid_crt_phase_summary" />
+        <SeekBarPreference
+            android:key="strength"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_strength"
+            android:max="100" />
 
-    <Preference
-        android:key="layers_note"
-        android:summary="@string/andr36oid_crt_layers_note" />
+        <ListPreference
+            android:key="pitch"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_pitch"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crt_pitch_entries"
+            android:entryValues="@array/andr36oid_crt_pitch_values" />
+
+        <SwitchPreference
+            android:key="phase"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_phase"
+            android:summary="@string/andr36oid_crt_phase_summary" />
+
+        <Preference
+            android:key="layers_note"
+            android:summary="@string/andr36oid_crt_layers_note" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gpu_category"
+        android:title="@string/andr36oid_crt_gpu_category">
+
+        <Preference
+            android:key="gpu_note"
+            android:summary="@string/andr36oid_crt_gpu_note" />
+
+        <SeekBarPreference
+            android:key="curvature"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_curvature"
+            android:summary="@string/andr36oid_crt_gpu_slow"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="glow"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_glow"
+            android:summary="@string/andr36oid_crt_gpu_slow"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="gpu_mask"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_gpu_mask"
+            android:summary="@string/andr36oid_crt_gpu_mask_summary"
+            android:max="100" />
+    </PreferenceCategory>
 </PreferenceScreen>

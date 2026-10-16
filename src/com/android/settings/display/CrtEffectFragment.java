@@ -23,18 +23,24 @@ import android.util.Log;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.SeekBarPreference;
 import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.widget.SeekBarPreference;
 
 /**
- * Settings > Display > CRT effect. The hardware composer puts a still picture of dark lines
- * on the display controller's top window and the controller blends it in while it sends
- * the picture to the screen, so the graphics chip does no extra work. This page only
- * writes the persist.andr36oid.crt.* properties; the composer reads them every frame, so
- * a change shows as soon as the page redraws (see hardware/rockchip crt_mask.cpp).
+ * Settings > Display > CRT effect (experimental). Two parts, both switched by "Use CRT effect":
+ * <ul>
+ * <li>Scanlines and mask: the hardware composer puts a still picture of dark lines on the
+ * display controller's top window and the controller blends it in while it sends the
+ * picture to the screen; no graphics chip work (hardware/rockchip crt_mask.cpp).</li>
+ * <li>Curvature, glow and phosphor mask: SurfaceFlinger draws every frame on the graphics
+ * chip and runs one extra pass over it (frameworks/native CrtFilter). Costly, so each is
+ * marked as slowing games down.</li>
+ * </ul>
+ * This page only writes persist.andr36oid.crt.*; both readers pick changes up on the next
+ * frame, so the page itself shows them.
  */
 public class CrtEffectFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -42,19 +48,30 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     private static final String TAG = "CrtEffect";
 
     private static final String PROP_ENABLE = "persist.andr36oid.crt.enable";
+    private static final String PROP_LINES = "persist.andr36oid.crt.lines";
     private static final String PROP_STYLE = "persist.andr36oid.crt.style";
     private static final String PROP_STRENGTH = "persist.andr36oid.crt.strength";
     private static final String PROP_PITCH = "persist.andr36oid.crt.pitch";
     private static final String PROP_PHASE = "persist.andr36oid.crt.phase";
+    private static final String PROP_CURVATURE = "persist.andr36oid.crt.curvature";
+    private static final String PROP_GLOW = "persist.andr36oid.crt.glow";
+    private static final String PROP_GPU_MASK = "persist.andr36oid.crt.gpu_mask";
 
-    /** the composer's defaults, keep in step with crt_mask.cpp */
+    /** the readers' defaults, keep in step with crt_mask.cpp and SurfaceFlinger.cpp */
     private static final int DEFAULT_STRENGTH = 50;
+    private static final int MIN_STRENGTH = 10;
+    /** d-pad step on every slider */
+    private static final int STEP = 5;
 
     private SwitchPreference mEnable;
+    private SwitchPreference mLines;
     private ListPreference mStyle;
     private SeekBarPreference mStrength;
     private ListPreference mPitch;
     private SwitchPreference mPhase;
+    private SeekBarPreference mCurvature;
+    private SeekBarPreference mGlow;
+    private SeekBarPreference mGpuMask;
 
     @Override
     public int getMetricsCategory() {
@@ -70,49 +87,74 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mEnable = findPreference("enable");
+        mLines = findPreference("lines");
         mStyle = findPreference("style");
         mStrength = findPreference("strength");
         mPitch = findPreference("pitch");
         mPhase = findPreference("phase");
+        mCurvature = findPreference("curvature");
+        mGlow = findPreference("glow");
+        mGpuMask = findPreference("gpu_mask");
 
-        mEnable.setOnPreferenceChangeListener(this);
-        mStyle.setOnPreferenceChangeListener(this);
-        mStrength.setOnPreferenceChangeListener(this);
-        mPitch.setOnPreferenceChangeListener(this);
-        mPhase.setOnPreferenceChangeListener(this);
-        // left and right on the d-pad move the bar, and every step shows on screen at once
-        mStrength.setContinuousUpdates(true);
+        setUpSlider(mStrength, MIN_STRENGTH);
+        setUpSlider(mCurvature, 0);
+        setUpSlider(mGlow, 0);
+        setUpSlider(mGpuMask, 0);
+        for (Preference p : new Preference[] {mEnable, mLines, mStyle, mPitch, mPhase}) {
+            p.setOnPreferenceChangeListener(this);
+        }
+    }
+
+    /** Left and right on the d-pad move the bar, and every step shows on screen at once. */
+    private void setUpSlider(SeekBarPreference slider, int min) {
+        slider.setMin(min);
+        slider.setMax(100);
+        slider.setSeekBarIncrement(STEP);
+        slider.setAdjustable(true);
+        slider.setShowSeekBarValue(true);
+        slider.setUpdatesContinuously(true);
+        slider.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        final boolean on = SystemProperties.getInt(PROP_ENABLE, 0) == 1;
-        mEnable.setChecked(on);
+        mEnable.setChecked(SystemProperties.getInt(PROP_ENABLE, 0) == 1);
+        mLines.setChecked(SystemProperties.getInt(PROP_LINES, 1) == 1);
         mStyle.setValue(String.valueOf(SystemProperties.getInt(PROP_STYLE, 0)));
-        mStrength.setProgress(SystemProperties.getInt(PROP_STRENGTH, DEFAULT_STRENGTH));
+        mStrength.setValue(SystemProperties.getInt(PROP_STRENGTH, DEFAULT_STRENGTH));
         mPitch.setValue(String.valueOf(SystemProperties.getInt(PROP_PITCH, 0)));
         mPhase.setChecked(SystemProperties.getInt(PROP_PHASE, 0) != 0);
-        updateEnabled(on);
+        mCurvature.setValue(SystemProperties.getInt(PROP_CURVATURE, 0));
+        mGlow.setValue(SystemProperties.getInt(PROP_GLOW, 0));
+        mGpuMask.setValue(SystemProperties.getInt(PROP_GPU_MASK, 0));
+        updateEnabled(mEnable.isChecked(), mLines.isChecked());
     }
 
-    private void updateEnabled(boolean on) {
-        mStyle.setEnabled(on);
-        mStrength.setEnabled(on);
-        mPitch.setEnabled(on);
-        mPhase.setEnabled(on);
+    private void updateEnabled(boolean on, boolean lines) {
+        mLines.setEnabled(on);
+        mStyle.setEnabled(on && lines);
+        mStrength.setEnabled(on && lines);
+        mPitch.setEnabled(on && lines);
+        mPhase.setEnabled(on && lines);
+        mCurvature.setEnabled(on);
+        mGlow.setEnabled(on);
+        mGpuMask.setEnabled(on);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        final String key = preference.getKey();
         if (preference == mEnable) {
             final boolean on = (Boolean) newValue;
             if (on && SystemProperties.get(PROP_STRENGTH, "").isEmpty()) {
                 set(PROP_STRENGTH, String.valueOf(DEFAULT_STRENGTH));
             }
-            updateEnabled(on);
+            updateEnabled(on, mLines.isChecked());
             return set(PROP_ENABLE, on ? "1" : "0");
+        } else if (preference == mLines) {
+            final boolean lines = (Boolean) newValue;
+            updateEnabled(mEnable.isChecked(), lines);
+            return set(PROP_LINES, lines ? "1" : "0");
         } else if (preference == mStyle) {
             return set(PROP_STYLE, (String) newValue);
         } else if (preference == mStrength) {
@@ -121,8 +163,14 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
             return set(PROP_PITCH, (String) newValue);
         } else if (preference == mPhase) {
             return set(PROP_PHASE, (Boolean) newValue ? "1" : "0");
+        } else if (preference == mCurvature) {
+            return set(PROP_CURVATURE, String.valueOf((Integer) newValue));
+        } else if (preference == mGlow) {
+            return set(PROP_GLOW, String.valueOf((Integer) newValue));
+        } else if (preference == mGpuMask) {
+            return set(PROP_GPU_MASK, String.valueOf((Integer) newValue));
         }
-        Log.w(TAG, "Unknown row " + key);
+        Log.w(TAG, "Unknown row " + preference.getKey());
         return false;
     }
 
