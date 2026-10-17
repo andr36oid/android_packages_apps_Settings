@@ -3,5 +3,7 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">İkinci SD kart</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">İkinci yuvadaki kartı kullan. Kapalıyken kart bağlanmaz, yeniden başlatmadan sonra da böyle kalır.</string>
+    <string name="andr36oid_sd2_mount_summary">İkinci yuvadaki kartı kullan. Kapalıyken kart hemen çıkarılır ve yuva bir sonraki açılıştan itibaren kapanır, sistem orada hiç kart görmez.</string>
+    <string name="andr36oid_sd2_restart_off">Yuvayı tamamen kapatmak için yeniden başlat. O zamana kadar kart bağlanmamış kalır.</string>
+    <string name="andr36oid_sd2_restart_on">Yuvayı yeniden kullanmak için yeniden başlat.</string>
 </resources>

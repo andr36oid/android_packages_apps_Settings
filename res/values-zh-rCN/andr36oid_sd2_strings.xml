@@ -3,5 +3,7 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">第二张 SD 卡</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">使用第二个插槽中的存储卡。关闭后将不再挂载此卡，重启后也不会挂载。</string>
+    <string name="andr36oid_sd2_mount_summary">使用第二个插槽中的存储卡。关闭后会立即卸载此卡，并从下次启动起关闭该插槽，系统将完全看不到其中的卡。</string>
+    <string name="andr36oid_sd2_restart_off">重启后插槽才会完全关闭。在此之前，此卡保持卸载。</string>
+    <string name="andr36oid_sd2_restart_on">重启后即可重新使用该插槽。</string>
 </resources>

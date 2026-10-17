@@ -3,5 +3,9 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">Second SD card</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">Use the card in the second slot. Off leaves it unmounted, also after a restart.</string>
+    <string name="andr36oid_sd2_mount_summary">Use the card in the second slot. Off unmounts it now and switches the slot off from the next start, so the system doesn\'t see a card there at all.</string>
+    <!-- Settings > Storage > Second SD card: switched off, the restart that removes the slot is still to come -->
+    <string name="andr36oid_sd2_restart_off">Restart to switch the slot off completely. Until then the card stays unmounted.</string>
+    <!-- Settings > Storage > Second SD card: switched on again, but this start runs without the slot -->
+    <string name="andr36oid_sd2_restart_on">Restart to use the slot again.</string>
 </resources>

@@ -3,5 +3,7 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">Druga karta SD</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">Używa karty w drugim gnieździe. Gdy wyłączone, karta nie jest montowana, także po restarcie.</string>
+    <string name="andr36oid_sd2_mount_summary">Używa karty w drugim gnieździe. Wyłączone odmontowuje ją od razu i wyłącza gniazdo od następnego uruchomienia, więc system w ogóle nie widzi tam karty.</string>
+    <string name="andr36oid_sd2_restart_off">Uruchom ponownie, aby całkiem wyłączyć gniazdo. Do tego czasu karta pozostaje odmontowana.</string>
+    <string name="andr36oid_sd2_restart_on">Uruchom ponownie, aby znów używać gniazda.</string>
 </resources>

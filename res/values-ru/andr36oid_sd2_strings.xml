@@ -3,5 +3,7 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">Вторая SD-карта</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">Использовать карту во втором слоте. Если выключено, карта остаётся неподключённой, в том числе после перезапуска.</string>
+    <string name="andr36oid_sd2_mount_summary">Использовать карту во втором слоте. Если выключить, карта сразу отключается, а со следующего запуска слот выключается совсем и система не видит в нём карту.</string>
+    <string name="andr36oid_sd2_restart_off">Перезапустите, чтобы выключить слот полностью. До этого карта остаётся неподключённой.</string>
+    <string name="andr36oid_sd2_restart_on">Перезапустите, чтобы снова пользоваться слотом.</string>
 </resources>
