@@ -3,13 +3,13 @@
     <!-- Dialog after picking a new peak refresh rate; it goes back unless kept -->
     <string name="andr36oid_refresh_trial_title">Оставить эту частоту обновления?</string>
     <string name="andr36oid_refresh_trial_keep">Оставить</string>
-    <string name="andr36oid_refresh_trial_revert">Вернуть</string>
+    <string name="andr36oid_refresh_trial_revert">Вернуть прежнюю</string>
     <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
     <plurals name="andr36oid_refresh_trial_message">
-        <item quantity="one">Возврат к %1$s через %2$d секунду. Оставьте, только если экран выглядит нормально.</item>
-        <item quantity="few">Возврат к %1$s через %2$d секунды. Оставьте, только если экран выглядит нормально.</item>
-        <item quantity="many">Возврат к %1$s через %2$d секунд. Оставьте, только если экран выглядит нормально.</item>
-        <item quantity="other">Возврат к %1$s через %2$d секунды. Оставьте, только если экран выглядит нормально.</item>
+        <item quantity="one">Возврат к %1$s через %2$d секунду. Оставляйте, только если с картинкой всё в порядке.</item>
+        <item quantity="few">Возврат к %1$s через %2$d секунды. Оставляйте, только если с картинкой всё в порядке.</item>
+        <item quantity="many">Возврат к %1$s через %2$d секунд. Оставляйте, только если с картинкой всё в порядке.</item>
+        <item quantity="other">Возврат к %1$s через %2$d секунды. Оставляйте, только если с картинкой всё в порядке.</item>
     </plurals>
     <string name="andr36oid_bfi_unlocked">Меню «Вставка чёрного кадра» доступно в настройках экрана</string>
 </resources>

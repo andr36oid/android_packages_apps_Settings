@@ -6,9 +6,9 @@
     <string name="andr36oid_refresh_trial_revert">Voltar</string>
     <!-- %1$s: the rate before, like 60Hz; %2$d: seconds left -->
     <plurals name="andr36oid_refresh_trial_message">
-        <item quantity="one">Volta a %1$s em %2$d segundo. Mantenha só se o ecrã estiver bem.</item>
-        <item quantity="many">Volta a %1$s em %2$d segundos. Mantenha só se o ecrã estiver bem.</item>
-        <item quantity="other">Volta a %1$s em %2$d segundos. Mantenha só se o ecrã estiver bem.</item>
+        <item quantity="one">Volta a %1$s dentro de %2$d segundo. Mantenha só se o ecrã estiver bem.</item>
+        <item quantity="many">Volta a %1$s dentro de %2$d segundos. Mantenha só se o ecrã estiver bem.</item>
+        <item quantity="other">Volta a %1$s dentro de %2$d segundos. Mantenha só se o ecrã estiver bem.</item>
     </plurals>
     <string name="andr36oid_bfi_unlocked">Menu «Inserção de fotograma preto» desbloqueado nas definições de Ecrã</string>
 </resources>

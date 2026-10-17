@@ -5,7 +5,7 @@
     <string name="andr36oid_panel_overclock_summary">Wypróbuj częstotliwości odświeżania, do których ekran nie został przygotowany</string>
     <string name="andr36oid_panel_overclock_intro">Dodaj częstotliwości do wypróbowania i uruchom ponownie. Potem wybierz jedną w „Najwyższa częstotliwość odświeżania”. Jeśli ekran zgaśnie albo się rozsypie, poczekaj 15 sekund, a wróci stara częstotliwość. Częstotliwość, która pokazuje obraz, może mimo to gubić klatki, sprawdź ją testem płynności. Żeby najpierw ją zobaczyć, podejrzyj ją przez 5 sekund bez restartu.</string>
     <!-- Always on the page, also at the end of the restart question -->
-    <string name="andr36oid_panel_overclock_warning_line">Uruchamianie ekranu z częstotliwościami, do których nie został zrobiony, może go trwale uszkodzić. Robisz to na własne ryzyko.</string>
+    <string name="andr36oid_panel_overclock_warning_line">Uruchamianie ekranu z częstotliwościami, do których nie został zaprojektowany, może go trwale uszkodzić. Robisz to na własne ryzyko.</string>
 
     <string name="andr36oid_panel_overclock_screen_title">Ten ekran</string>
     <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
@@ -18,7 +18,7 @@
     <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
     <string name="andr36oid_panel_overclock_rate_offered">Teraz oferowana. Wybierz, żeby podejrzeć albo usunąć.</string>
     <string name="andr36oid_panel_overclock_rate_pending">Zostanie dodana po następnym restarcie. Wybierz, żeby podejrzeć albo usunąć.</string>
-    <string name="andr36oid_panel_overclock_rate_left_out">Nie oferowana: łącze ekranu jej nie uniesie albo ekran ma już taką bliską częstotliwość. Wybierz, żeby podejrzeć albo usunąć.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Nieoferowana: łącze ekranu jej nie przeniesie albo ekran ma już taką bliską częstotliwość. Wybierz, żeby podejrzeć albo usunąć.</string>
     <string name="andr36oid_panel_overclock_remove">Usuń</string>
 
     <string name="andr36oid_panel_overclock_add">Dodaj częstotliwości</string>
@@ -31,7 +31,7 @@
 
     <!-- The warning before the first rate is added -->
     <string name="andr36oid_panel_overclock_warning_title">Zanim zaczniesz</string>
-    <string name="andr36oid_panel_overclock_warning">Uruchamianie ekranu z częstotliwościami, do których nie został zrobiony, może go trwale uszkodzić. andr36oid nie może znać granicy twojego panelu. Robisz to na własne ryzyko.</string>
+    <string name="andr36oid_panel_overclock_warning">Uruchamianie ekranu z częstotliwościami, do których nie został zaprojektowany, może go trwale uszkodzić. andr36oid nie może znać granicy twojego panelu. Robisz to na własne ryzyko.</string>
     <string name="andr36oid_panel_overclock_warning_check">Rozumiem ryzyko</string>
     <string name="andr36oid_panel_overclock_warning_accept">Rozumiem, dalej</string>
 
@@ -56,11 +56,11 @@
     <string name="andr36oid_panel_overclock_preview_yes">Tak</string>
     <string name="andr36oid_panel_overclock_preview_no">Nie</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_offer">Dodać %1$s Hz do swoich częstotliwości?</string>
+    <string name="andr36oid_panel_overclock_preview_offer">Dodać %1$s Hz do twoich częstotliwości?</string>
     <string name="andr36oid_panel_overclock_preview_offer_message">Jest oferowana po restarcie. Częstotliwość, która wyglądała dobrze, może mimo to gubić klatki, sprawdź ją testem płynności.</string>
     <string name="andr36oid_panel_overclock_preview_busy">Podgląd właśnie się skończył. Spróbuj za chwilę.</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_range">Łącze ekranu nie uniesie %1$s Hz</string>
+    <string name="andr36oid_panel_overclock_preview_range">Łącze ekranu nie przeniesie %1$s Hz</string>
     <string name="andr36oid_panel_overclock_preview_off">Ekran musi być włączony, żeby zobaczyć podgląd</string>
     <string name="andr36oid_panel_overclock_preview_missing">Ten system jeszcze nie potrafi podglądać częstotliwości</string>
     <string name="andr36oid_panel_overclock_preview_failed">Podgląd nie mógł się uruchomić</string>

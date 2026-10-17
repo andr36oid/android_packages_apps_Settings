@@ -5,7 +5,7 @@
     <string name="andr36oid_panel_overclock_summary">尝试屏幕没有为其设置的刷新率</string>
     <string name="andr36oid_panel_overclock_intro">添加要尝试的刷新率然后重启，再在“最高刷新率”中选一个。如果屏幕变黑或出现花屏，等 15 秒，旧的刷新率会恢复。能显示画面的刷新率仍可能丢帧，请用流畅度测试检查。若想先看看某个刷新率，可以预览 5 秒，无需重启。</string>
     <!-- Always on the page, also at the end of the restart question -->
-    <string name="andr36oid_panel_overclock_warning_line">让屏幕以它不是为之设计的刷新率运行，可能会永久损坏屏幕。风险由你自行承担。</string>
+    <string name="andr36oid_panel_overclock_warning_line">使用超出屏幕设计范围的刷新率，可能会永久损坏屏幕。请自行承担风险。</string>
 
     <string name="andr36oid_panel_overclock_screen_title">本屏幕</string>
     <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
@@ -31,7 +31,7 @@
 
     <!-- The warning before the first rate is added -->
     <string name="andr36oid_panel_overclock_warning_title">开始之前</string>
-    <string name="andr36oid_panel_overclock_warning">让屏幕以它不是为之设计的刷新率运行，可能会永久损坏屏幕。andr36oid 无法知道你面板的极限。风险由你自行承担。</string>
+    <string name="andr36oid_panel_overclock_warning">使用超出屏幕设计范围的刷新率，可能会永久损坏屏幕。andr36oid 无法确定您的屏幕能承受多高的刷新率。请自行承担风险。</string>
     <string name="andr36oid_panel_overclock_warning_check">我了解风险</string>
     <string name="andr36oid_panel_overclock_warning_accept">我了解，继续</string>
 
@@ -40,7 +40,7 @@
     <string name="andr36oid_panel_overclock_restart_nothing">刷新率与已保存的一致</string>
     <string name="andr36oid_panel_overclock_restart_question">立即重启？</string>
     <!-- %1$s: andr36oid_panel_overclock_warning_line -->
-    <string name="andr36oid_panel_overclock_restart_message">主机将以新的刷新率重启。然后在“最高刷新率”中选一个。如果屏幕变黑或出现花屏，请等待 15 秒。\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart_message">掌机将以新的刷新率重启。然后在“最高刷新率”中选一个。如果屏幕变黑或出现花屏，请等待 15 秒。\n\n%1$s</string>
     <string name="andr36oid_panel_overclock_restart">重启</string>
     <string name="andr36oid_panel_overclock_save_failed">无法将刷新率保存到 BOOT 分区</string>
 
@@ -56,7 +56,7 @@
     <string name="andr36oid_panel_overclock_preview_yes">是</string>
     <string name="andr36oid_panel_overclock_preview_no">否</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_offer">将 %1$s Hz 添加到你的刷新率中？</string>
+    <string name="andr36oid_panel_overclock_preview_offer">将 %1$s Hz 添加到您的刷新率中？</string>
     <string name="andr36oid_panel_overclock_preview_offer_message">该刷新率会在重启后提供。显示正常的刷新率仍可能丢帧，请用流畅度测试检查。</string>
     <string name="andr36oid_panel_overclock_preview_busy">刚刚结束了一次预览，请稍后再试。</string>
     <!-- %1$s: a rate, like 77.5 -->

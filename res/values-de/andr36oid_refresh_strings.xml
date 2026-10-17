@@ -9,5 +9,5 @@
         <item quantity="one">Zurück zu %1$s in %2$d Sekunde. Nur behalten, wenn das Bild richtig aussieht.</item>
         <item quantity="other">Zurück zu %1$s in %2$d Sekunden. Nur behalten, wenn das Bild richtig aussieht.</item>
     </plurals>
-    <string name="andr36oid_bfi_unlocked">Menü „Schwarzbild einfügen“ in den Display-Einstellungen freigeschaltet</string>
+    <string name="andr36oid_bfi_unlocked">Menü „Schwarzbildeinfügung“ in den Display-Einstellungen freigeschaltet</string>
 </resources>

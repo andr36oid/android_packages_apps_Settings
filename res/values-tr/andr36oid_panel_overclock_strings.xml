@@ -2,10 +2,10 @@
 <!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
 <resources>
     <string name="andr36oid_panel_overclock_title">Panel overclock</string>
-    <string name="andr36oid_panel_overclock_summary">Ekranın ayarlanmadığı yenileme hızlarını dene</string>
-    <string name="andr36oid_panel_overclock_intro">Denenecek hızları ekle ve yeniden başlat. Sonra En yüksek yenileme hızı içinden birini seç. Ekran kararır ya da bozulursa 15 saniye bekle, eski hız geri gelir. Görüntü veren bir hız yine de kare atlayabilir, bunu akıcılık testiyle kontrol et. Bir hızı önce görmek için yeniden başlatmadan 5 saniye önizle.</string>
+    <string name="andr36oid_panel_overclock_summary">Ekranın tasarlanmadığı yenileme hızlarını deneyin</string>
+    <string name="andr36oid_panel_overclock_intro">Denenecek hızları ekleyin ve yeniden başlatın. Sonra En yüksek yenileme hızı içinden birini seçin. Ekran kararır ya da bozulursa 15 saniye bekleyin, eski hız geri gelir. Görüntü veren bir hız yine de kare atlayabilir, bunu akıcılık testiyle kontrol edin. Bir hızı önce görmek için yeniden başlatmadan 5 saniye önizleyin.</string>
     <!-- Always on the page, also at the end of the restart question -->
-    <string name="andr36oid_panel_overclock_warning_line">Ekranı yapılmadığı hızlarda çalıştırmak onu kalıcı olarak bozabilir. Bunu kendi sorumluluğunda yaparsın.</string>
+    <string name="andr36oid_panel_overclock_warning_line">Ekranı tasarlanmadığı hızlarda çalıştırmak onu kalıcı olarak bozabilir. Bunu kendi sorumluluğunuzda yaparsınız.</string>
 
     <string name="andr36oid_panel_overclock_screen_title">Bu ekran</string>
     <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
@@ -16,22 +16,22 @@
     <string name="andr36oid_panel_overclock_rates_none">Henüz yok</string>
     <!-- %1$s: a rate, like 77.5 -->
     <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
-    <string name="andr36oid_panel_overclock_rate_offered">Şu an sunuluyor. Önizlemek veya kaldırmak için seç.</string>
-    <string name="andr36oid_panel_overclock_rate_pending">Bir sonraki yeniden başlatmada eklenecek. Önizlemek veya kaldırmak için seç.</string>
-    <string name="andr36oid_panel_overclock_rate_left_out">Sunulmuyor: ekran bağlantısı taşıyamıyor ya da ekranın zaten buna çok yakın bir hızı var. Önizlemek veya kaldırmak için seç.</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Şu an sunuluyor. Önizlemek veya kaldırmak için seçin.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Bir sonraki yeniden başlatmada eklenecek. Önizlemek veya kaldırmak için seçin.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Sunulmuyor: ekran bağlantısı taşıyamıyor ya da ekranın zaten buna çok yakın bir hızı var. Önizlemek veya kaldırmak için seçin.</string>
     <string name="andr36oid_panel_overclock_remove">Kaldır</string>
 
     <string name="andr36oid_panel_overclock_add">Hız ekle</string>
-    <string name="andr36oid_panel_overclock_add_summary">Listeden seç ya da kendin belirle, en fazla 16</string>
-    <string name="andr36oid_panel_overclock_full">Zaten 16 hız var. Önce birini kaldır.</string>
+    <string name="andr36oid_panel_overclock_add_summary">Listeden seçin ya da kendiniz belirleyin, en fazla 16</string>
+    <string name="andr36oid_panel_overclock_full">Zaten 16 hız var. Önce birini kaldırın.</string>
     <string name="andr36oid_panel_overclock_custom">Özel hız…</string>
     <string name="andr36oid_panel_overclock_custom_title">Özel hız</string>
-    <string name="andr36oid_panel_overclock_custom_message">30 ile 300 Hz. Yukarı ve aşağı basamağı değiştirir, sola ve sağa basamaklar arasında geçersin. A tuşlara gider, B iptal eder.</string>
+    <string name="andr36oid_panel_overclock_custom_message">30 ile 300 Hz. Yukarı ve aşağı basamağı değiştirir, sola ve sağa basamaklar arasında geçer. A tuşlara gider, B iptal eder.</string>
     <string name="andr36oid_panel_overclock_custom_add">Ekle</string>
 
     <!-- The warning before the first rate is added -->
     <string name="andr36oid_panel_overclock_warning_title">Başlamadan önce</string>
-    <string name="andr36oid_panel_overclock_warning">Ekranı yapılmadığı hızlarda çalıştırmak onu kalıcı olarak bozabilir. andr36oid panelinin sınırını bilemez. Bunu kendi sorumluluğunda yaparsın.</string>
+    <string name="andr36oid_panel_overclock_warning">Ekranı tasarlanmadığı hızlarda çalıştırmak onu kalıcı olarak bozabilir. andr36oid panelinizin sınırını bilemez. Bunu kendi sorumluluğunuzda yaparsınız.</string>
     <string name="andr36oid_panel_overclock_warning_check">Riski anlıyorum</string>
     <string name="andr36oid_panel_overclock_warning_accept">Anlıyorum, devam et</string>
 
@@ -40,7 +40,7 @@
     <string name="andr36oid_panel_overclock_restart_nothing">Hızlar kaydedildiği gibi</string>
     <string name="andr36oid_panel_overclock_restart_question">Şimdi yeniden başlatılsın mı?</string>
     <!-- %1$s: andr36oid_panel_overclock_warning_line -->
-    <string name="andr36oid_panel_overclock_restart_message">Konsol yeni hızlarla yeniden başlar. Sonra En yüksek yenileme hızı içinden birini seç. Ekran kararır ya da bozulursa 15 saniye bekle.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart_message">Konsol yeni hızlarla yeniden başlar. Sonra En yüksek yenileme hızı içinden birini seçin. Ekran kararır ya da bozulursa 15 saniye bekleyin.\n\n%1$s</string>
     <string name="andr36oid_panel_overclock_restart">Yeniden başlat</string>
     <string name="andr36oid_panel_overclock_save_failed">Hızlar BOOT bölümüne kaydedilemedi</string>
 
@@ -56,9 +56,9 @@
     <string name="andr36oid_panel_overclock_preview_yes">Evet</string>
     <string name="andr36oid_panel_overclock_preview_no">Hayır</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_offer">%1$s Hz hızı hızlarına eklensin mi?</string>
-    <string name="andr36oid_panel_overclock_preview_offer_message">Yeniden başlatmadan sonra sunulur. Doğru görünen bir hız yine de kare atlayabilir, akıcılık testiyle kontrol et.</string>
-    <string name="andr36oid_panel_overclock_preview_busy">Bir önizleme yeni bitti. Biraz sonra tekrar dene.</string>
+    <string name="andr36oid_panel_overclock_preview_offer">%1$s Hz hızlarınıza eklensin mi?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">Yeniden başlatmadan sonra sunulur. Doğru görünen bir hız yine de kare atlayabilir, akıcılık testiyle kontrol edin.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">Bir önizleme yeni bitti. Biraz sonra tekrar deneyin.</string>
     <!-- %1$s: a rate, like 77.5 -->
     <string name="andr36oid_panel_overclock_preview_range">Ekran bağlantısı %1$s Hz taşıyamıyor</string>
     <string name="andr36oid_panel_overclock_preview_off">Önizleme için ekranın açık olması gerekir</string>

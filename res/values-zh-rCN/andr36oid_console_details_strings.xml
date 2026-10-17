@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="andr36oid_console_details_title">主机详情</string>
-    <string name="andr36oid_console_details_console">主机</string>
+    <string name="andr36oid_console_details_title">掌机详情</string>
+    <string name="andr36oid_console_details_console">掌机</string>
     <string name="andr36oid_console_details_board">主板</string>
     <string name="andr36oid_console_details_board_genuine">原版 R36S</string>
     <string name="andr36oid_console_details_board_ee">仿制机，EE 主板</string>

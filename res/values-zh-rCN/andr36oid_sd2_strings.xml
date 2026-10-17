@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
-    <string name="andr36oid_sd2_mount_title">第二张SD卡</string>
+    <string name="andr36oid_sd2_mount_title">第二张 SD 卡</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">使用第二个插槽中的卡。关闭后该卡不会安装，重启后也保持不安装。</string>
+    <string name="andr36oid_sd2_mount_summary">使用第二个插槽中的存储卡。关闭后将不再挂载此卡，重启后也不会挂载。</string>
 </resources>

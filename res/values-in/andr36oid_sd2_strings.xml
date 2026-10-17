@@ -3,5 +3,5 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">Kartu SD kedua</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">Gunakan kartu di slot kedua. Jika mati, kartu tidak dipasang, termasuk setelah restart.</string>
+    <string name="andr36oid_sd2_mount_summary">Gunakan kartu di slot kedua. Jika nonaktif, kartu tidak dipasang, termasuk setelah restart.</string>
 </resources>

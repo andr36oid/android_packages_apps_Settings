@@ -9,7 +9,7 @@
         <item>Muito mais escura</item>
     </string-array>
     <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Cores da tela</string>
+    <string name="andr36oid_screen_colors_title">Cores do ecrã</string>
     <string-array name="andr36oid_screen_colors_entries">
         <item>Naturais</item>
         <item>Vívidas</item>

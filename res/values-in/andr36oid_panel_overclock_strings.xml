@@ -2,10 +2,10 @@
 <!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
 <resources>
     <string name="andr36oid_panel_overclock_title">Overclock panel</string>
-    <string name="andr36oid_panel_overclock_summary">Coba laju refresh yang tidak disiapkan untuk layarmu</string>
+    <string name="andr36oid_panel_overclock_summary">Coba kecepatan refresh yang tidak disiapkan untuk layar Anda</string>
     <string name="andr36oid_panel_overclock_intro">Tambahkan laju untuk dicoba lalu mulai ulang. Pilih salah satu di Peak refresh rate. Jika layar menjadi gelap atau kacau, tunggu 15 detik dan laju lama akan kembali. Laju yang menampilkan gambar tetap bisa melewatkan frame, periksa dengan tes kehalusan. Untuk melihat laju dulu, pratinjau selama 5 detik, tanpa perlu mulai ulang.</string>
     <!-- Always on the page, also at the end of the restart question -->
-    <string name="andr36oid_panel_overclock_warning_line">Menjalankan layar pada laju yang tidak dibuat untuknya bisa merusaknya secara permanen. Kamu melakukannya atas risiko sendiri.</string>
+    <string name="andr36oid_panel_overclock_warning_line">Menjalankan layar pada laju yang tidak dibuat untuknya bisa merusaknya secara permanen. Anda melakukannya atas risiko sendiri.</string>
 
     <string name="andr36oid_panel_overclock_screen_title">Layar ini</string>
     <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
@@ -31,7 +31,7 @@
 
     <!-- The warning before the first rate is added -->
     <string name="andr36oid_panel_overclock_warning_title">Sebelum mulai</string>
-    <string name="andr36oid_panel_overclock_warning">Menjalankan layar pada laju yang tidak dibuat untuknya bisa merusaknya secara permanen. andr36oid tidak bisa mengetahui batas panelmu. Kamu melakukannya atas risiko sendiri.</string>
+    <string name="andr36oid_panel_overclock_warning">Menjalankan layar pada laju yang tidak dibuat untuknya bisa merusaknya secara permanen. andr36oid tidak bisa mengetahui batas panel Anda. Anda melakukannya atas risiko sendiri.</string>
     <string name="andr36oid_panel_overclock_warning_check">Saya mengerti risikonya</string>
     <string name="andr36oid_panel_overclock_warning_accept">Saya mengerti, lanjutkan</string>
 
@@ -56,7 +56,7 @@
     <string name="andr36oid_panel_overclock_preview_yes">Ya</string>
     <string name="andr36oid_panel_overclock_preview_no">Tidak</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_offer">Tambahkan %1$s Hz ke laju kamu?</string>
+    <string name="andr36oid_panel_overclock_preview_offer">Tambahkan %1$s Hz ke laju Anda?</string>
     <string name="andr36oid_panel_overclock_preview_offer_message">Laju ini ditawarkan setelah mulai ulang. Laju yang terlihat benar tetap bisa melewatkan frame, periksa dengan tes kehalusan.</string>
     <string name="andr36oid_panel_overclock_preview_busy">Pratinjau baru saja selesai. Coba lagi sebentar lagi.</string>
     <!-- %1$s: a rate, like 77.5 -->

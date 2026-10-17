@@ -2,50 +2,50 @@
 <!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
 <resources>
     <string name="andr36oid_panel_overclock_title">Overclocking de l\'écran</string>
-    <string name="andr36oid_panel_overclock_summary">Essayer des fréquences d\'actualisation pour lesquelles ton écran n\'a pas été prévu</string>
-    <string name="andr36oid_panel_overclock_intro">Ajoute des fréquences à essayer, puis redémarre. Choisis ensuite l\'une d\'elles dans Taux de rafraîchissement maximal. Si l\'écran devient noir ou brouillé, attends 15 secondes et l\'ancienne fréquence revient. Une fréquence qui affiche une image peut quand même sauter des images : vérifie-la avec le test de fluidité. Pour en voir une d\'abord, prévisualise-la pendant 5 secondes, sans redémarrage.</string>
+    <string name="andr36oid_panel_overclock_summary">Essayer des taux de rafraîchissement pour lesquels votre écran n\'a pas été prévu</string>
+    <string name="andr36oid_panel_overclock_intro">Ajoutez des taux à essayer, puis redémarrez. Choisissez ensuite l\'un d\'eux dans Taux de rafraîchissement maximal. Si l\'écran devient noir ou brouillé, attendez 15 secondes et l\'ancien taux revient. Un taux qui affiche une image peut quand même sauter des images : vérifiez-le avec le test de fluidité. Pour en voir un d\'abord, prévisualisez-le pendant 5 secondes, sans redémarrage.</string>
     <!-- Always on the page, also at the end of the restart question -->
-    <string name="andr36oid_panel_overclock_warning_line">Faire tourner l\'écran à des fréquences pour lesquelles il n\'a pas été conçu peut l\'abîmer de façon permanente. Tu le fais à tes risques et périls.</string>
+    <string name="andr36oid_panel_overclock_warning_line">Faire tourner l\'écran à des taux pour lesquels il n\'a pas été conçu peut l\'abîmer de façon permanente. Vous le faites à vos risques et périls.</string>
 
     <string name="andr36oid_panel_overclock_screen_title">Cet écran</string>
     <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
-    <string name="andr36oid_panel_overclock_screen_summary">Prévu pour %1$s Hz. Proposé maintenant : %2$s Hz</string>
-    <string name="andr36oid_panel_overclock_paused">Les réglages du noyau sont désactivés (Système > Réglages du noyau), donc un redémarrage n\'ajoute pas les fréquences en plus.</string>
+    <string name="andr36oid_panel_overclock_screen_summary">Prévu pour %1$s Hz. Proposés maintenant : %2$s Hz</string>
+    <string name="andr36oid_panel_overclock_paused">Les réglages du noyau sont désactivés (Système > Réglages du noyau), donc un redémarrage n\'ajoute pas les taux supplémentaires.</string>
 
-    <string name="andr36oid_panel_overclock_rates">Fréquences en plus</string>
-    <string name="andr36oid_panel_overclock_rates_none">Aucune pour l\'instant</string>
+    <string name="andr36oid_panel_overclock_rates">Taux supplémentaires</string>
+    <string name="andr36oid_panel_overclock_rates_none">Aucun pour l\'instant</string>
     <!-- %1$s: a rate, like 77.5 -->
     <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
-    <string name="andr36oid_panel_overclock_rate_offered">Proposée maintenant. Sélectionne pour la prévisualiser ou la retirer.</string>
-    <string name="andr36oid_panel_overclock_rate_pending">Ajoutée au prochain redémarrage. Sélectionne pour la prévisualiser ou la retirer.</string>
-    <string name="andr36oid_panel_overclock_rate_left_out">Non proposée : la liaison vers l\'écran ne peut pas la transporter, ou l\'écran a déjà une fréquence aussi proche. Sélectionne pour la prévisualiser ou la retirer.</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Proposé maintenant. Sélectionnez pour le prévisualiser ou le retirer.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Ajouté au prochain redémarrage. Sélectionnez pour le prévisualiser ou le retirer.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Non proposé : la liaison vers l\'écran ne peut pas le transporter, ou l\'écran a déjà un taux aussi proche. Sélectionnez pour le prévisualiser ou le retirer.</string>
     <string name="andr36oid_panel_overclock_remove">Retirer</string>
 
-    <string name="andr36oid_panel_overclock_add">Ajouter des fréquences</string>
-    <string name="andr36oid_panel_overclock_add_summary">Choisis dans une liste ou définis les tiennes, jusqu\'à 16</string>
-    <string name="andr36oid_panel_overclock_full">Ce sont déjà 16 fréquences. Retires-en une d\'abord.</string>
-    <string name="andr36oid_panel_overclock_custom">Fréquence personnalisée…</string>
-    <string name="andr36oid_panel_overclock_custom_title">Fréquence personnalisée</string>
+    <string name="andr36oid_panel_overclock_add">Ajouter des taux</string>
+    <string name="andr36oid_panel_overclock_add_summary">Choisissez dans une liste ou définissez les vôtres, jusqu\'à 16</string>
+    <string name="andr36oid_panel_overclock_full">Il y a déjà 16 taux. Retirez-en un d\'abord.</string>
+    <string name="andr36oid_panel_overclock_custom">Taux personnalisé…</string>
+    <string name="andr36oid_panel_overclock_custom_title">Taux personnalisé</string>
     <string name="andr36oid_panel_overclock_custom_message">De 30 à 300 Hz. Haut et bas changent un chiffre, gauche et droite passent d\'un chiffre à l\'autre. A va aux boutons, B annule.</string>
     <string name="andr36oid_panel_overclock_custom_add">Ajouter</string>
 
     <!-- The warning before the first rate is added -->
     <string name="andr36oid_panel_overclock_warning_title">Avant de commencer</string>
-    <string name="andr36oid_panel_overclock_warning">Faire tourner l\'écran à des fréquences pour lesquelles il n\'a pas été conçu peut l\'abîmer de façon permanente. andr36oid ne peut pas connaître la limite de ton écran. Tu le fais à tes risques et périls.</string>
+    <string name="andr36oid_panel_overclock_warning">Faire tourner l\'écran à des fréquences pour lesquelles il n\'a pas été conçu peut l\'abîmer de façon permanente. andr36oid ne peut pas connaître la limite de votre écran. Vous le faites à vos risques et périls.</string>
     <string name="andr36oid_panel_overclock_warning_check">Je comprends le risque</string>
     <string name="andr36oid_panel_overclock_warning_accept">Je comprends, continuer</string>
 
     <string name="andr36oid_panel_overclock_restart_add">Redémarrer pour les ajouter</string>
     <string name="andr36oid_panel_overclock_restart_remove">Redémarrer pour les retirer</string>
-    <string name="andr36oid_panel_overclock_restart_nothing">Les fréquences sont telles qu\'enregistrées</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">Les taux sont tels qu\'enregistrés</string>
     <string name="andr36oid_panel_overclock_restart_question">Redémarrer maintenant ?</string>
     <!-- %1$s: andr36oid_panel_overclock_warning_line -->
-    <string name="andr36oid_panel_overclock_restart_message">La console redémarre avec les nouvelles fréquences. Choisis ensuite l\'une d\'elles dans Taux de rafraîchissement maximal. Si l\'écran devient noir ou brouillé, attends 15 secondes.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart_message">La console redémarre avec les nouveaux taux. Choisissez ensuite l\'un d\'eux dans Taux de rafraîchissement maximal. Si l\'écran devient noir ou brouillé, attendez 15 secondes.\n\n%1$s</string>
     <string name="andr36oid_panel_overclock_restart">Redémarrer</string>
-    <string name="andr36oid_panel_overclock_save_failed">Les fréquences n\'ont pas pu être enregistrées sur la partition BOOT</string>
+    <string name="andr36oid_panel_overclock_save_failed">Les taux n\'ont pas pu être enregistrés sur la partition BOOT</string>
 
-    <string name="andr36oid_panel_overclock_remove_all">Retirer les fréquences en plus</string>
-    <string name="andr36oid_panel_overclock_remove_all_summary">Après un redémarrage, l\'écran ne garde que ses propres fréquences</string>
+    <string name="andr36oid_panel_overclock_remove_all">Retirer les taux supplémentaires</string>
+    <string name="andr36oid_panel_overclock_remove_all_summary">Après un redémarrage, l\'écran ne garde que ses propres taux</string>
 
     <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
     <string name="andr36oid_panel_overclock_preview">Prévisualiser pendant 5 secondes</string>
@@ -56,13 +56,13 @@
     <string name="andr36oid_panel_overclock_preview_yes">Oui</string>
     <string name="andr36oid_panel_overclock_preview_no">Non</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_offer">Ajouter %1$s Hz à tes fréquences ?</string>
-    <string name="andr36oid_panel_overclock_preview_offer_message">Elle est proposée après un redémarrage. Une fréquence qui semblait correcte peut quand même sauter des images : vérifie-la avec le test de fluidité.</string>
-    <string name="andr36oid_panel_overclock_preview_busy">Une prévisualisation vient de se terminer. Réessaie dans un instant.</string>
+    <string name="andr36oid_panel_overclock_preview_offer">Ajouter %1$s Hz à vos taux ?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">Il est proposé après un redémarrage. Un taux qui semblait correct peut quand même sauter des images : vérifiez-le avec le test de fluidité.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">Une prévisualisation vient de se terminer. Réessayez dans un instant.</string>
     <!-- %1$s: a rate, like 77.5 -->
     <string name="andr36oid_panel_overclock_preview_range">La liaison vers l\'écran ne peut pas transporter %1$s Hz</string>
     <string name="andr36oid_panel_overclock_preview_off">L\'écran doit être allumé pour une prévisualisation</string>
-    <string name="andr36oid_panel_overclock_preview_missing">Ce système ne peut pas encore prévisualiser de fréquences</string>
+    <string name="andr36oid_panel_overclock_preview_missing">Ce système ne peut pas encore prévisualiser de taux</string>
     <string name="andr36oid_panel_overclock_preview_failed">La prévisualisation n\'a pas pu démarrer</string>
 
     <string name="andr36oid_panel_overclock_test">Test de fluidité</string>

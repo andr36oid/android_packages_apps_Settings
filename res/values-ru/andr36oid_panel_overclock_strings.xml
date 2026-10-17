@@ -1,70 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- andr36oid: Settings > Display > Panel overclocking, extra refresh rates to try -->
 <resources>
-    <string name="andr36oid_panel_overclock_title">Разгон панели</string>
-    <string name="andr36oid_panel_overclock_summary">Пробуй частоты обновления, для которых экран не был настроен</string>
-    <string name="andr36oid_panel_overclock_intro">Добавь частоты для пробы и перезапусти. Потом выбери одну в разделе «Максимальная частота обновления». Если экран погаснет или пойдёт помехами, подожди 15 секунд, и вернётся старая частота. Частота, на которой есть картинка, всё равно может пропускать кадры, проверь её тестом плавности. Чтобы сначала посмотреть частоту, включи предпросмотр на 5 секунд, без перезапуска.</string>
+    <string name="andr36oid_panel_overclock_title">Разгон экрана</string>
+    <string name="andr36oid_panel_overclock_summary">Попробовать частоты обновления, на которые экран не рассчитан</string>
+    <string name="andr36oid_panel_overclock_intro">Добавьте частоты для пробы и перезапустите консоль. Потом выберите одну из них в разделе «Максимальная частота обновления». Если экран погаснет или покроется помехами, подождите 15 секунд, и вернётся прежняя частота. Частота, на которой есть картинка, всё равно может пропускать кадры — проверьте её тестом плавности. Чтобы сначала посмотреть на частоту, включите предпросмотр на 5 секунд, перезапуск для этого не нужен.</string>
     <!-- Always on the page, also at the end of the restart question -->
-    <string name="andr36oid_panel_overclock_warning_line">Работа экрана на частотах, для которых он не сделан, может его навсегда испортить. Ты делаешь это на свой страх и риск.</string>
-
+    <string name="andr36oid_panel_overclock_warning_line">Работа на частотах, на которые экран не рассчитан, может навсегда его испортить. Вы делаете это на свой страх и риск.</string>
     <string name="andr36oid_panel_overclock_screen_title">Этот экран</string>
     <!-- %1$s: the panel's own rate, like 60; %2$s: every rate offered now, like 50, 60, 75 -->
-    <string name="andr36oid_panel_overclock_screen_summary">Рассчитан на %1$s Hz. Сейчас предлагаются: %2$s Hz</string>
-    <string name="andr36oid_panel_overclock_paused">Настройки ядра выключены (Система > Настройки ядра), поэтому перезапуск не добавит дополнительные частоты.</string>
-
+    <string name="andr36oid_panel_overclock_screen_summary">Рассчитан на %1$s Гц. Сейчас доступны: %2$s Гц</string>
+    <string name="andr36oid_panel_overclock_paused">Настройки ядра выключены (Система &gt; Настройки ядра), поэтому перезапуск не добавит дополнительные частоты.</string>
     <string name="andr36oid_panel_overclock_rates">Дополнительные частоты</string>
     <string name="andr36oid_panel_overclock_rates_none">Пока нет</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_rate">%1$s Hz</string>
-    <string name="andr36oid_panel_overclock_rate_offered">Сейчас предлагается. Выбери, чтобы посмотреть или удалить.</string>
-    <string name="andr36oid_panel_overclock_rate_pending">Добавится при следующем перезапуске. Выбери, чтобы посмотреть или удалить.</string>
-    <string name="andr36oid_panel_overclock_rate_left_out">Не предлагается: связь с экраном её не тянет или у экрана уже есть такая близкая частота. Выбери, чтобы посмотреть или удалить.</string>
+    <string name="andr36oid_panel_overclock_rate">%1$s Гц</string>
+    <string name="andr36oid_panel_overclock_rate_offered">Сейчас доступна. Выберите, чтобы посмотреть или удалить.</string>
+    <string name="andr36oid_panel_overclock_rate_pending">Добавится при следующем перезапуске. Выберите, чтобы посмотреть или удалить.</string>
+    <string name="andr36oid_panel_overclock_rate_left_out">Недоступна: канал до экрана её не тянет, или у экрана уже есть очень близкая частота. Выберите, чтобы посмотреть или удалить.</string>
     <string name="andr36oid_panel_overclock_remove">Удалить</string>
-
     <string name="andr36oid_panel_overclock_add">Добавить частоты</string>
-    <string name="andr36oid_panel_overclock_add_summary">Выбери из списка или задай свою, до 16</string>
-    <string name="andr36oid_panel_overclock_full">Уже 16 частот. Сначала удали одну.</string>
+    <string name="andr36oid_panel_overclock_add_summary">Выберите из списка или задайте свою, до 16 штук</string>
+    <string name="andr36oid_panel_overclock_full">Уже 16 частот. Сначала удалите одну.</string>
     <string name="andr36oid_panel_overclock_custom">Своя частота…</string>
     <string name="andr36oid_panel_overclock_custom_title">Своя частота</string>
-    <string name="andr36oid_panel_overclock_custom_message">От 30 до 300 Hz. Вверх и вниз меняют цифру, влево и вправо переходят между цифрами. A переходит к кнопкам, B отменяет.</string>
+    <string name="andr36oid_panel_overclock_custom_message">От 30 до 300 Гц. Вверх и вниз меняют цифру, влево и вправо переходят между цифрами. A переходит к кнопкам, B отменяет.</string>
     <string name="andr36oid_panel_overclock_custom_add">Добавить</string>
-
     <!-- The warning before the first rate is added -->
     <string name="andr36oid_panel_overclock_warning_title">Прежде чем начать</string>
-    <string name="andr36oid_panel_overclock_warning">Работа экрана на частотах, для которых он не сделан, может его навсегда испортить. andr36oid не может знать предел твоей панели. Ты делаешь это на свой страх и риск.</string>
+    <string name="andr36oid_panel_overclock_warning">Работа на частотах, на которые экран не рассчитан, может навсегда его испортить. andr36oid не может знать предел вашей панели. Вы делаете это на свой страх и риск.</string>
     <string name="andr36oid_panel_overclock_warning_check">Я понимаю риск</string>
     <string name="andr36oid_panel_overclock_warning_accept">Понимаю, продолжить</string>
-
     <string name="andr36oid_panel_overclock_restart_add">Перезапустить, чтобы добавить</string>
     <string name="andr36oid_panel_overclock_restart_remove">Перезапустить, чтобы удалить</string>
-    <string name="andr36oid_panel_overclock_restart_nothing">Частоты такие, как сохранено</string>
+    <string name="andr36oid_panel_overclock_restart_nothing">Частоты уже такие, как сохранено</string>
     <string name="andr36oid_panel_overclock_restart_question">Перезапустить сейчас?</string>
     <!-- %1$s: andr36oid_panel_overclock_warning_line -->
-    <string name="andr36oid_panel_overclock_restart_message">Консоль перезапустится с новыми частотами. Потом выбери одну в разделе «Максимальная частота обновления». Если экран погаснет или пойдёт помехами, подожди 15 секунд.\n\n%1$s</string>
+    <string name="andr36oid_panel_overclock_restart_message">Консоль перезапустится с новыми частотами. Потом выберите одну из них в разделе «Максимальная частота обновления». Если экран погаснет или покроется помехами, подождите 15 секунд.\n\n%1$s</string>
     <string name="andr36oid_panel_overclock_restart">Перезапустить</string>
-    <string name="andr36oid_panel_overclock_save_failed">Не удалось сохранить частоты на раздел BOOT</string>
-
+    <string name="andr36oid_panel_overclock_save_failed">Не удалось сохранить частоты в раздел BOOT</string>
     <string name="andr36oid_panel_overclock_remove_all">Удалить дополнительные частоты</string>
-    <string name="andr36oid_panel_overclock_remove_all_summary">После перезапуска экран снова получит только свои частоты</string>
-
+    <string name="andr36oid_panel_overclock_remove_all_summary">После перезапуска у экрана снова будут только его собственные частоты</string>
     <!-- The 5 second preview, from a saved rate or the custom rate dialog -->
     <string name="andr36oid_panel_overclock_preview">Предпросмотр на 5 секунд</string>
     <!-- %1$s: a rate, like 77.5; %2$d: seconds left, 5 to 1 -->
-    <string name="andr36oid_panel_overclock_previewing">Предпросмотр %1$s Hz, возврат через %2$d с</string>
+    <string name="andr36oid_panel_overclock_previewing">Предпросмотр %1$s Гц, возврат через %2$d с</string>
     <string name="andr36oid_panel_overclock_preview_end">Вернуть сейчас</string>
-    <string name="andr36oid_panel_overclock_preview_question">Картинка выглядела правильно?</string>
+    <string name="andr36oid_panel_overclock_preview_question">Картинка была нормальной?</string>
     <string name="andr36oid_panel_overclock_preview_yes">Да</string>
     <string name="andr36oid_panel_overclock_preview_no">Нет</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_offer">Добавить %1$s Hz в твои частоты?</string>
-    <string name="andr36oid_panel_overclock_preview_offer_message">Её предложат после перезапуска. Частота, которая выглядела правильно, всё равно может пропускать кадры, проверь её тестом плавности.</string>
-    <string name="andr36oid_panel_overclock_preview_busy">Предпросмотр только что закончился. Попробуй через минуту.</string>
+    <string name="andr36oid_panel_overclock_preview_offer">Добавить %1$s Гц к вашим частотам?</string>
+    <string name="andr36oid_panel_overclock_preview_offer_message">Она станет доступна после перезапуска. Даже если картинка была нормальной, частота всё равно может пропускать кадры — проверьте её тестом плавности.</string>
+    <string name="andr36oid_panel_overclock_preview_busy">Предпросмотр только что закончился. Попробуйте чуть позже.</string>
     <!-- %1$s: a rate, like 77.5 -->
-    <string name="andr36oid_panel_overclock_preview_range">Связь с экраном не тянет %1$s Hz</string>
+    <string name="andr36oid_panel_overclock_preview_range">Канал до экрана не тянет %1$s Гц</string>
     <string name="andr36oid_panel_overclock_preview_off">Для предпросмотра экран должен быть включён</string>
-    <string name="andr36oid_panel_overclock_preview_missing">Эта система пока не умеет показывать частоты в предпросмотре</string>
+    <string name="andr36oid_panel_overclock_preview_missing">Эта система пока не умеет показывать предпросмотр частот</string>
     <string name="andr36oid_panel_overclock_preview_failed">Предпросмотр не запустился</string>
-
     <string name="andr36oid_panel_overclock_test">Тест плавности</string>
-    <string name="andr36oid_panel_overclock_test_summary">Движущийся блок и частота кадров, которую экран реально выдаёт</string>
+    <string name="andr36oid_panel_overclock_test_summary">Движущийся блок и частота кадров, которую экран выдаёт на самом деле</string>
 </resources>

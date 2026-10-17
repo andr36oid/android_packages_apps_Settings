@@ -3,5 +3,5 @@
     <!-- Settings > Storage: switch for the card in the console's second SD card slot -->
     <string name="andr36oid_sd2_mount_title">Segunda tarjeta SD</string>
     <!-- Settings > Storage: what the second SD card switch does -->
-    <string name="andr36oid_sd2_mount_summary">Usa la tarjeta de la segunda ranura. Si está desactivado, la tarjeta queda desconectada, incluso tras reiniciar.</string>
+    <string name="andr36oid_sd2_mount_summary">Usa la tarjeta de la segunda ranura. Si está desactivado, la tarjeta queda sin montar, incluso tras reiniciar.</string>
 </resources>
