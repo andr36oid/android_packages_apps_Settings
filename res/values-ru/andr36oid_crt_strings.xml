@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Свечение</string>
     <string name="andr36oid_crt_gpu_mask">Люминофорная маска</string>
     <string name="andr36oid_crt_gpu_mask_summary">Экспериментально, может сильно замедлять игры. Красные, зелёные и синие полосы; заменяет решётку и щелевую маску выше</string>
+    <string name="andr36oid_crt_tile_added">Плитка «Эффект ЭЛТ» добавлена в панель уведомлений</string>
 </resources>

@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Leuchten</string>
     <string name="andr36oid_crt_gpu_mask">Phosphormaske</string>
     <string name="andr36oid_crt_gpu_mask_summary">Experimentell, kann Spiele stark verlangsamen. Rote, grüne und blaue Streifen; ersetzt die Streifen- und Schlitzmasken oben</string>
+    <string name="andr36oid_crt_tile_added">Kachel „Röhrenbildschirm-Effekt“ zu den Schnelleinstellungen hinzugefügt</string>
 </resources>

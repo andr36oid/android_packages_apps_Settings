@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Brilho difuso</string>
     <string name="andr36oid_crt_gpu_mask">Máscara de fósforo</string>
     <string name="andr36oid_crt_gpu_mask_summary">Experimental, pode deixar os jogos muito mais lentos. Listras vermelhas, verdes e azuis; substitui os estilos de grade e fendas acima</string>
+    <string name="andr36oid_crt_tile_added">Bloco rápido do efeito CRT adicionado à aba de notificações</string>
 </resources>

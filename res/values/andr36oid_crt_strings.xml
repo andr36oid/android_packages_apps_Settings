@@ -59,4 +59,6 @@
     <string name="andr36oid_crt_glow">Glow</string>
     <string name="andr36oid_crt_gpu_mask">Phosphor mask</string>
     <string name="andr36oid_crt_gpu_mask_summary">Experimental, can slow games down a lot. Red, green and blue stripes; replaces the grille and slot styles above</string>
+    <!-- Toast the first time the effect is turned on -->
+    <string name="andr36oid_crt_tile_added">CRT effect Quick Tile added to the notification shade</string>
 </resources>

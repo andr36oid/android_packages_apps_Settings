@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Poświata</string>
     <string name="andr36oid_crt_gpu_mask">Maska luminoforu</string>
     <string name="andr36oid_crt_gpu_mask_summary">Eksperymentalne, może znacznie spowolnić gry. Czerwone, zielone i niebieskie paski; zastępuje wybrane powyżej maski paskowe i szczelinowe</string>
+    <string name="andr36oid_crt_tile_added">Kafelek Efekt CRT dodany do panelu powiadomień</string>
 </resources>

@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">辉光</string>
     <string name="andr36oid_crt_gpu_mask">荧光条纹</string>
     <string name="andr36oid_crt_gpu_mask_summary">实验性功能，可能导致游戏大幅变慢。模拟红、绿、蓝荧光条纹，替代上方的栅格和槽孔样式</string>
+    <string name="andr36oid_crt_tile_added">CRT 效果快捷开关已添加到通知栏</string>
 </resources>

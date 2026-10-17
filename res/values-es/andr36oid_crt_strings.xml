@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Resplandor</string>
     <string name="andr36oid_crt_gpu_mask">Máscara de fósforo</string>
     <string name="andr36oid_crt_gpu_mask_summary">Experimental, puede ralentizar mucho los juegos. Franjas rojas, verdes y azules; sustituye los estilos de rejilla y ranuras anteriores</string>
+    <string name="andr36oid_crt_tile_added">Botón rápido de efecto CRT añadido al panel de notificaciones</string>
 </resources>

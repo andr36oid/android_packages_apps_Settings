@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Parıltı</string>
     <string name="andr36oid_crt_gpu_mask">Fosfor maskesi</string>
     <string name="andr36oid_crt_gpu_mask_summary">Deneysel, oyunları ciddi ölçüde yavaşlatabilir. Kırmızı, yeşil ve mavi şeritler; yukarıdaki ızgara ve yarık stillerinin yerini alır</string>
+    <string name="andr36oid_crt_tile_added">CRT efekti hızlı ayarı bildirim paneline eklendi</string>
 </resources>

@@ -28,4 +28,5 @@
     <string name="andr36oid_crt_glow">Pendar</string>
     <string name="andr36oid_crt_gpu_mask">Masker fosfor</string>
     <string name="andr36oid_crt_gpu_mask_summary">Eksperimental, dapat membuat game jauh lebih lambat. Garis merah, hijau, dan biru; menggantikan gaya kisi dan celah di atas</string>
+    <string name="andr36oid_crt_tile_added">Tombol cepat Efek CRT ditambahkan ke panel notifikasi</string>
 </resources>

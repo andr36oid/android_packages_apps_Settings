@@ -15,6 +15,7 @@
 package com.android.settings.display;
 
 import android.app.settings.SettingsEnums;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.util.Log;
@@ -117,7 +118,7 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
-        mEnable.setChecked(SystemProperties.getInt(PROP_ENABLE, 0) == 1);
+        mEnable.setChecked(isEnabled());
         mLines.setChecked(SystemProperties.getInt(PROP_LINES, 1) == 1);
         mStyle.setValue(String.valueOf(SystemProperties.getInt(PROP_STYLE, 0)));
         mStrength.setValue(SystemProperties.getInt(PROP_STRENGTH, DEFAULT_STRENGTH));
@@ -144,11 +145,8 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mEnable) {
             final boolean on = (Boolean) newValue;
-            if (on && SystemProperties.get(PROP_STRENGTH, "").isEmpty()) {
-                set(PROP_STRENGTH, String.valueOf(DEFAULT_STRENGTH));
-            }
             updateEnabled(on, mLines.isChecked());
-            return set(PROP_ENABLE, on ? "1" : "0");
+            return setEnabled(getContext(), on);
         } else if (preference == mLines) {
             final boolean lines = (Boolean) newValue;
             updateEnabled(mEnable.isChecked(), lines);
@@ -170,6 +168,24 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
         }
         Log.w(TAG, "Unknown row " + preference.getKey());
         return false;
+    }
+
+    static boolean isEnabled() {
+        return SystemProperties.getInt(PROP_ENABLE, 0) == 1;
+    }
+
+    /** Turns the effect on or off, also from the Quick Settings tile (CrtTileService). */
+    static boolean setEnabled(Context context, boolean on) {
+        if (on && SystemProperties.get(PROP_STRENGTH, "").isEmpty()) {
+            set(PROP_STRENGTH, String.valueOf(DEFAULT_STRENGTH));
+        }
+        if (!set(PROP_ENABLE, on ? "1" : "0")) {
+            return false;
+        }
+        if (on) {
+            CrtTileService.addOnce(context);
+        }
+        return true;
     }
 
     private static boolean set(String prop, String value) {
