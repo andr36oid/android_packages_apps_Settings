@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">CRT 效果</string>
+    <string name="andr36oid_crt_summary">实验性功能：模拟老式电视的扫描线、屏幕曲面和辉光</string>
+    <string name="andr36oid_crt_warning_title">实验性功能</string>
+    <string name="andr36oid_crt_warning">本页所有效果均为实验性功能。GPU 效果可能导致 RK3326 芯片上的游戏大幅变慢。部分效果在某些屏幕上可能显示不正常。</string>
+    <string name="andr36oid_crt_intro">效果覆盖整个屏幕，包括菜单。截图和录屏中不会显示这些效果。</string>
+    <string name="andr36oid_crt_enable">启用 CRT 效果</string>
+    <string name="andr36oid_crt_lines_category">硬件扫描线</string>
+    <string name="andr36oid_crt_lines">扫描线和荫罩</string>
+    <string name="andr36oid_crt_lines_summary">由屏幕硬件绘制，不使用图形芯片</string>
+    <string name="andr36oid_crt_style">样式</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>扫描线</item><item>扫描线和栅格荫罩</item><item>槽孔荫罩</item><item>仅栅格荫罩</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">强度</string>
+    <string name="andr36oid_crt_pitch">扫描线间距</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>自动，适合 240 行游戏</item><item>每 2 行</item><item>每 3 行</item><item>每 4 行</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">扫描线下移一行</string>
+    <string name="andr36oid_crt_phase_summary">如果扫描线与游戏像素对不齐，可以试试此选项</string>
+    <string name="andr36oid_crt_layers_note">扫描线会占用屏幕三个硬件图层中的一个。屏幕上有多个图层时，例如视频上方叠加菜单，图形芯片的负担可能会增加。</string>
+    <string name="andr36oid_crt_gpu_category">图形芯片效果</string>
+    <string name="andr36oid_crt_gpu_note">只要以下任一数值大于零，图形芯片就会在每一帧重新绘制整个屏幕。游戏可能明显变慢，尤其是在 720x720 屏幕上。</string>
+    <string name="andr36oid_crt_gpu_slow">实验性功能，可能导致游戏大幅变慢</string>
+    <string name="andr36oid_crt_curvature">屏幕曲率</string>
+    <string name="andr36oid_crt_glow">辉光</string>
+    <string name="andr36oid_crt_gpu_mask">荧光条纹</string>
+    <string name="andr36oid_crt_gpu_mask_summary">实验性功能，可能导致游戏大幅变慢。模拟红、绿、蓝荧光条纹，替代上方的栅格和槽孔样式</string>
+</resources>

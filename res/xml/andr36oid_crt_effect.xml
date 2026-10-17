@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2026 The andr36oid Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<!-- Display > CRT effect, run by CrtEffectFragment. Nothing is saved here: every row writes
+     a persist.andr36oid.crt.* property. The hardware composer reads the line settings each
+     frame, SurfaceFlinger the GPU ones. Sliders move with left and right on the d-pad and
+     the screen changes at once. The text rows are selectable (a press does nothing) so the
+     d-pad can scroll the page. -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/andr36oid_crt_title">
+
+    <Preference
+        android:key="warning"
+        android:icon="@drawable/ic_warning_24dp"
+        android:title="@string/andr36oid_crt_warning_title"
+        android:summary="@string/andr36oid_crt_warning" />
+
+    <Preference
+        android:key="intro"
+        android:summary="@string/andr36oid_crt_intro" />
+
+    <SwitchPreference
+        android:key="enable"
+        android:persistent="false"
+        android:title="@string/andr36oid_crt_enable" />
+
+    <PreferenceCategory
+        android:key="lines_category"
+        android:title="@string/andr36oid_crt_lines_category">
+
+        <SwitchPreference
+            android:key="lines"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_lines"
+            android:summary="@string/andr36oid_crt_lines_summary" />
+
+        <ListPreference
+            android:key="style"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_style"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crt_style_entries"
+            android:entryValues="@array/andr36oid_crt_style_values" />
+
+        <SeekBarPreference
+            android:key="strength"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_strength"
+            android:max="100" />
+
+        <ListPreference
+            android:key="pitch"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_pitch"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crt_pitch_entries"
+            android:entryValues="@array/andr36oid_crt_pitch_values" />
+
+        <SwitchPreference
+            android:key="phase"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_phase"
+            android:summary="@string/andr36oid_crt_phase_summary" />
+
+        <Preference
+            android:key="layers_note"
+            android:summary="@string/andr36oid_crt_layers_note" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gpu_category"
+        android:title="@string/andr36oid_crt_gpu_category">
+
+        <Preference
+            android:key="gpu_note"
+            android:summary="@string/andr36oid_crt_gpu_note" />
+
+        <SeekBarPreference
+            android:key="curvature"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_curvature"
+            android:summary="@string/andr36oid_crt_gpu_slow"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="glow"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_glow"
+            android:summary="@string/andr36oid_crt_gpu_slow"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="gpu_mask"
+            android:persistent="false"
+            android:title="@string/andr36oid_crt_gpu_mask"
+            android:summary="@string/andr36oid_crt_gpu_mask_summary"
+            android:max="100" />
+    </PreferenceCategory>
+</PreferenceScreen>

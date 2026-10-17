@@ -130,6 +130,13 @@
         android:summary="@string/andr36oid_panel_overclock_summary"
         android:fragment="com.android.settings.display.PanelOverclockFragment" />
 
+    <!-- andr36oid: scanlines / mask blended in by the display controller, no GPU work -->
+    <Preference
+        android:key="crt_effect"
+        android:title="@string/andr36oid_crt_title"
+        android:summary="@string/andr36oid_crt_summary"
+        android:fragment="com.android.settings.display.CrtEffectFragment" />
+
     <Preference
         android:key="font_size"
         android:title="@string/title_font_size"

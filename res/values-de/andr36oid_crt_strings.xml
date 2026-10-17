@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">Röhrenbildschirm-Effekt</string>
+    <string name="andr36oid_crt_summary">Experimentell: Scanlines, Bildwölbung und Leuchten wie bei einem alten Fernseher</string>
+    <string name="andr36oid_crt_warning_title">Experimentell</string>
+    <string name="andr36oid_crt_warning">Alle Effekte auf dieser Seite sind experimentell. Die GPU-Effekte können Spiele auf dem RK3326 deutlich verlangsamen. Manche Effekte sehen nicht auf jedem Bildschirm richtig aus.</string>
+    <string name="andr36oid_crt_intro">Der Effekt gilt für den gesamten Bildschirm, auch für Menüs. Auf Screenshots und Bildschirmaufnahmen ist er nicht zu sehen.</string>
+    <string name="andr36oid_crt_enable">Röhrenbildschirm-Effekt verwenden</string>
+    <string name="andr36oid_crt_lines_category">Scanlines über die Bildschirmhardware</string>
+    <string name="andr36oid_crt_lines">Scanlines und Maske</string>
+    <string name="andr36oid_crt_lines_summary">Werden von der Bildschirmhardware erzeugt, nicht vom Grafikchip</string>
+    <string name="andr36oid_crt_style">Stil</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Scanlines</item><item>Scanlines und Streifenmaske</item><item>Schlitzmaske</item><item>Nur Streifenmaske</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Stärke</string>
+    <string name="andr36oid_crt_pitch">Zeilenabstand</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Automatisch, für Spiele mit 240 Zeilen</item><item>Jede 2. Zeile</item><item>Jede 3. Zeile</item><item>Jede 4. Zeile</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Linien um eine Zeile nach unten verschieben</string>
+    <string name="andr36oid_crt_phase_summary">Probiere das aus, wenn die Linien ungleichmäßig durch die Pixel im Spiel laufen</string>
+    <string name="andr36oid_crt_layers_note">Scanlines belegen eine der drei Hardware-Ebenen des Bildschirms. Bei vielen Ebenen, etwa einem Menü über einem Video, muss der Grafikchip unter Umständen mehr Arbeit übernehmen.</string>
+    <string name="andr36oid_crt_gpu_category">Grafikchip-Effekte</string>
+    <string name="andr36oid_crt_gpu_note">Sobald einer dieser Werte über null liegt, zeichnet der Grafikchip bei jedem Bild den gesamten Bildschirm neu. Spiele können dadurch deutlich langsamer laufen, besonders auf einem Bildschirm mit 720x720 Pixeln.</string>
+    <string name="andr36oid_crt_gpu_slow">Experimentell, kann Spiele stark verlangsamen</string>
+    <string name="andr36oid_crt_curvature">Bildwölbung</string>
+    <string name="andr36oid_crt_glow">Leuchten</string>
+    <string name="andr36oid_crt_gpu_mask">Phosphormaske</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Experimentell, kann Spiele stark verlangsamen. Rote, grüne und blaue Streifen; ersetzt die Streifen- und Schlitzmasken oben</string>
+</resources>

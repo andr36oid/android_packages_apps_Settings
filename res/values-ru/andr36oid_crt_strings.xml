@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">Эффект ЭЛТ</string>
+    <string name="andr36oid_crt_summary">Экспериментально: строки развёртки, выпуклый экран и свечение, как у старого телевизора</string>
+    <string name="andr36oid_crt_warning_title">Экспериментальные функции</string>
+    <string name="andr36oid_crt_warning">Все эффекты на этой странице экспериментальные. Эффекты GPU могут сильно замедлять игры на чипе RK3326. На некоторых экранах эффекты могут отображаться некорректно.</string>
+    <string name="andr36oid_crt_intro">Эффект применяется ко всему экрану, включая меню. На скриншотах и в записях экрана его не будет.</string>
+    <string name="andr36oid_crt_enable">Включить эффект ЭЛТ</string>
+    <string name="andr36oid_crt_lines_category">Аппаратные строки развёртки</string>
+    <string name="andr36oid_crt_lines">Строки развёртки и маска</string>
+    <string name="andr36oid_crt_lines_summary">Формируются контроллером экрана, а не графическим чипом</string>
+    <string name="andr36oid_crt_style">Стиль</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Строки развёртки</item><item>Строки развёртки и апертурная решётка</item><item>Щелевая маска</item><item>Только апертурная решётка</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Интенсивность</string>
+    <string name="andr36oid_crt_pitch">Интервал между строками</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Автоматически, для игр с 240 строками</item><item>Каждая 2-я строка</item><item>Каждая 3-я строка</item><item>Каждая 4-я строка</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Сдвинуть линии на одну строку вниз</string>
+    <string name="andr36oid_crt_phase_summary">Попробуйте, если линии неравномерно пересекают пиксели игры</string>
+    <string name="andr36oid_crt_layers_note">Строки развёртки занимают один из трёх аппаратных слоёв экрана. Если слоёв много, например при отображении меню поверх видео, нагрузка на графический чип может вырасти.</string>
+    <string name="andr36oid_crt_gpu_category">Эффекты графического чипа</string>
+    <string name="andr36oid_crt_gpu_note">Если хотя бы одно значение выше нуля, графический чип заново рисует весь экран для каждого кадра. Игры могут работать значительно медленнее, особенно на экране 720x720.</string>
+    <string name="andr36oid_crt_gpu_slow">Экспериментально, может сильно замедлять игры</string>
+    <string name="andr36oid_crt_curvature">Кривизна экрана</string>
+    <string name="andr36oid_crt_glow">Свечение</string>
+    <string name="andr36oid_crt_gpu_mask">Люминофорная маска</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Экспериментально, может сильно замедлять игры. Красные, зелёные и синие полосы; заменяет решётку и щелевую маску выше</string>
+</resources>

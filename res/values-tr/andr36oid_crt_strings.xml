@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">CRT efekti</string>
+    <string name="andr36oid_crt_summary">Deneysel: eski bir tüplü TV gibi tarama çizgileri, ekran eğriliği ve parıltı</string>
+    <string name="andr36oid_crt_warning_title">Deneysel</string>
+    <string name="andr36oid_crt_warning">Bu sayfadaki tüm efektler deneyseldir. GPU efektleri, RK3326 çipinde oyunları ciddi ölçüde yavaşlatabilir. Bazı efektler her ekranda düzgün görünmeyebilir.</string>
+    <string name="andr36oid_crt_intro">Efekt, menüler dahil tüm ekranı kaplar. Ekran görüntülerinde ve ekran kayıtlarında görünmez.</string>
+    <string name="andr36oid_crt_enable">CRT efektini kullan</string>
+    <string name="andr36oid_crt_lines_category">Donanımsal tarama çizgileri</string>
+    <string name="andr36oid_crt_lines">Tarama çizgileri ve maske</string>
+    <string name="andr36oid_crt_lines_summary">Grafik çipi yerine ekran donanımı tarafından çizilir</string>
+    <string name="andr36oid_crt_style">Stil</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Tarama çizgileri</item><item>Tarama çizgileri ve açıklık ızgarası</item><item>Yarık maskesi</item><item>Yalnızca açıklık ızgarası</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Yoğunluk</string>
+    <string name="andr36oid_crt_pitch">Çizgi aralığı</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Otomatik, 240 satırlı oyunlar için</item><item>Her 2 satırda bir</item><item>Her 3 satırda bir</item><item>Her 4 satırda bir</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Çizgileri bir satır aşağı kaydır</string>
+    <string name="andr36oid_crt_phase_summary">Çizgiler oyunun piksellerini düzensiz kesiyorsa bunu deneyin</string>
+    <string name="andr36oid_crt_layers_note">Tarama çizgileri, ekranın üç donanım katmanından birini kullanır. Video üzerinde bir menü gibi çok sayıda katman olduğunda grafik çipinin yükü artabilir.</string>
+    <string name="andr36oid_crt_gpu_category">Grafik çipi efektleri</string>
+    <string name="andr36oid_crt_gpu_note">Bu değerlerden herhangi biri sıfırın üzerindeyse grafik çipi her karede ekranın tamamını yeniden çizer. Oyunlar özellikle 720x720 ekranda çok daha yavaş çalışabilir.</string>
+    <string name="andr36oid_crt_gpu_slow">Deneysel, oyunları ciddi ölçüde yavaşlatabilir</string>
+    <string name="andr36oid_crt_curvature">Ekran eğriliği</string>
+    <string name="andr36oid_crt_glow">Parıltı</string>
+    <string name="andr36oid_crt_gpu_mask">Fosfor maskesi</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Deneysel, oyunları ciddi ölçüde yavaşlatabilir. Kırmızı, yeşil ve mavi şeritler; yukarıdaki ızgara ve yarık stillerinin yerini alır</string>
+</resources>

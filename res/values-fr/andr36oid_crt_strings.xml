@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">Effet CRT</string>
+    <string name="andr36oid_crt_summary">Expérimental : lignes de balayage, courbure et lueur comme sur un ancien téléviseur</string>
+    <string name="andr36oid_crt_warning_title">Expérimental</string>
+    <string name="andr36oid_crt_warning">Tous les effets de cette page sont expérimentaux. Les effets GPU peuvent fortement ralentir les jeux sur la puce RK3326. Certains effets peuvent mal s’afficher selon l’écran.</string>
+    <string name="andr36oid_crt_intro">L’effet s’applique à tout l’écran, y compris aux menus. Il n’apparaît pas dans les captures ni les enregistrements d’écran.</string>
+    <string name="andr36oid_crt_enable">Utiliser l’effet CRT</string>
+    <string name="andr36oid_crt_lines_category">Lignes de balayage matérielles</string>
+    <string name="andr36oid_crt_lines">Lignes de balayage et masque</string>
+    <string name="andr36oid_crt_lines_summary">Générés par le matériel de l’écran, pas par la puce graphique</string>
+    <string name="andr36oid_crt_style">Style</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Lignes de balayage</item><item>Lignes de balayage et grille d’ouverture</item><item>Masque à fentes</item><item>Grille d’ouverture seule</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Intensité</string>
+    <string name="andr36oid_crt_pitch">Espacement des lignes</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Automatique, pour les jeux en 240 lignes</item><item>Toutes les 2 lignes</item><item>Toutes les 3 lignes</item><item>Toutes les 4 lignes</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Décaler les lignes d’un pixel vers le bas</string>
+    <string name="andr36oid_crt_phase_summary">Essayez si les lignes ne s’alignent pas bien avec les pixels du jeu</string>
+    <string name="andr36oid_crt_layers_note">Les lignes de balayage occupent l’un des trois plans matériels de l’écran. Avec plusieurs plans superposés, comme un menu sur une vidéo, la puce graphique peut avoir davantage de travail.</string>
+    <string name="andr36oid_crt_gpu_category">Effets de la puce graphique</string>
+    <string name="andr36oid_crt_gpu_note">Dès qu’une de ces valeurs dépasse zéro, la puce graphique redessine tout l’écran à chaque image. Les jeux peuvent beaucoup ralentir, surtout sur un écran de 720x720.</string>
+    <string name="andr36oid_crt_gpu_slow">Expérimental, peut fortement ralentir les jeux</string>
+    <string name="andr36oid_crt_curvature">Courbure de l’écran</string>
+    <string name="andr36oid_crt_glow">Lueur</string>
+    <string name="andr36oid_crt_gpu_mask">Masque de phosphores</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Expérimental, peut fortement ralentir les jeux. Bandes rouges, vertes et bleues ; remplace les styles à grille et à fentes ci-dessus</string>
+</resources>
