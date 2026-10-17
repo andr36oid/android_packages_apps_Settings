@@ -57,8 +57,11 @@
             android:entries="@array/andr36oid_crt_style_entries"
             android:entryValues="@array/andr36oid_crt_style_values" />
 
+        <!-- AndroidX needs its own seekbar and value IDs; the Settings theme's
+             default slider layout is for com.android.settings.widget.SeekBarPreference. -->
         <SeekBarPreference
             android:key="strength"
+            android:layout="@layout/preference_widget_seekbar_material"
             android:persistent="false"
             android:title="@string/andr36oid_crt_strength"
             android:max="100" />
@@ -92,6 +95,7 @@
 
         <SeekBarPreference
             android:key="curvature"
+            android:layout="@layout/preference_widget_seekbar_material"
             android:persistent="false"
             android:title="@string/andr36oid_crt_curvature"
             android:summary="@string/andr36oid_crt_gpu_slow"
@@ -99,6 +103,7 @@
 
         <SeekBarPreference
             android:key="glow"
+            android:layout="@layout/preference_widget_seekbar_material"
             android:persistent="false"
             android:title="@string/andr36oid_crt_glow"
             android:summary="@string/andr36oid_crt_gpu_slow"
@@ -106,6 +111,7 @@
 
         <SeekBarPreference
             android:key="gpu_mask"
+            android:layout="@layout/preference_widget_seekbar_material"
             android:persistent="false"
             android:title="@string/andr36oid_crt_gpu_mask"
             android:summary="@string/andr36oid_crt_gpu_mask_summary"
