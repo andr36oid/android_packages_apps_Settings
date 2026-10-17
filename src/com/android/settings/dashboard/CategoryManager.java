@@ -150,6 +150,14 @@ public class CategoryManager {
             if (firstLoading) {
                 logTiles(context);
             }
+            // andr36oid: one line per load, to see in a problem report when the start page's
+            // entries were looked up and how many there were (ours went missing on a first start)
+            final StringBuilder counts = new StringBuilder();
+            for (DashboardCategory category : mCategories) {
+                counts.append(' ').append(category.key.replace("com.android.settings.", ""))
+                        .append('=').append(category.getTilesCount());
+            }
+            Log.i(TAG, "Loaded entries" + (forceClearCache ? " (cache cleared):" : ":") + counts);
         }
     }
 
