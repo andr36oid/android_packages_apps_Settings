@@ -5,7 +5,7 @@
     <string name="andr36oid_crt_summary">Experimental: scanlines, a curved screen and glow like an old TV</string>
     <!-- Always at the top of the page -->
     <string name="andr36oid_crt_warning_title">Experimental</string>
-    <string name="andr36oid_crt_warning">Everything on this page is experimental. It can slow games down dramatically on this console\'s chip, and parts of it may not look right on every screen.</string>
+    <string name="andr36oid_crt_warning">All effects on this page are experimental. The GPU effects can slow games down dramatically on the RK3326 chip. Some effects may not look right on every screen.</string>
     <string name="andr36oid_crt_intro">The effect covers everything on screen, menus too. Screenshots and screen recordings don\'t show it.</string>
 
     <string name="andr36oid_crt_enable">Use CRT effect</string>
@@ -49,14 +49,14 @@
     <string name="andr36oid_crt_phase">Move lines down one row</string>
     <string name="andr36oid_crt_phase_summary">Try this if the lines cut through the game\'s pixels unevenly</string>
 
-    <string name="andr36oid_crt_layers_note">The effect takes one of the screen\'s three hardware layers. Games need one or two, so they aren\'t affected. Screens with many layers at once, like a menu over a video, can take a little more work from the graphics chip.</string>
+    <string name="andr36oid_crt_layers_note">Scanlines use one of the screen\'s three hardware layers. With many layers on screen, such as a menu over a video, the graphics chip may have to do more work.</string>
 
     <string name="andr36oid_crt_gpu_category">Graphics chip effects</string>
-    <string name="andr36oid_crt_gpu_note">With any of these above zero, the graphics chip redraws the whole screen every frame. Games lose a lot of speed, more on the 720x720 screen.</string>
+    <string name="andr36oid_crt_gpu_note">With any of these above zero, the graphics chip redraws the whole screen every frame. Games can run much slower, especially on a 720x720 screen.</string>
     <!-- Under each graphics chip effect -->
-    <string name="andr36oid_crt_gpu_slow">Experimental, slows games down a lot</string>
+    <string name="andr36oid_crt_gpu_slow">Experimental, can slow games down a lot</string>
     <string name="andr36oid_crt_curvature">Screen curvature</string>
     <string name="andr36oid_crt_glow">Glow</string>
     <string name="andr36oid_crt_gpu_mask">Phosphor mask</string>
-    <string name="andr36oid_crt_gpu_mask_summary">Experimental, slows games down a lot. Red, green and blue stripes; replaces the grille and slot styles above</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Experimental, can slow games down a lot. Red, green and blue stripes; replaces the grille and slot styles above</string>
 </resources>

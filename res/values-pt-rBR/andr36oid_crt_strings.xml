@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">Efeito CRT</string>
+    <string name="andr36oid_crt_summary">Experimental: linhas de varredura, curvatura e brilho como em uma TV de tubo</string>
+    <string name="andr36oid_crt_warning_title">Experimental</string>
+    <string name="andr36oid_crt_warning">Todos os efeitos desta página são experimentais. Os efeitos de GPU podem deixar os jogos muito mais lentos no chip RK3326. Alguns efeitos podem não aparecer corretamente em todas as telas.</string>
+    <string name="andr36oid_crt_intro">O efeito cobre toda a tela, inclusive os menus. Ele não aparece em capturas nem em gravações de tela.</string>
+    <string name="andr36oid_crt_enable">Usar efeito CRT</string>
+    <string name="andr36oid_crt_lines_category">Linhas de varredura por hardware</string>
+    <string name="andr36oid_crt_lines">Linhas de varredura e máscara</string>
+    <string name="andr36oid_crt_lines_summary">Geradas pelo hardware da tela, não pelo chip gráfico</string>
+    <string name="andr36oid_crt_style">Estilo</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Linhas de varredura</item><item>Linhas de varredura e grade de abertura</item><item>Máscara de fendas</item><item>Somente grade de abertura</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Intensidade</string>
+    <string name="andr36oid_crt_pitch">Espaçamento entre linhas</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Automático, para jogos de 240 linhas</item><item>A cada 2 linhas</item><item>A cada 3 linhas</item><item>A cada 4 linhas</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Deslocar as linhas um pixel para baixo</string>
+    <string name="andr36oid_crt_phase_summary">Experimente se as linhas cortarem os pixels do jogo de forma irregular</string>
+    <string name="andr36oid_crt_layers_note">As linhas de varredura usam uma das três camadas de hardware da tela. Com muitas camadas, como um menu sobre um vídeo, o chip gráfico pode precisar trabalhar mais.</string>
+    <string name="andr36oid_crt_gpu_category">Efeitos do chip gráfico</string>
+    <string name="andr36oid_crt_gpu_note">Se qualquer um destes valores estiver acima de zero, o chip gráfico redesenha a tela inteira a cada quadro. Os jogos podem ficar muito mais lentos, principalmente em uma tela de 720x720.</string>
+    <string name="andr36oid_crt_gpu_slow">Experimental, pode deixar os jogos muito mais lentos</string>
+    <string name="andr36oid_crt_curvature">Curvatura da tela</string>
+    <string name="andr36oid_crt_glow">Brilho difuso</string>
+    <string name="andr36oid_crt_gpu_mask">Máscara de fósforo</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Experimental, pode deixar os jogos muito mais lentos. Listras vermelhas, verdes e azuis; substitui os estilos de grade e fendas acima</string>
+</resources>

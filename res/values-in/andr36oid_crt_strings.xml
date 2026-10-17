@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">Efek CRT</string>
+    <string name="andr36oid_crt_summary">Eksperimental: garis pindai, layar melengkung, dan pendar seperti TV tabung</string>
+    <string name="andr36oid_crt_warning_title">Eksperimental</string>
+    <string name="andr36oid_crt_warning">Semua efek di halaman ini masih eksperimental. Efek GPU dapat membuat game jauh lebih lambat pada chip RK3326. Beberapa efek mungkin tidak terlihat sesuai di semua layar.</string>
+    <string name="andr36oid_crt_intro">Efek berlaku untuk seluruh layar, termasuk menu. Efek tidak muncul pada tangkapan maupun rekaman layar.</string>
+    <string name="andr36oid_crt_enable">Gunakan efek CRT</string>
+    <string name="andr36oid_crt_lines_category">Garis pindai dari perangkat keras layar</string>
+    <string name="andr36oid_crt_lines">Garis pindai dan pola masker</string>
+    <string name="andr36oid_crt_lines_summary">Digambar oleh perangkat keras layar, bukan chip grafis</string>
+    <string name="andr36oid_crt_style">Gaya</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Garis pindai</item><item>Garis pindai dan kisi apertur</item><item>Masker celah</item><item>Kisi apertur saja</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Intensitas</string>
+    <string name="andr36oid_crt_pitch">Jarak antargaris</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Otomatis, untuk game 240 baris</item><item>Setiap 2 baris</item><item>Setiap 3 baris</item><item>Setiap 4 baris</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Geser garis satu baris ke bawah</string>
+    <string name="andr36oid_crt_phase_summary">Coba jika garis memotong piksel game secara tidak merata</string>
+    <string name="andr36oid_crt_layers_note">Garis pindai memakai satu dari tiga lapisan perangkat keras layar. Jika banyak lapisan tampil bersamaan, seperti menu di atas video, chip grafis mungkin harus bekerja lebih keras.</string>
+    <string name="andr36oid_crt_gpu_category">Efek chip grafis</string>
+    <string name="andr36oid_crt_gpu_note">Jika salah satu nilai ini di atas nol, chip grafis menggambar ulang seluruh layar pada setiap frame. Game bisa berjalan jauh lebih lambat, terutama pada layar 720x720.</string>
+    <string name="andr36oid_crt_gpu_slow">Eksperimental, dapat membuat game jauh lebih lambat</string>
+    <string name="andr36oid_crt_curvature">Kelengkungan layar</string>
+    <string name="andr36oid_crt_glow">Pendar</string>
+    <string name="andr36oid_crt_gpu_mask">Masker fosfor</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Eksperimental, dapat membuat game jauh lebih lambat. Garis merah, hijau, dan biru; menggantikan gaya kisi dan celah di atas</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_title">Efekt CRT</string>
+    <string name="andr36oid_crt_summary">Eksperymentalne: linie skanowania, krzywizna i poświata jak w starym telewizorze</string>
+    <string name="andr36oid_crt_warning_title">Funkcje eksperymentalne</string>
+    <string name="andr36oid_crt_warning">Wszystkie efekty na tej stronie są eksperymentalne. Efekty GPU mogą znacznie spowolnić gry na układzie RK3326. Niektóre efekty mogą wyglądać nieprawidłowo na części ekranów.</string>
+    <string name="andr36oid_crt_intro">Efekt obejmuje cały ekran, także menu. Nie jest widoczny na zrzutach ani nagraniach ekranu.</string>
+    <string name="andr36oid_crt_enable">Włącz efekt CRT</string>
+    <string name="andr36oid_crt_lines_category">Sprzętowe linie skanowania</string>
+    <string name="andr36oid_crt_lines">Linie skanowania i maska</string>
+    <string name="andr36oid_crt_lines_summary">Tworzone przez układ wyświetlacza, a nie układ graficzny</string>
+    <string name="andr36oid_crt_style">Styl</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>Linie skanowania</item><item>Linie skanowania i maska paskowa</item><item>Maska szczelinowa</item><item>Tylko maska paskowa</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">Intensywność</string>
+    <string name="andr36oid_crt_pitch">Odstęp między liniami</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>Automatycznie, dla gier z 240 liniami</item><item>Co 2. wiersz</item><item>Co 3. wiersz</item><item>Co 4. wiersz</item>
+    </string-array>
+    <string name="andr36oid_crt_phase">Przesuń linie o jeden wiersz w dół</string>
+    <string name="andr36oid_crt_phase_summary">Wypróbuj, jeśli linie nierówno przecinają piksele gry</string>
+    <string name="andr36oid_crt_layers_note">Linie skanowania zajmują jedną z trzech warstw sprzętowych ekranu. Przy wielu warstwach, na przykład menu nałożonym na film, układ graficzny może mieć więcej pracy.</string>
+    <string name="andr36oid_crt_gpu_category">Efekty układu graficznego</string>
+    <string name="andr36oid_crt_gpu_note">Gdy choć jedna z tych wartości przekracza zero, układ graficzny rysuje cały ekran od nowa w każdej klatce. Gry mogą działać znacznie wolniej, zwłaszcza na ekranie 720x720.</string>
+    <string name="andr36oid_crt_gpu_slow">Eksperymentalne, może znacznie spowolnić gry</string>
+    <string name="andr36oid_crt_curvature">Krzywizna ekranu</string>
+    <string name="andr36oid_crt_glow">Poświata</string>
+    <string name="andr36oid_crt_gpu_mask">Maska luminoforu</string>
+    <string name="andr36oid_crt_gpu_mask_summary">Eksperymentalne, może znacznie spowolnić gry. Czerwone, zielone i niebieskie paski; zastępuje wybrane powyżej maski paskowe i szczelinowe</string>
+</resources>
