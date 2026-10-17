@@ -36,6 +36,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.android.settings.core.OnActivityResultListener;
+import com.android.settings.display.CrtEffectFragment;
 import com.android.settings.testutils.FakeFeatureFactory;
 
 import org.junit.Before;
@@ -76,6 +77,11 @@ public class SettingsActivityTest {
         doReturn(RuntimeEnvironment.application.getClassLoader()).when(mActivity).getClassLoader();
 
         mActivity.launchSettingFragment(null, mock(Intent.class));
+    }
+
+    @Test
+    public void isValidFragment_crtEffect_isAccepted() {
+        assertThat(mActivity.isValidFragment(CrtEffectFragment.class.getName())).isTrue();
     }
 
     @Test
