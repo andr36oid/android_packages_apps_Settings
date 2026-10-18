@@ -12249,4 +12249,9 @@
     <string name="bluetooth_connect_access_dialog_negative">Don\u2019t connect</string>
     <!-- Strings for Dialog connect button -->
     <string name="bluetooth_connect_access_dialog_positive">Connect</string>
+
+    <!-- andr36oid: button hint bar at the bottom of Settings [CHAR LIMIT=12] -->
+    <string name="hint_bar_select">Select</string>
+    <string name="hint_bar_back">Back</string>
+    <string name="hint_bar_search">Search</string>
 </resources>

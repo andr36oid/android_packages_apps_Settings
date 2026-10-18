@@ -98,6 +98,16 @@ public class SettingsBaseActivity extends FragmentActivity {
     }
 
     @Override
+    public boolean dispatchKeyEvent(android.view.KeyEvent event) {
+        // andr36oid: Y opens search from every page, the hint bar at the bottom says so
+        if (com.android.settings.andr36oid.HintBar.handleKey(this, event,
+                android.app.settings.SettingsEnums.SETTINGS_HOMEPAGE)) {
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+    @Override
     public boolean onNavigateUp() {
         if (!super.onNavigateUp()) {
             finish();

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: button hints along the bottom of Settings, same look as the Quick start guide's.
+     Y is handled by the activities (HintBar.openSearch). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/andr36oid_hint_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground"
+    android:gravity="center_vertical|end"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+    <TextView
+        style="@style/Andr36oidHintKey"
+        android:text="A" />
+    <TextView
+        style="@style/Andr36oidHintLabel"
+        android:text="@string/hint_bar_select" />
+    <TextView
+        style="@style/Andr36oidHintKey"
+        android:text="B" />
+    <TextView
+        style="@style/Andr36oidHintLabel"
+        android:text="@string/hint_bar_back" />
+    <TextView
+        style="@style/Andr36oidHintKey"
+        android:text="Y" />
+    <TextView
+        style="@style/Andr36oidHintLabel"
+        android:text="@string/hint_bar_search" />
+</LinearLayout>

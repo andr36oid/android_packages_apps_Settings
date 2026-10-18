@@ -15,13 +15,21 @@
      limitations under the License.
 -->
 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/andr36oid_homepage_outer"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/settings_homepage_container"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="0dp"
+    android:layout_weight="1">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/main_content_scrollable_container"
@@ -52,11 +60,8 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:touchscreenBlocksFocus="false"
-        android:keyboardNavigationCluster="false">
-        <include layout="@layout/search_bar"/>
-    </com.google.android.material.appbar.AppBarLayout>
+    <!-- andr36oid: no search bar on top, Y opens search (see the hint bar) -->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/andr36oid_hint_bar"/>
+</LinearLayout>

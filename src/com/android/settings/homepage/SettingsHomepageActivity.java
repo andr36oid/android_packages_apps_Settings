@@ -76,12 +76,7 @@ public class SettingsHomepageActivity extends FragmentActivity {
 
         setHomepageContainerPaddingTop();
 
-        final Toolbar toolbar = findViewById(R.id.search_action_bar);
-        FeatureFactory.getFactory(this).getSearchFeatureProvider()
-                .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
-
-        final ImageView avatarView = findViewById(R.id.account_avatar);
-        getLifecycle().addObserver(new AvatarViewMixin(this, avatarView));
+        // andr36oid: no search bar on top, Y opens search (dispatchKeyEvent)
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
 
         if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
@@ -178,6 +173,10 @@ public class SettingsHomepageActivity extends FragmentActivity {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             mPinTopUntil = 0;
         }
+        if (com.android.settings.andr36oid.HintBar.handleKey(this, event,
+                SettingsEnums.SETTINGS_HOMEPAGE)) {
+            return true;
+        }
         return super.dispatchKeyEvent(event);
     }
 
@@ -198,12 +197,8 @@ public class SettingsHomepageActivity extends FragmentActivity {
     void setHomepageContainerPaddingTop() {
         final View view = this.findViewById(R.id.homepage_container);
 
-        final int searchBarHeight = getResources().getDimensionPixelSize(R.dimen.search_bar_height);
-        final int searchBarMargin = getResources().getDimensionPixelSize(R.dimen.search_bar_margin);
-
-        // The top padding is the height of action bar(48dp) + top/bottom margins(16dp)
-        final int paddingTop = searchBarHeight + searchBarMargin * 2;
-        view.setPadding(0 /* left */, paddingTop, 0 /* right */, 0 /* bottom */);
+        // andr36oid: no search bar on top, nothing to leave room for
+        view.setPadding(0 /* left */, 0 /* top */, 0 /* right */, 0 /* bottom */);
     }
 
     @Override
