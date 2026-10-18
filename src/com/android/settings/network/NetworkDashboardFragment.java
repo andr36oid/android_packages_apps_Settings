@@ -22,12 +22,15 @@ import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
@@ -116,21 +119,47 @@ public class NetworkDashboardFragment extends DashboardFragment implements
         updateAdvancedCount();
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        // andr36oid: paired devices are added in the background after onDataSetChanged, which
+        // would push the last rows before Advanced under it. Count again whenever the list is
+        // rebuilt; the adapter only rebuilds once more if the count changed.
+        final RecyclerView list = getListView();
+        final RecyclerView.Adapter<?> adapter = list != null ? list.getAdapter() : null;
+        if (adapter instanceof PreferenceGroupAdapter) {
+            adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+                @Override
+                public void onChanged() {
+                    if (updateAdvancedCount()) {
+                        ((PreferenceGroupAdapter) adapter).onPreferenceHierarchyChange(null);
+                    }
+                }
+            });
+        }
+    }
+
     /**
      * andr36oid: everything before the Advanced part (VPN, Private DNS, Hotspot & tethering) is
      * shown, however many paired devices and app tiles there are right now.
      */
-    private void updateAdvancedCount() {
+    /** Returns whether the count changed. */
+    private boolean updateAdvancedCount() {
         final PreferenceScreen screen = getPreferenceScreen();
         final Bundle arguments = getArguments();
         if (screen == null || (arguments != null
                 && arguments.containsKey(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY))) {
-            return; // a search result is highlighted, everything stays expanded
+            return false; // a search result is highlighted, everything stays expanded
+        }
+        if (screen.getInitialExpandedChildrenCount() == Integer.MAX_VALUE) {
+            return false; // Advanced was opened (the expand button sets this), it stays open
         }
         final int count = countVisible(screen);
-        if (count != screen.getInitialExpandedChildrenCount()) {
-            screen.setInitialExpandedChildrenCount(count);
+        if (count == screen.getInitialExpandedChildrenCount()) {
+            return false;
         }
+        screen.setInitialExpandedChildrenCount(count);
+        return true;
     }
 
     private static int countVisible(PreferenceScreen screen) {
