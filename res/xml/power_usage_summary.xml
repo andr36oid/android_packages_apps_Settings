@@ -70,13 +70,8 @@
         android:selectable="false" />
 
     <!-- andr36oid: Battery saver is the last row, just above the footer -->
-    <Preference
-        android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
-        android:key="battery_saver_summary"
-        android:title="@string/battery_saver"
-        settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
-
-    <!-- andr36oid: no Battery & performance (LineageParts perf profiles) row, its page is empty -->
+    <!-- andr36oid: no Battery saver and no Battery & performance row: Settings > Performance
+         profile is the battery saver here -->
 
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
