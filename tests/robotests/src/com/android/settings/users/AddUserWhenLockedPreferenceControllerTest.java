@@ -170,7 +170,7 @@ public class AddUserWhenLockedPreferenceControllerTest {
 
         verify(preference).setVisible(false);
         assertThat(controller.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.CONDITIONALLY_UNAVAILABLE);
+                BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
@@ -186,8 +186,9 @@ public class AddUserWhenLockedPreferenceControllerTest {
 
         controller.updateState(preference);
 
-        verify(preference).setVisible(true);
+        verify(preference).setVisible(false);
+        // andr36oid: the entry is always hidden
         assertThat(controller.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.AVAILABLE);
+                BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 }

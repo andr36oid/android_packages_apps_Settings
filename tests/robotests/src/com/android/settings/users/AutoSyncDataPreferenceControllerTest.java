@@ -88,7 +88,8 @@ public class AutoSyncDataPreferenceControllerTest {
 
         mController.displayPreference(mScreen);
 
-        assertThat(mPreference.isVisible()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mPreference.isVisible()).isFalse();
     }
 
     @Test
@@ -101,7 +102,8 @@ public class AutoSyncDataPreferenceControllerTest {
 
         mController.displayPreference(mScreen);
 
-        assertThat(mPreference.isVisible()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mPreference.isVisible()).isFalse();
     }
 
     @Test

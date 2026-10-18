@@ -82,9 +82,8 @@ public class AutoSyncDataPreferenceController extends AbstractPreferenceControll
 
     @Override
     public boolean isAvailable() {
-        return !mUserManager.isManagedProfile()
-                && (mUserManager.isRestrictedProfile()
-                || mUserManager.getProfiles(UserHandle.myUserId()).size() == 1);
+        // andr36oid: no "Automatically sync app data", the console has no accounts to sync
+        return false;
     }
 
     @Override

@@ -44,14 +44,8 @@ public class BrandedAccountPreferenceController extends BasePreferenceController
 
     @Override
     public int getAvailabilityStatus() {
-        if (!mContext.getResources().getBoolean(
-                R.bool.config_show_branded_account_in_device_info)) {
-            return UNSUPPORTED_ON_DEVICE;
-        }
-        if (mAccounts != null && mAccounts.length > 0) {
-            return AVAILABLE;
-        }
-        return DISABLED_FOR_USER;
+        // andr36oid: no branded account row in About, the console has no accounts
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

@@ -68,26 +68,8 @@ public class SecondaryUserController extends AbstractPreferenceController implem
             Context context, UserManager userManager) {
 
         List<AbstractPreferenceController> controllers = new ArrayList<>();
-        UserInfo primaryUser = userManager.getPrimaryUser();
-        boolean addedUser = false;
-        List<UserInfo> infos = userManager.getUsers();
-        for (int i = 0, size = infos.size(); i < size; i++) {
-            UserInfo info = infos.get(i);
-            if (info.isPrimary()) {
-                continue;
-            }
-
-            if (info == null || Utils.isProfileOf(primaryUser, info)) {
-                continue;
-            }
-
-            controllers.add(new SecondaryUserController(context, info));
-            addedUser = true;
-        }
-
-        if (!addedUser) {
-            controllers.add(new NoSecondaryUserController(context));
-        }
+        // andr36oid: no "Other users" storage group, the console has a single user
+        controllers.add(new NoSecondaryUserController(context));
         return controllers;
     }
 

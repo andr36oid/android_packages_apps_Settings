@@ -53,15 +53,8 @@ public class AddUserWhenLockedPreferenceController extends TogglePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        if (!mUserCaps.isAdmin()) {
-            return DISABLED_FOR_USER;
-        } else if (mUserCaps.disallowAddUser() || mUserCaps.disallowAddUserSetByAdmin()) {
-            return DISABLED_FOR_USER;
-        } else if (!mLockPatternUtils.isSecure(UserHandle.myUserId())) {
-            return CONDITIONALLY_UNAVAILABLE;
-        } else {
-            return mUserCaps.mUserSwitcherEnabled ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
-        }
+        // andr36oid: no "Add users from lock screen", the console has a single user
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

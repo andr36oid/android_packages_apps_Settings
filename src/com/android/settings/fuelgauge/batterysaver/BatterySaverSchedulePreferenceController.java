@@ -79,6 +79,7 @@ public class BatterySaverSchedulePreferenceController extends BasePreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no Battery saver schedule, battery saver itself stays
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

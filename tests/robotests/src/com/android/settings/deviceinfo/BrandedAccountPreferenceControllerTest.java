@@ -63,7 +63,8 @@ public class BrandedAccountPreferenceControllerTest {
         final BrandedAccountPreferenceController controller =
                 new BrandedAccountPreferenceController(mContext, "test_key");
 
-        assertThat(controller.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(controller.isAvailable()).isFalse();
     }
 
     @Test

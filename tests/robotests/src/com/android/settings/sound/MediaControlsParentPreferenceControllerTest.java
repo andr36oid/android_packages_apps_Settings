@@ -16,7 +16,7 @@
 
 package com.android.settings.sound;
 
-import static com.android.settings.core.BasePreferenceController.AVAILABLE;
+import static com.android.settings.core.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -67,7 +67,9 @@ public class MediaControlsParentPreferenceControllerTest {
 
     @Test
     public void getAvailability_returnAvailable() {
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+        // andr36oid: the entry is always hidden
+        assertThat(mController.getAvailabilityStatus())
+                .isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
 
     @Test

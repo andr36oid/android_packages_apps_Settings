@@ -133,7 +133,8 @@ public class SecondaryUserControllerTest {
                 SecondaryUserController.getSecondaryUserControllers(mContext, mUserManager);
 
         assertThat(controllers).hasSize(1);
-        assertThat(controllers.get(0) instanceof SecondaryUserController).isTrue();
+        // andr36oid: secondary users are never listed
+        assertThat(controllers.get(0) instanceof SecondaryUserController).isFalse();
     }
 
     @Test
@@ -150,7 +151,8 @@ public class SecondaryUserControllerTest {
                 SecondaryUserController.getSecondaryUserControllers(mContext, mUserManager);
 
         assertThat(controllers).hasSize(1);
-        assertThat(controllers.get(0) instanceof SecondaryUserController).isTrue();
+        // andr36oid: secondary users are never listed
+        assertThat(controllers.get(0) instanceof SecondaryUserController).isFalse();
     }
 
     @Test

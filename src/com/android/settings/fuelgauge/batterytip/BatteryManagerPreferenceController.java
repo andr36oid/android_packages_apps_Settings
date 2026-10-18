@@ -49,7 +49,8 @@ public class BatteryManagerPreferenceController extends BasePreferenceController
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE_UNSEARCHABLE;
+        // andr36oid: no Battery manager / Adaptive battery, the console has no app standby tips
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

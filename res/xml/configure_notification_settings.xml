@@ -135,11 +135,8 @@
             android:title="@string/notification_pulse_title"
             settings:controller="com.android.settings.notification.PulseNotificationPreferenceController"/>
 
-        <!-- Notification lights -->
-        <org.lineageos.internal.lineageparts.LineagePartsPreference
-            android:key="notification_lights"
-            lineage:requiresConfig="@*android:bool/config_intrusiveNotificationLed"
-            lineage:replacesKey="notification_pulse" />
+        <!-- andr36oid: no Notification lights page (the plain Pulse notification light
+             switch stays) -->
 
         <!-- Heads up -->
         <lineageos.preference.GlobalSettingSwitchPreference

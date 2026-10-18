@@ -53,6 +53,8 @@
 
         <lineageos.preference.LineageSecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
+            settings:isPreferenceVisible="false"
+            settings:searchable="false"
             android:title="@string/lockscreen_visualizer_title"
             android:defaultValue="false" />
 

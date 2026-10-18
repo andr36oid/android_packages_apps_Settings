@@ -57,6 +57,7 @@ public class BatterySaverStickyPreferenceController extends TogglePreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no "Turn off when charged" option, battery saver itself stays
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

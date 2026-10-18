@@ -35,7 +35,8 @@ public class MediaControlsParentPreferenceController extends BasePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no Media controls entry, there is no lock screen player to configure
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
