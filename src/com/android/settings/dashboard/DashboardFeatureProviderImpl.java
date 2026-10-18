@@ -362,8 +362,7 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
         final Icon tileIcon = tile.getIcon(preference.getContext());
         if (tileIcon != null) {
             Drawable iconDrawable = tileIcon.loadDrawable(preference.getContext());
-            // andr36oid: a tintable icon (ours) stays a plain glyph, no coloured circle behind it
-            if (forceRoundedIcon && !tile.isIconTintable(preference.getContext())
+            if (forceRoundedIcon
                     && !TextUtils.equals(mContext.getPackageName(), tile.getPackageName())) {
                 iconDrawable = new AdaptiveIcon(mContext, iconDrawable);
                 ((AdaptiveIcon) iconDrawable).setBackgroundColor(mContext, tile);
