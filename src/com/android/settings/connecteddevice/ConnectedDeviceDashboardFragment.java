@@ -128,7 +128,7 @@ public class ConnectedDeviceDashboardFragment extends DashboardFragment {
     }
 
     @VisibleForTesting
-    public static boolean isAlwaysDiscoverable(String callingAppPackageName, String action) {
+    boolean isAlwaysDiscoverable(String callingAppPackageName, String action) {
         return TextUtils.equals(SLICE_ACTION, action) ? false
                 : TextUtils.equals(SETTINGS_PACKAGE_NAME, callingAppPackageName)
                 || TextUtils.equals(SYSTEMUI_PACKAGE_NAME, callingAppPackageName);
@@ -138,12 +138,5 @@ public class ConnectedDeviceDashboardFragment extends DashboardFragment {
      * For Search.
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.connected_devices) {
-                @Override
-                protected boolean isPageSearchEnabled(Context context) {
-                    // andr36oid: the page has no start page entry, its content is on
-                    // Wi-Fi & Bluetooth (NetworkDashboardFragment)
-                    return false;
-                }
-            };
+            new BaseSearchIndexProvider(R.xml.connected_devices);
 }

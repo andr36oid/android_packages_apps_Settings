@@ -20,21 +20,17 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
-    <!-- andr36oid: Wi-Fi & Bluetooth, the Connected devices page is merged into this one -->
     <Preference
         android:key="top_level_network"
-        android:title="@string/wifi_and_bluetooth_title"
+        android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_homepage_network"
         android:order="-120"
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController"/>
 
-    <!-- andr36oid: no Connected devices entry, Bluetooth and paired devices are on Wi-Fi &
-         Bluetooth -->
     <Preference
         android:key="top_level_connected_devices"
-        settings:isPreferenceVisible="false"
         android:title="@string/connected_devices_dashboard_title"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_homepage_connected_device"

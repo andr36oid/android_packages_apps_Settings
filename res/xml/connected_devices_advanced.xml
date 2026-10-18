@@ -19,11 +19,9 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/connected_device_connections_title">
 
-    <!-- andr36oid: Bluetooth is searchable on Wi-Fi & Bluetooth -->
     <Preference
         android:fragment="com.android.settings.connecteddevice.BluetoothDashboardFragment"
         android:key="bluetooth_switchbar_screen"
-        settings:searchable="false"
         android:title="@string/bluetooth_settings_title"
         android:icon="@*android:drawable/ic_settings_bluetooth"
         android:order="-9"/>

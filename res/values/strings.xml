@@ -7540,6 +7540,8 @@
     <string name="network_dashboard_title">Network &amp; internet</string>
     <!-- andr36oid: title of the start page entry and its page, Wi-Fi plus Bluetooth and paired devices [CHAR LIMIT=40] -->
     <string name="wifi_and_bluetooth_title">Wi\u2011Fi &amp; Bluetooth</string>
+    <!-- andr36oid: row on Wi-Fi & Bluetooth that opens the Connected devices page [CHAR LIMIT=40] -->
+    <string name="bluetooth_and_devices_title">Bluetooth &amp; devices</string>
     <!-- Summary for Network and Internet settings, explaining it contains mobile network setting [CHAR LIMIT=NONE]-->
     <string name="network_dashboard_summary_mobile">mobile</string>
     <!-- Summary for Network and Internet settings, explaining it contains network data usage setting [CHAR LIMIT=NONE]-->

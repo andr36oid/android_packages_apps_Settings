@@ -32,7 +32,9 @@ public class TopLevelSecurityEntryPreferenceController extends BasePreferenceCon
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no Security page. The controller makes the entry visible again
+        // whatever settings:isPreferenceVisible says, so it has to be unavailable here.
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

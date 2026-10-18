@@ -30,8 +30,8 @@ public class TopLevelConnectedDevicesPreferenceController extends BasePreference
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_top_level_connected_devices)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no start page entry, Connected devices opens from Wi-Fi & Bluetooth
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
