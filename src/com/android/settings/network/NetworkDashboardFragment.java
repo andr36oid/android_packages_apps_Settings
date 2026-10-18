@@ -24,26 +24,42 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
 import androidx.fragment.app.Fragment;
 
 import com.android.settings.R;
+import com.android.settings.SettingsActivity;
+import com.android.settings.connecteddevice.AvailableMediaDeviceGroupController;
+import com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment;
+import com.android.settings.connecteddevice.ConnectedDeviceGroupController;
+import com.android.settings.connecteddevice.DiscoverableFooterPreferenceController;
+import com.android.settings.connecteddevice.PreviouslyConnectedDevicePreferenceController;
+import com.android.settings.connecteddevice.SavedTwsDeviceGroupController;
 import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.password.PasswordUtils;
 import com.android.settings.network.MobilePlanPreferenceController.MobilePlanPreferenceHost;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.wifi.WifiMasterSwitchPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.drawer.CategoryKey;
 import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @SearchIndexable
 public class NetworkDashboardFragment extends DashboardFragment implements
         MobilePlanPreferenceHost {
 
     private static final String TAG = "NetworkDashboardFrag";
+
+    /** Preferences from this order on (Data Saver, VPN, Private DNS, tethering) are under Advanced. */
+    private static final int ADVANCED_ORDER = 200;
 
     @Override
     public int getMetricsCategory() {
@@ -67,6 +83,75 @@ public class NetworkDashboardFragment extends DashboardFragment implements
         use(MultiNetworkHeaderController.class).init(getSettingsLifecycle());
         use(AirplaneModePreferenceController.class).setFragment(this);
         getSettingsLifecycle().addObserver(use(AllInOneTetherPreferenceController.class));
+        initConnectedDeviceControllers();
+    }
+
+    private void initConnectedDeviceControllers() {
+        // andr36oid: the paired devices part of the old Connected devices page
+        use(AvailableMediaDeviceGroupController.class).init(this);
+        use(ConnectedDeviceGroupController.class).init(this);
+        use(SavedTwsDeviceGroupController.class).init(this);
+        use(PreviouslyConnectedDevicePreferenceController.class).init(this);
+        final String callingAppPackageName = PasswordUtils.getCallingAppPackageName(
+                getActivity().getActivityToken());
+        final String action = getIntent() != null ? getIntent().getAction() : "";
+        use(DiscoverableFooterPreferenceController.class).setAlwaysDiscoverable(
+                ConnectedDeviceDashboardFragment.isAlwaysDiscoverable(
+                        callingAppPackageName, action));
+    }
+
+    @Override
+    public void onCategoriesChanged(Set<String> categories) {
+        // andr36oid: tiles for the old Connected devices category are shown here as well
+        if (categories != null && categories.contains(CategoryKey.CATEGORY_CONNECT)) {
+            super.onCategoriesChanged(null);
+            return;
+        }
+        super.onCategoriesChanged(categories);
+    }
+
+    @Override
+    protected void onDataSetChanged() {
+        super.onDataSetChanged();
+        updateAdvancedCount();
+    }
+
+    /**
+     * andr36oid: everything before the Advanced part (VPN, Private DNS, Hotspot & tethering) is
+     * shown, however many paired devices and app tiles there are right now.
+     */
+    private void updateAdvancedCount() {
+        final PreferenceScreen screen = getPreferenceScreen();
+        final Bundle arguments = getArguments();
+        if (screen == null || (arguments != null
+                && arguments.containsKey(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY))) {
+            return; // a search result is highlighted, everything stays expanded
+        }
+        final int count = countVisible(screen);
+        if (count != screen.getInitialExpandedChildrenCount()) {
+            screen.setInitialExpandedChildrenCount(count);
+        }
+    }
+
+    private static int countVisible(PreferenceScreen screen) {
+        int count = 0;
+        for (int i = 0; i < screen.getPreferenceCount(); i++) {
+            final Preference pref = screen.getPreference(i);
+            if (!pref.isVisible() || pref.getOrder() >= ADVANCED_ORDER) {
+                continue;
+            }
+            if (pref instanceof PreferenceGroup) {
+                final PreferenceGroup group = (PreferenceGroup) pref;
+                for (int j = 0; j < group.getPreferenceCount(); j++) {
+                    if (group.getPreference(j).isVisible()) {
+                        count++;
+                    }
+                }
+            } else {
+                count++;
+            }
+        }
+        return count;
     }
 
     @Override

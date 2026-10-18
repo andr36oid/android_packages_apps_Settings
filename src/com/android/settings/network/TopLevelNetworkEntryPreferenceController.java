@@ -32,14 +32,9 @@ import java.util.List;
 public class TopLevelNetworkEntryPreferenceController extends BasePreferenceController {
 
     private final WifiMasterSwitchPreferenceController mWifiPreferenceController;
-    private final MobileNetworkPreferenceController mMobileNetworkPreferenceController;
-    private final TetherPreferenceController mTetherPreferenceController;
 
     public TopLevelNetworkEntryPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
-        mMobileNetworkPreferenceController = new MobileNetworkPreferenceController(mContext);
-        mTetherPreferenceController = new TetherPreferenceController(
-                mContext, null /* lifecycle */);
         mWifiPreferenceController = new WifiMasterSwitchPreferenceController(
                 mContext, null /* metrics */);
     }
@@ -51,29 +46,18 @@ public class TopLevelNetworkEntryPreferenceController extends BasePreferenceCont
 
     @Override
     public CharSequence getSummary() {
+        // andr36oid: the entry is Wi-Fi & Bluetooth, the console has no mobile data
         final String wifiSummary = BidiFormatter.getInstance()
                 .unicodeWrap(mContext.getString(R.string.wifi_settings_title));
-        final String mobileSummary = mContext.getString(
-                R.string.network_dashboard_summary_mobile);
-        final String dataUsageSummary = mContext.getString(
-                R.string.network_dashboard_summary_data_usage);
-        final String hotspotSummary = mContext.getString(
-                R.string.network_dashboard_summary_hotspot);
+        final String bluetoothSummary = mContext.getString(R.string.bluetooth_settings_title);
 
         final List<String> summaries = new ArrayList<>();
         if (mWifiPreferenceController.isAvailable()
                 && !TextUtils.isEmpty(wifiSummary)) {
             summaries.add(wifiSummary);
         }
-        if (mMobileNetworkPreferenceController.isAvailable() && !TextUtils.isEmpty(mobileSummary)) {
-            summaries.add(mobileSummary);
-        }
-        if (!TextUtils.isEmpty(dataUsageSummary)) {
-            summaries.add(dataUsageSummary);
-        }
-        if (mTetherPreferenceController.isAvailable()
-                && !TextUtils.isEmpty(hotspotSummary)) {
-            summaries.add(hotspotSummary);
+        if (!TextUtils.isEmpty(bluetoothSummary)) {
+            summaries.add(bluetoothSummary);
         }
         return ListFormatter.getInstance().format(summaries);
     }

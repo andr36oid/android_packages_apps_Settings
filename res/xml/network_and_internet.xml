@@ -18,7 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="network_and_internet_screen"
-    android:title="@string/network_dashboard_title"
+    android:title="@string/wifi_and_bluetooth_title"
     settings:initialExpandedChildrenCount="5">
 
     <PreferenceCategory
@@ -41,6 +41,16 @@
             android:action="android.settings.WIFI_SETTINGS"
             android:targetClass="Settings$WifiSettingsActivity" />
     </com.android.settings.widget.MasterSwitchPreference>
+
+    <!-- andr36oid: Wi-Fi & Bluetooth page. Bluetooth and the paired devices lists come from the
+         old Connected devices page (ConnectedDeviceDashboardFragment still works for intents),
+         VPN, Private DNS and Hotspot & tethering are behind Advanced at the end -->
+    <Preference
+        android:fragment="com.android.settings.connecteddevice.BluetoothDashboardFragment"
+        android:key="bluetooth_switchbar_screen"
+        android:title="@string/bluetooth_settings_title"
+        android:icon="@*android:drawable/ic_settings_bluetooth"
+        android:order="-25"/>
 
     <com.android.settings.widget.AddPreference
         android:key="mobile_network_list"
@@ -74,7 +84,7 @@
         android:key="tether_settings"
         android:title="@string/tether_settings_title_all"
         android:icon="@drawable/ic_wifi_tethering"
-        android:order="5"
+        android:order="230"
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
@@ -85,12 +95,79 @@
         android:key="all_tether_settings"
         android:title="@string/tether_settings_title_all"
         android:icon="@drawable/ic_wifi_tethering"
-        android:order="6"
+        android:order="231"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.network.AllInOneTetherPreferenceController"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
         settings:useAdminDisabledSummary="true" />
+
+    <PreferenceCategory
+        android:key="available_device_list"
+        android:title="@string/connected_device_media_device_title"
+        android:order="1"
+        settings:allowDividerAbove="true"
+        settings:controller="com.android.settings.connecteddevice.AvailableMediaDeviceGroupController"/>
+
+    <PreferenceCategory
+        android:key="connected_device_list"
+        android:title="@string/connected_device_other_device_title"
+        android:order="2"
+        settings:controller="com.android.settings.connecteddevice.ConnectedDeviceGroupController"/>
+
+    <PreferenceCategory
+        android:key="saved_tws_device_list"
+        android:title="@string/connected_tws_device_saved_title"
+        android:order="3"
+        settings:controller="com.android.settings.connecteddevice.SavedTwsDeviceGroupController"/>
+
+    <com.android.settingslib.RestrictedPreference
+        android:key="add_bt_devices"
+        android:title="@string/bluetooth_pairing_pref_title"
+        android:icon="@drawable/ic_add_24dp"
+        android:summary="@string/connected_device_add_device_summary"
+        android:fragment="com.android.settings.bluetooth.BluetoothPairingDetail"
+        android:order="4"
+        settings:allowDividerAbove="true"
+        settings:keywords="@string/keywords_add_bt_device"
+        settings:userRestriction="no_config_bluetooth"
+        settings:useAdminDisabledSummary="true"
+        settings:controller="com.android.settings.connecteddevice.AddDevicePreferenceController"/>
+
+    <PreferenceCategory
+        android:key="previously_connected_devices"
+        android:title="@string/connected_device_previously_connected_title"
+        android:order="5"
+        settings:controller="com.android.settings.connecteddevice.PreviouslyConnectedDevicePreferenceController">
+
+        <Preference
+            android:key="previously_connected_devices_see_all"
+            android:title="@string/previous_connected_see_all"
+            android:icon="@drawable/ic_chevron_right_24dp"
+            android:order="10"
+            settings:searchable="false"
+            android:fragment="com.android.settings.connecteddevice.PreviouslyConnectedDeviceDashboardFragment"/>
+    </PreferenceCategory>
+
+    <Preference
+        android:key="connection_preferences"
+        android:title="@string/connected_device_connections_title"
+        android:summary="@string/summary_placeholder"
+        android:fragment="com.android.settings.connecteddevice.AdvancedConnectedDeviceDashboardFragment"
+        android:order="6"
+        settings:allowDividerAbove="true"
+        settings:controller="com.android.settings.connecteddevice.AdvancedConnectedDeviceController"/>
+
+    <!-- Apps' tiles for the old Connected devices and Network pages land here, see CategoryManager -->
+    <PreferenceCategory
+        android:key="dashboard_tile_placeholder"
+        android:order="100"/>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="discoverable_footer"
+        android:title="@string/bluetooth_off_footer"
+        android:selectable="false"
+        settings:controller="com.android.settings.connecteddevice.DiscoverableFooterPreferenceController"/>
 
     <!-- andr36oid: no Data Saver, the console has no mobile data -->
     <com.android.settings.datausage.DataSaverPreference
@@ -99,7 +176,7 @@
         settings:searchable="false"
         android:title="@string/data_saver_title"
         android:icon="@drawable/ic_settings_data_usage"
-        android:order="10"
+        android:order="205"
         android:fragment="com.android.settings.datausage.DataSaverSummary"/>
 
     <com.android.settingslib.RestrictedPreference
@@ -107,7 +184,7 @@
         android:key="vpn_settings"
         android:title="@string/vpn_settings_title"
         android:icon="@drawable/ic_vpn_key"
-        android:order="15"
+        android:order="210"
         android:summary="@string/summary_placeholder"
         settings:userRestriction="no_config_vpn"
         settings:useAdminDisabledSummary="true" />
@@ -115,7 +192,7 @@
     <com.android.settings.network.PrivateDnsModeDialogPreference
         android:key="private_dns_settings"
         android:title="@string/select_private_dns_configuration_title"
-        android:order="20"
+        android:order="220"
         android:dialogTitle="@string/select_private_dns_configuration_dialog_title"
         android:dialogLayout="@layout/private_dns_mode_dialog"
         android:positiveButtonText="@string/save"
@@ -126,6 +203,6 @@
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
         android:summary="@string/summary_placeholder"
-        android:order="25"
+        android:order="240"
         settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
 </PreferenceScreen>

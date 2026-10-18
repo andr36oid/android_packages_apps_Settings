@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings start page entry and its page: Wi-Fi plus Bluetooth and paired devices -->
+    <string name="wifi_and_bluetooth_title">Wi\u2011Fi &amp; Bluetooth</string>
+</resources>

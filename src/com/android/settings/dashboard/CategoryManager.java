@@ -71,6 +71,25 @@ public class CategoryManager {
     public synchronized DashboardCategory getTilesByCategory(Context context, String categoryKey) {
         tryInitCategories(context);
 
+        if (CategoryKey.CATEGORY_NETWORK.equals(categoryKey)) {
+            // andr36oid: the Wi-Fi & Bluetooth page also shows what apps inject for the
+            // old Connected devices page
+            final DashboardCategory network = mCategoryByKeyMap.get(categoryKey);
+            final DashboardCategory connect = mCategoryByKeyMap.get(CategoryKey.CATEGORY_CONNECT);
+            if (connect == null) {
+                return network;
+            }
+            final DashboardCategory merged = new DashboardCategory(categoryKey);
+            if (network != null) {
+                for (Tile tile : network.getTiles()) {
+                    merged.addTile(tile);
+                }
+            }
+            for (Tile tile : connect.getTiles()) {
+                merged.addTile(tile);
+            }
+            return merged;
+        }
         return mCategoryByKeyMap.get(categoryKey);
     }
 

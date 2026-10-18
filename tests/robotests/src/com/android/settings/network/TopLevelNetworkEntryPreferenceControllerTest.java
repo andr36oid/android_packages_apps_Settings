@@ -48,10 +48,6 @@ public class TopLevelNetworkEntryPreferenceControllerTest {
 
     @Mock
     private WifiMasterSwitchPreferenceController mWifiPreferenceController;
-    @Mock
-    private MobileNetworkPreferenceController mMobileNetworkPreferenceController;
-    @Mock
-    private TetherPreferenceController mTetherPreferenceController;
 
     private Context mContext;
     private TopLevelNetworkEntryPreferenceController mController;
@@ -68,10 +64,6 @@ public class TopLevelNetworkEntryPreferenceControllerTest {
 
         ReflectionHelpers.setField(mController, "mWifiPreferenceController",
                 mWifiPreferenceController);
-        ReflectionHelpers.setField(mController, "mMobileNetworkPreferenceController",
-                mMobileNetworkPreferenceController);
-        ReflectionHelpers.setField(mController, "mTetherPreferenceController",
-                mTetherPreferenceController);
     }
 
     @After
@@ -86,21 +78,16 @@ public class TopLevelNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void getSummary_hasMobileAndHotspot_shouldReturnMobileSummary() {
+    public void getSummary_wifiAvailable_shouldReturnWifiAndBluetooth() {
         when(mWifiPreferenceController.isAvailable()).thenReturn(true);
-        when(mMobileNetworkPreferenceController.isAvailable()).thenReturn(true);
-        when(mTetherPreferenceController.isAvailable()).thenReturn(true);
 
-        assertThat(mController.getSummary())
-                .isEqualTo("Wi\u2011Fi, mobile, data usage, and hotspot");
+        assertThat(mController.getSummary()).isEqualTo("Wi\u2011Fi and Bluetooth");
     }
 
     @Test
-    public void getSummary_noMobileOrHotspot_shouldReturnSimpleSummary() {
-        when(mWifiPreferenceController.isAvailable()).thenReturn(true);
-        when(mMobileNetworkPreferenceController.isAvailable()).thenReturn(false);
-        when(mTetherPreferenceController.isAvailable()).thenReturn(false);
+    public void getSummary_noWifi_shouldReturnBluetooth() {
+        when(mWifiPreferenceController.isAvailable()).thenReturn(false);
 
-        assertThat(mController.getSummary()).isEqualTo("Wi\u2011Fi and data usage");
+        assertThat(mController.getSummary()).isEqualTo("Bluetooth");
     }
 }
