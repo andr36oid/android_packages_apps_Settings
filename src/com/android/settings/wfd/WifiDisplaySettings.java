@@ -768,5 +768,12 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.wifi_display_settings);
+            new BaseSearchIndexProvider(R.xml.wifi_display_settings) {
+                @Override
+                protected boolean isPageSearchEnabled(Context context) {
+                    // andr36oid: Cast has no entry in Connected devices, see
+                    // WifiDisplayPreferenceController
+                    return false;
+                }
+            };
 }

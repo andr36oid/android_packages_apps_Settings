@@ -16,7 +16,7 @@
 
 package com.android.settings.gestures;
 
-import static com.android.settings.core.BasePreferenceController.AVAILABLE;
+import static com.android.settings.core.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -68,7 +68,7 @@ public class GesturesSettingsPreferenceControllerTest {
     }
 
     @Test
-    public void isAvailable_hasGesture_shouldReturnTrue() {
+    public void isAvailable_hasGesture_stillUnsupported() {
         final List<AbstractPreferenceController> mControllers = new ArrayList<>();
         mControllers.add(new AbstractPreferenceController(RuntimeEnvironment.application) {
             @Override
@@ -83,7 +83,8 @@ public class GesturesSettingsPreferenceControllerTest {
         });
         ReflectionHelpers.setField(mController, "mGestureControllers", mControllers);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+        // andr36oid: the entry is always hidden
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
 
     @Test

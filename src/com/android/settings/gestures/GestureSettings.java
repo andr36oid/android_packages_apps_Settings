@@ -63,5 +63,12 @@ public class GestureSettings extends DashboardFragment {
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.gestures);
+            new BaseSearchIndexProvider(R.xml.gestures) {
+                @Override
+                protected boolean isPageSearchEnabled(Context context) {
+                    // andr36oid: Gestures has no entry in System, see
+                    // GesturesSettingPreferenceController
+                    return false;
+                }
+            };
 }

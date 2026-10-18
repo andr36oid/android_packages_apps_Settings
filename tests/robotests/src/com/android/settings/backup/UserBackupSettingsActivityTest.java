@@ -128,8 +128,9 @@ public class UserBackupSettingsActivityTest {
 
         assertThat(UserBackupSettingsActivity.SEARCH_INDEX_DATA_PROVIDER.getRawDataToIndex(
                 mApplication, true)).isNotEmpty();
+        // andr36oid: never in search
         assertThat(UserBackupSettingsActivity.SEARCH_INDEX_DATA_PROVIDER.getNonIndexableKeys(
-                mApplication)).isEmpty();
+                mApplication)).contains("Backup");
     }
 
     @Test

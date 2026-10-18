@@ -69,7 +69,9 @@ public class WifiDisplayPreferenceController extends BasePreferenceController im
 
     @Override
     public int getAvailabilityStatus() {
-        return WifiDisplaySettings.isAvailable(mContext) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Cast entry, casting needs a receiver and Google services the console
+        // doesn't have
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

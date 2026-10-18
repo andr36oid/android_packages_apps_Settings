@@ -49,14 +49,9 @@ public class GesturesSettingPreferenceController extends BasePreferenceControlle
 
     @Override
     public int getAvailabilityStatus() {
-        if (mGestureControllers == null) {
-            mGestureControllers = buildAllPreferenceControllers(mContext);
-        }
-        boolean isAvailable = false;
-        for (AbstractPreferenceController controller : mGestureControllers) {
-            isAvailable = isAvailable || controller.isAvailable();
-        }
-        return isAvailable ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Gestures entry in System, its gestures are for phones (camera on
+        // double power press, swipe navigation, prevent ringing, lift to wake)
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     /**

@@ -116,6 +116,13 @@ public class PrivacyDashboardFragment extends DashboardFragment {
             new BaseSearchIndexProvider(R.xml.privacy_dashboard_settings) {
 
                 @Override
+                protected boolean isPageSearchEnabled(Context context) {
+                    // andr36oid: the page has no entry on the start page, so search doesn't
+                    // lead there either
+                    return false;
+                }
+
+                @Override
                 public List<AbstractPreferenceController> createPreferenceControllers(
                         Context context) {
                     return buildPreferenceControllers(context, null);

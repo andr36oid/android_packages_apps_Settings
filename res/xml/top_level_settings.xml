@@ -81,8 +81,11 @@
         android:fragment="com.android.settings.deviceinfo.StorageSettings"
         settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
 
+    <!-- andr36oid: no Privacy page. Permissions are under Apps, autofill under Languages &
+         input, lock screen notifications under Notifications -->
     <Preference
         android:key="top_level_privacy"
+        settings:isPreferenceVisible="false"
         android:title="@string/privacy_dashboard_title"
         android:summary="@string/privacy_dashboard_summary"
         android:icon="@drawable/ic_homepage_privacy"

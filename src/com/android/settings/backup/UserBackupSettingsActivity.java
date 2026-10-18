@@ -123,9 +123,9 @@ public class UserBackupSettingsActivity extends FragmentActivity implements Inde
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     final List<String> keys = super.getNonIndexableKeys(context);
-                    if (!new BackupSettingsHelper(context).isBackupServiceActive()) {
-                        keys.add(BACKUP_SEARCH_INDEX_KEY);
-                    }
+                    // andr36oid: never in search, the page has no entry in System (see the
+                    // manifest) and the console has no backup service
+                    keys.add(BACKUP_SEARCH_INDEX_KEY);
                     return keys;
                 }
             };
