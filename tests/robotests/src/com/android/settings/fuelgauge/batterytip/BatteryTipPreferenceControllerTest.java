@@ -160,9 +160,9 @@ public class BatteryTipPreferenceControllerTest {
     }
 
     @Test
-    public void getAvailabilityStatus_returnAvailableUnsearchable() {
+    public void getAvailabilityStatus_returnUnsupportedOnDevice() {
         assertThat(mBatteryTipPreferenceController.getAvailabilityStatus()).isEqualTo(
-                BasePreferenceController.AVAILABLE_UNSEARCHABLE);
+                BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     private void assertOnlyContainsSummaryTip(CardPreference preference) {

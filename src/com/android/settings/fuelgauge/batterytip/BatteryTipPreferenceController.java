@@ -82,7 +82,9 @@ public class BatteryTipPreferenceController extends BasePreferenceController {
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE_UNSEARCHABLE;
+        // andr36oid: no battery tips. Mostly "Apps are running normally", otherwise phone
+        // advice (restrict apps, adaptive battery) that doesn't fit the console
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
