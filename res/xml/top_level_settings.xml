@@ -22,7 +22,7 @@
 
     <Preference
         android:key="top_level_network"
-        android:title="@string/network_dashboard_title"
+        android:title="@string/wifi_and_bluetooth_title"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_homepage_network"
         android:order="-120"
