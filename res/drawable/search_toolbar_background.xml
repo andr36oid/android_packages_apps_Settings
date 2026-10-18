@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- andr36oid: the search button on the start page can take the d-pad focus; focused it gets an
-     accent outline like the other focusable controls, otherwise the usual ripple -->
+     accent outline like the other focusable controls, otherwise nothing -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_focused="true">
         <shape android:shape="rectangle">
             <corners android:radius="12dp"/>
             <solid android:color="#26ffffff"/>
-            <stroke android:width="2dp" android:color="?android:attr/colorAccent"/>
+            <stroke android:width="2dp" android:color="@*android:color/accent_device_default_light"/>
         </shape>
     </item>
-    <item android:drawable="?android:attr/selectableItemBackgroundBorderless"/>
+    <!-- Not ?android:attr/selectableItemBackgroundBorderless: a selector can't resolve a theme
+         attribute for an item's drawable, the start page failed to inflate and Settings crashed -->
+    <item android:drawable="@android:color/transparent"/>
 </selector>
