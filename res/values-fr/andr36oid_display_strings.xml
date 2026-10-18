@@ -8,11 +8,4 @@
         <item>Plus sombre</item>
         <item>Beaucoup plus sombre</item>
     </string-array>
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Couleurs de l\'écran</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>Naturelles</item>
-        <item>Vives</item>
-        <item>Très vives</item>
-    </string-array>
 </resources>

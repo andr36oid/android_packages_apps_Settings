@@ -8,11 +8,4 @@
         <item>更暗</item>
         <item>暗很多</item>
     </string-array>
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">屏幕色彩</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>自然</item>
-        <item>鲜艳</item>
-        <item>超鲜艳</item>
-    </string-array>
 </resources>

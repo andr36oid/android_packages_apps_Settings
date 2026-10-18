@@ -8,11 +8,4 @@
         <item>Daha koyu</item>
         <item>Çok daha koyu</item>
     </string-array>
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Ekran renkleri</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>Doğal</item>
-        <item>Canlı</item>
-        <item>Çok canlı</item>
-    </string-array>
 </resources>

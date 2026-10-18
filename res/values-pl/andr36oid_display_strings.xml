@@ -8,11 +8,4 @@
         <item>Ciemniej</item>
         <item>Znacznie ciemniej</item>
     </string-array>
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Kolory ekranu</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>Naturalne</item>
-        <item>Żywe</item>
-        <item>Bardzo żywe</item>
-    </string-array>
 </resources>

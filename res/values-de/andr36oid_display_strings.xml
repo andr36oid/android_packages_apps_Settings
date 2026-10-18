@@ -8,11 +8,4 @@
         <item>Dunkler</item>
         <item>Viel dunkler</item>
     </string-array>
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Bildschirmfarben</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>Natürlich</item>
-        <item>Kräftig</item>
-        <item>Extra kräftig</item>
-    </string-array>
 </resources>

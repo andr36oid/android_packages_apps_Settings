@@ -8,11 +8,4 @@
         <item>Lebih gelap</item>
         <item>Jauh lebih gelap</item>
     </string-array>
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Warna layar</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>Alami</item>
-        <item>Cerah</item>
-        <item>Ekstra cerah</item>
-    </string-array>
 </resources>

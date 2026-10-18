@@ -17,17 +17,4 @@
         <item>35</item>
     </string-array>
 
-    <!-- Screen colors: saturation in the display hardware -->
-    <string name="andr36oid_screen_colors_title">Screen colors</string>
-    <string-array name="andr36oid_screen_colors_entries">
-        <item>Natural</item>
-        <item>Vivid</item>
-        <item>Extra vivid</item>
-    </string-array>
-    <!-- persist.vendor.saturation.main, 50 = unchanged -->
-    <string-array name="andr36oid_screen_colors_values" translatable="false">
-        <item>50</item>
-        <item>56</item>
-        <item>62</item>
-    </string-array>
 </resources>

@@ -55,13 +55,6 @@
         android:entryValues="@array/andr36oid_extra_dim_values"
         settings:controller="com.android.settings.display.ExtraDimPreferenceController" />
 
-    <ListPreference
-        android:key="andr36oid_screen_colors"
-        android:title="@string/andr36oid_screen_colors_title"
-        android:entries="@array/andr36oid_screen_colors_entries"
-        android:entryValues="@array/andr36oid_screen_colors_values"
-        settings:controller="com.android.settings.display.ScreenColorsPreferenceController" />
-
     <Preference
         android:key="auto_brightness_entry"
         android:title="@string/auto_brightness_title"
