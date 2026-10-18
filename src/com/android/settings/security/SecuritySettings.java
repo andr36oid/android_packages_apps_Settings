@@ -167,5 +167,12 @@ public class SecuritySettings extends DashboardFragment {
                     return buildPreferenceControllers(context, null /* lifecycle */,
                             null /* host*/);
                 }
+
+                @Override
+                protected boolean isPageSearchEnabled(Context context) {
+                    // andr36oid: the page has no entry on the start page, so search doesn't
+                    // lead there either
+                    return false;
+                }
             };
 }

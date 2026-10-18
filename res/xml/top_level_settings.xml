@@ -101,12 +101,15 @@
         android:fragment="com.android.settings.location.LocationSettings"
         settings:controller="com.android.settings.location.TopLevelLocationPreferenceController"/>
 
+    <!-- andr36oid: no Security page. Screen lock, fingerprint and SIM lock make no sense on
+         the console; Wi-Fi certificates install from Wi-Fi preferences -->
     <Preference
         android:key="top_level_security"
         android:title="@string/security_settings_title"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_homepage_security"
         android:order="-40"
+        settings:isPreferenceVisible="false"
         android:fragment="com.android.settings.security.SecuritySettings"
         settings:controller="com.android.settings.security.TopLevelSecurityEntryPreferenceController"/>
 
