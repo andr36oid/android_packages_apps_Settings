@@ -101,8 +101,8 @@ public class WifiP2pPreferenceController extends AbstractPreferenceController
 
     @Override
     public boolean isAvailable() {
-        // Always show preference.
-        return true;
+        // andr36oid: no Wi-Fi Direct entry (also not in search, see wifi_configure_settings)
+        return false;
     }
     @Override
     public String getPreferenceKey() {

@@ -41,7 +41,8 @@ public class NotificationAssistantPreferenceController extends BasePreferenceCon
 
     @Override
     public int getAvailabilityStatus() {
-        return BasePreferenceController.AVAILABLE;
+        // andr36oid: no Adaptive notifications entry, there is no notification assistant
+        return BasePreferenceController.UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

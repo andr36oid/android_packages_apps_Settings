@@ -34,11 +34,8 @@ public class LockdownButtonPreferenceController extends TogglePreferenceControll
 
     @Override
     public int getAvailabilityStatus() {
-        if (mLockPatternUtils.isSecure(UserHandle.myUserId())) {
-            return AVAILABLE;
-        } else {
-            return DISABLED_FOR_USER;
-        }
+        // andr36oid: no "Show lockdown option", there is no lock screen to lock down
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

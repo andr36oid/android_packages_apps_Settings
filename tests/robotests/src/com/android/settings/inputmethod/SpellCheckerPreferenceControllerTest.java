@@ -67,7 +67,8 @@ public class SpellCheckerPreferenceControllerTest {
 
     @Test
     public void testSpellChecker_byDefault_shouldBeShown() {
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test

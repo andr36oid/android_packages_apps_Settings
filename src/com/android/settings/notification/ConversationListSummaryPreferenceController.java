@@ -32,7 +32,8 @@ public class ConversationListSummaryPreferenceController extends BasePreferenceC
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no Conversations entry, there are no messaging apps
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

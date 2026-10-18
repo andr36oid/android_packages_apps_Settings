@@ -46,7 +46,8 @@ public class ZenAccessController extends BasePreferenceController {
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no Do Not Disturb access entry in Special app access
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     public static Set<String> getPackagesRequestingNotificationPolicyAccess() {

@@ -25,4 +25,10 @@ public class DefaultEmergencyShortcutPreferenceController
     public DefaultEmergencyShortcutPreferenceController(Context context, String packageName) {
         super(context, KEY, RoleManager.ROLE_EMERGENCY, packageName);
     }
+
+    @Override
+    public int getAvailabilityStatus() {
+        // andr36oid: no Emergency app row on app info, there is no emergency calling
+        return UNSUPPORTED_ON_DEVICE;
+    }
 }

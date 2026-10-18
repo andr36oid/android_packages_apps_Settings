@@ -32,10 +32,7 @@ public class ModuleLicensesListPreferenceController extends BasePreferenceContro
 
     @Override
     public int getAvailabilityStatus() {
-        PackageManager packageManager = mContext.getPackageManager();
-        List<ModuleInfo> modules = packageManager.getInstalledModules(0 /* flags */);
-        return modules.stream().anyMatch(new ModuleLicensesPreferenceController.Predicate(mContext))
-                ? AVAILABLE
-                : CONDITIONALLY_UNAVAILABLE;
+        // andr36oid: no Google Play system update licenses entry, there is no Google Play
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

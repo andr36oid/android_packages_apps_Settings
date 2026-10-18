@@ -47,8 +47,8 @@ public class ManageTrustAgentsPreferenceController extends BasePreferenceControl
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_manage_trust_agents)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Trust agents entry, there is no Smart Lock / lock screen to extend
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

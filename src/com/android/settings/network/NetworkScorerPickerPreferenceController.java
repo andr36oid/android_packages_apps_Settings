@@ -43,7 +43,8 @@ public class NetworkScorerPickerPreferenceController extends BasePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no Network rating provider entry, there are no scorer apps
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

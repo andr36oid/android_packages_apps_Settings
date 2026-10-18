@@ -29,7 +29,7 @@ public class PremiumSmsController extends BasePreferenceController {
 
     @AvailabilityStatus
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_premium_sms)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Premium SMS access entry, the console can't send SMS
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

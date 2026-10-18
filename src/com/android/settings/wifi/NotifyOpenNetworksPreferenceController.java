@@ -68,7 +68,8 @@ public class NotifyOpenNetworksPreferenceController extends TogglePreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no "Notify for public networks" entry
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

@@ -71,7 +71,8 @@ public class ManageTrustAgentsPreferenceControllerTest {
 
     @Test
     public void isAvailable_byDefault_isTrue() {
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test

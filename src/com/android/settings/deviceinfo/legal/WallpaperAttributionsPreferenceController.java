@@ -28,8 +28,7 @@ public class WallpaperAttributionsPreferenceController extends BasePreferenceCon
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_wallpaper_attribution)
-                ? AVAILABLE
-                : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Wallpapers entry in Legal information
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

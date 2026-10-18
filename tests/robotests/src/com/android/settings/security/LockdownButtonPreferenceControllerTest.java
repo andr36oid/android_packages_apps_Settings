@@ -60,7 +60,8 @@ public class LockdownButtonPreferenceControllerTest {
     @Test
     public void isAvailable_lockSet_shouldReturnTrue() {
         when(mLockPatternUtils.isSecure(anyInt())).thenReturn(true);
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test

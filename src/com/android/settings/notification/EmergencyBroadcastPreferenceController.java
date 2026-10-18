@@ -78,9 +78,8 @@ public class EmergencyBroadcastPreferenceController extends AbstractPreferenceCo
 
     @Override
     public boolean isAvailable() {
-        return mUserManager.isAdminUser() && isCellBroadcastAppLinkEnabled()
-                && !mHelper.hasBaseUserRestriction(
-                UserManager.DISALLOW_CONFIG_CELL_BROADCASTS, UserHandle.myUserId());
+        // andr36oid: no Wireless emergency alerts entry, the console has no cell radio
+        return false;
     }
 
     private boolean isCellBroadcastAppLinkEnabled() {

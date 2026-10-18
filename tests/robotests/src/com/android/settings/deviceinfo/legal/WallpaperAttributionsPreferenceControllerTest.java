@@ -45,7 +45,8 @@ public class WallpaperAttributionsPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_byDefault_true() {
         assertThat(mController.getAvailabilityStatus())
-                .isEqualTo(BasePreferenceController.AVAILABLE);
+                // andr36oid: the entry is always hidden
+                .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     @Test

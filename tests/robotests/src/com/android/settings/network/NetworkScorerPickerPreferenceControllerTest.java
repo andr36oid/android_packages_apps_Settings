@@ -64,7 +64,8 @@ public class NetworkScorerPickerPreferenceControllerTest {
 
     @Test
     public void testIsAvailable_shouldAlwaysReturnTrue() {
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test

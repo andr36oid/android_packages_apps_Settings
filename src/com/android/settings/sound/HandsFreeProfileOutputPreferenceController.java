@@ -44,6 +44,12 @@ public class HandsFreeProfileOutputPreferenceController extends AudioSwitchPrefe
     }
 
     @Override
+    public int getAvailabilityStatus() {
+        // andr36oid: no "Take call on" entry, the console makes no calls
+        return UNSUPPORTED_ON_DEVICE;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String address = (String) newValue;
         if (!(preference instanceof ListPreference)) {

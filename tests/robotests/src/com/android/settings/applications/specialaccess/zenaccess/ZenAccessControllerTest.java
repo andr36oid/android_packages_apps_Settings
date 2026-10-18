@@ -59,7 +59,8 @@ public class ZenAccessControllerTest {
 
     @Test
     public void isAvailable_byDefault_true() {
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test

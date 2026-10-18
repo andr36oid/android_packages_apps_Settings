@@ -72,16 +72,7 @@ public class EmergencyInfoPreferenceController extends BasePreferenceController 
 
     @Override
     public int getAvailabilityStatus() {
-        if (!mContext.getResources().getBoolean(R.bool.config_show_emergency_info_in_device_info)) {
-            return UNSUPPORTED_ON_DEVICE;
-        }
-
-        // If the variant of emergency info can not work, we should fallback to AOSP version.
-        if (isEmergencyInfoSupported()) {
-            return AVAILABLE;
-        } else if (isAOSPVersionSupported()) {
-            return AVAILABLE;
-        }
+        // andr36oid: no Emergency information entry in About
         return UNSUPPORTED_ON_DEVICE;
     }
 

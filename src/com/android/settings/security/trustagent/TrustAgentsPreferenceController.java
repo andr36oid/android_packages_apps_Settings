@@ -84,7 +84,8 @@ public class TrustAgentsPreferenceController extends BasePreferenceController
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        // andr36oid: no trust agents, see ManageTrustAgentsPreferenceController
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

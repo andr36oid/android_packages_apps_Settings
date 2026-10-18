@@ -35,9 +35,7 @@ public final class SpellCheckerForWorkPreferenceController extends BasePreferenc
     @AvailabilityStatus
     @Override
     public int getAvailabilityStatus() {
-        if (!mContext.getResources().getBoolean(R.bool.config_show_spellcheckers_settings)) {
-            return UNSUPPORTED_ON_DEVICE;
-        }
-        return AVAILABLE;
+        // andr36oid: see SpellCheckerPreferenceController
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

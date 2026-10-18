@@ -60,11 +60,8 @@ public class RTTSettingPreferenceController extends BasePreferenceController {
 
     @Override
     public int getAvailabilityStatus() {
-        final List<ResolveInfo> resolved =
-                mPackageManager.queryIntentActivities(mRTTIntent, 0 /* flags */);
-        return resolved != null && !resolved.isEmpty() && isDialerSupportRTTSetting()
-                ? AVAILABLE
-                : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no RTT settings, real-time text is for phone calls
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override

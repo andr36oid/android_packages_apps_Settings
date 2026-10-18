@@ -112,7 +112,7 @@ public abstract class AudioSwitchPreferenceController extends BasePreferenceCont
      * the feature flag and they could mistakenly break it via overriding.
      */
     @Override
-    public final int getAvailabilityStatus() {
+    public int getAvailabilityStatus() {
         return FeatureFlagUtils.isEnabled(mContext, FeatureFlags.AUDIO_SWITCHER_SETTINGS) &&
                 mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;

@@ -52,7 +52,8 @@ public class SpellCheckerPreferenceController extends AbstractPreferenceControll
 
     @Override
     public boolean isAvailable() {
-        return mContext.getResources().getBoolean(R.bool.config_show_spellcheckers_settings);
+        // andr36oid: no Spell checker entry, the console has no typing use for it
+        return false;
     }
 
     @Override

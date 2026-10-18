@@ -45,7 +45,8 @@ public class DataSaverControllerTest {
 
     @Test
     public void testDataSaver_byDefault_shouldBeShown() {
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test

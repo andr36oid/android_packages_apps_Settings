@@ -42,8 +42,9 @@ public class ManageDeviceAdminPreferenceController extends BasePreferenceControl
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_manage_device_admin)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Device admin apps entry (Security and Special app access), nothing on
+        // the console is managed by an admin app
+        return UNSUPPORTED_ON_DEVICE;
     }
 
 }

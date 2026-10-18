@@ -30,7 +30,7 @@ public class DataSaverController extends BasePreferenceController {
 
     @AvailabilityStatus
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_data_saver)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        // andr36oid: no Unrestricted data entry, the console has no mobile data to restrict
+        return UNSUPPORTED_ON_DEVICE;
     }
 }

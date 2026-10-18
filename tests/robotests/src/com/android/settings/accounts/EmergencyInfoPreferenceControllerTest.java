@@ -106,7 +106,8 @@ public class EmergencyInfoPreferenceControllerTest {
 
         mController.updateRawDataToIndex(data);
 
-        assertThat(mController.isAvailable()).isTrue();
+        // andr36oid: the entry is always hidden
+        assertThat(mController.isAvailable()).isFalse();
         assertThat(data).isNotEmpty();
     }
 

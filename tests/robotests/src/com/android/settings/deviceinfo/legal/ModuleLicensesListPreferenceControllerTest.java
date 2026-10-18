@@ -69,7 +69,8 @@ public class ModuleLicensesListPreferenceControllerTest {
         ModuleLicensesListPreferenceController controller =
                 new ModuleLicensesListPreferenceController(context, PREFERENCE_KEY);
         assertThat(controller.getAvailabilityStatus())
-                .isEqualTo(BasePreferenceController.AVAILABLE);
+                // andr36oid: the entry is always hidden
+                .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
@@ -83,7 +84,8 @@ public class ModuleLicensesListPreferenceControllerTest {
         ModuleLicensesListPreferenceController controller =
                 new ModuleLicensesListPreferenceController(context, PREFERENCE_KEY);
         assertThat(controller.getAvailabilityStatus())
-                .isEqualTo(BasePreferenceController.CONDITIONALLY_UNAVAILABLE);
+                // andr36oid: the entry is always hidden
+                .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
@@ -110,6 +112,7 @@ public class ModuleLicensesListPreferenceControllerTest {
         ModuleLicensesListPreferenceController controller =
                 new ModuleLicensesListPreferenceController(context, PREFERENCE_KEY);
         assertThat(controller.getAvailabilityStatus())
-                .isEqualTo(BasePreferenceController.CONDITIONALLY_UNAVAILABLE);
+                // andr36oid: the entry is always hidden
+                .isEqualTo(BasePreferenceController.UNSUPPORTED_ON_DEVICE);
     }
 }
