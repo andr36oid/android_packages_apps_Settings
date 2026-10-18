@@ -48,6 +48,7 @@ import com.android.settings.search.actionbar.SearchMenuController;
 import com.android.settings.support.actionbar.HelpMenuController;
 import com.android.settings.support.actionbar.HelpResourceProvider;
 import com.android.settings.widget.HighlightablePreferenceGroupAdapter;
+import com.android.settings.widget.ListFocusGuard;
 import com.android.settings.widget.LoadingViewController;
 import com.android.settingslib.CustomDialogPreferenceCompat;
 import com.android.settingslib.CustomEditTextPreferenceCompat;
@@ -357,6 +358,17 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
 
     public View getEmptyView() {
         return mEmptyView;
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        final RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
+                savedInstanceState);
+        // andr36oid: with a d-pad, the list or the page around it must never be what has the
+        // focus (it gets outlined over the whole page), see ListFocusGuard
+        ListFocusGuard.install(recyclerView);
+        return recyclerView;
     }
 
     @Override
