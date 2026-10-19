@@ -16,7 +16,9 @@
 
 package com.android.settings.accounts;
 
+import android.accounts.AccountManager;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.icu.text.ListFormatter;
 import android.os.UserHandle;
 import android.text.BidiFormatter;
@@ -36,7 +38,24 @@ public class TopLevelAccountEntryPreferenceController extends BasePreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
+        // andr36oid: without Google services there's nothing to sign in to, unless an
+        // installed app already added an account (e.g. a sync app)
+        if (!isInstalled(GMS_PACKAGE)
+                && AccountManager.get(mContext).getAccounts().length == 0) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
         return AVAILABLE;
+    }
+
+    private static final String GMS_PACKAGE = "com.google.android.gms";
+
+    private boolean isInstalled(String packageName) {
+        try {
+            mContext.getPackageManager().getPackageInfo(packageName, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
     }
 
     @Override
