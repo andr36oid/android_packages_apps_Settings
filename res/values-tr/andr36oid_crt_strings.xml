@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Sallanma</string>
     <string name="andr36oid_crtoff_on_colour">Gökkuşağı renkleri</string>
+    <string name="andr36oid_crtoff_backlight">Arka ışık</string>
+    <string name="andr36oid_crtoff_backlight_summary">Arka ışık çizgiyle birlikte parlar, bozulmalarla titrer ve ışıltıyla kararır</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">Görüntü oturana kadar arka ışık vurur ve uğultu yapar</string>
 </resources>

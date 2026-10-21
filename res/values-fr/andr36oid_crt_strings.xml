@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Oscillation</string>
     <string name="andr36oid_crtoff_on_colour">Couleurs arc-en-ciel</string>
+    <string name="andr36oid_crtoff_backlight">Rétroéclairage</string>
+    <string name="andr36oid_crtoff_backlight_summary">Le rétroéclairage s’illumine avec la ligne, scintille avec les parasites et s’atténue avec la lueur</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">Le rétroéclairage cogne et ronfle pendant que l’image se stabilise</string>
 </resources>

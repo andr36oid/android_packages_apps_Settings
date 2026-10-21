@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Kołysanie</string>
     <string name="andr36oid_crtoff_on_colour">Tęczowe kolory</string>
+    <string name="andr36oid_crtoff_backlight">Podświetlenie</string>
+    <string name="andr36oid_crtoff_backlight_summary">Podświetlenie rozbłyska razem z linią, migocze przy zakłóceniach i przygasa wraz z poświatą</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">Podświetlenie stuka i buczy, gdy obraz się stabilizuje</string>
 </resources>

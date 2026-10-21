@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Balanceo</string>
     <string name="andr36oid_crtoff_on_colour">Colores del arcoíris</string>
+    <string name="andr36oid_crtoff_backlight">Retroiluminación</string>
+    <string name="andr36oid_crtoff_backlight_summary">La retroiluminación destella con la línea, parpadea con los fallos y se atenúa con el brillo</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">La retroiluminación da un golpe y zumba mientras la imagen se estabiliza</string>
 </resources>

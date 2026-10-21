@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Oscilação</string>
     <string name="andr36oid_crtoff_on_colour">Cores de arco-íris</string>
+    <string name="andr36oid_crtoff_backlight">Retroiluminação</string>
+    <string name="andr36oid_crtoff_backlight_summary">A retroiluminação acende com a linha, pisca com as falhas e escurece com o brilho</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">A retroiluminação dá um estalo e zumbe enquanto a imagem se estabiliza</string>
 </resources>

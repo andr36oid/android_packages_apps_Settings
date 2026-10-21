@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Покачивание</string>
     <string name="andr36oid_crtoff_on_colour">Радужные цвета</string>
+    <string name="andr36oid_crtoff_backlight">Подсветка</string>
+    <string name="andr36oid_crtoff_backlight_summary">Подсветка вспыхивает вместе с линией, мерцает при помехах и гаснет вместе со свечением</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">Подсветка гудит и вздрагивает, пока изображение стабилизируется</string>
 </resources>

@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Wackeln</string>
     <string name="andr36oid_crtoff_on_colour">Regenbogenfarben</string>
+    <string name="andr36oid_crtoff_backlight">Hintergrundbeleuchtung</string>
+    <string name="andr36oid_crtoff_backlight_summary">Die Hintergrundbeleuchtung blitzt mit der Linie auf, flackert bei den Störungen und wird mit dem Nachleuchten dunkler</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">Die Hintergrundbeleuchtung wummert und brummt, während sich das Bild einpendelt</string>
 </resources>

@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">晃动</string>
     <string name="andr36oid_crtoff_on_colour">彩虹色</string>
+    <string name="andr36oid_crtoff_backlight">背光</string>
+    <string name="andr36oid_crtoff_backlight_summary">背光随亮线闪亮，随故障闪烁，随辉光变暗</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">画面稳定时背光会发出撞击和嗡鸣声</string>
 </resources>

@@ -90,4 +90,7 @@
     </string-array>
     <string name="andr36oid_crtoff_on_wobble">Goyang</string>
     <string name="andr36oid_crtoff_on_colour">Warna pelangi</string>
+    <string name="andr36oid_crtoff_backlight">Lampu latar</string>
+    <string name="andr36oid_crtoff_backlight_summary">Lampu latar menyala bersama garis, berkedip saat gangguan, dan meredup bersama pendar</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">Lampu latar berdentum dan berdengung saat gambar stabil</string>
 </resources>
