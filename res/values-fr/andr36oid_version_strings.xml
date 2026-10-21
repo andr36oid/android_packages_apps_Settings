@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="andr36oid_version_build_sd">Build <xliff:g id="build" example="20261021-2216">%1$s</xliff:g>, démarré depuis la carte SD</string>
+    <string name="andr36oid_version_build_emmc">Build <xliff:g id="build" example="20261021-2216">%1$s</xliff:g>, démarré depuis l'eMMC</string>
+</resources>
