@@ -171,6 +171,14 @@
             android:title="@string/andr36oid_crtoff_afterglow"
             android:max="100" />
 
+        <SeekBarPreference
+            android:key="off_backlight"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_backlight"
+            android:summary="@string/andr36oid_crtoff_backlight_summary"
+            android:max="100" />
+
         <Preference
             android:key="off_glitch_note"
             android:title="@string/andr36oid_crtoff_glitch"
@@ -250,6 +258,14 @@
             android:layout="@layout/preference_widget_seekbar_material"
             android:persistent="false"
             android:title="@string/andr36oid_crtoff_on_colour"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="on_backlight"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_backlight"
+            android:summary="@string/andr36oid_crtoff_on_backlight_summary"
             android:max="100" />
 
         <Preference

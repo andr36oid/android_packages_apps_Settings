@@ -68,10 +68,10 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     private static final int[] OFF_LIST_DEFAULTS = {OFF_NONE, 700, 0, 0, OFF_NONE, 1200};
     private static final int ON_LIST = 4;
     /** sliders and their ColorFade defaults */
-    private static final String[] OFF_SLIDERS = {"flash", "afterglow", "tear", "split", "noise",
-            "roll", "flicker", "on_wobble", "on_colour"};
-    private static final int[] OFF_SLIDER_DEFAULTS = {70, 50, 25, 30, 20, 0, 25, 60, 70};
-    private static final int ON_SLIDER = 7;
+    private static final String[] OFF_SLIDERS = {"flash", "afterglow", "backlight", "tear",
+            "split", "noise", "roll", "flicker", "on_wobble", "on_colour", "on_backlight"};
+    private static final int[] OFF_SLIDER_DEFAULTS = {70, 50, 60, 25, 30, 20, 0, 25, 60, 70, 60};
+    private static final int ON_SLIDER = 8;
 
     /** the readers' defaults, keep in step with crt_mask.cpp and SurfaceFlinger.cpp */
     private static final int DEFAULT_STRENGTH = 50;

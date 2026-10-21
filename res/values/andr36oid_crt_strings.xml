@@ -118,6 +118,9 @@
     </string-array>
     <string name="andr36oid_crtoff_flash">Flash and glow</string>
     <string name="andr36oid_crtoff_afterglow">Afterglow</string>
+    <string name="andr36oid_crtoff_backlight">Backlight</string>
+    <string name="andr36oid_crtoff_backlight_summary">The backlight flares with the line, flickers with the glitches and dims with the glow</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">The backlight thumps and hums while the picture settles</string>
     <string name="andr36oid_crtoff_glitch">Glitches</string>
     <string name="andr36oid_crtoff_glitch_note">The picture losing its signal before it collapses. All at zero gives a clean switch-off.</string>
     <string name="andr36oid_crtoff_tear">Tearing</string>
