@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_sd2_mount_summary">2 つ目のスロットのカードを使います。オフにすると、今すぐ取り出し、次回の起動からスロットをオフにします。システムからはそこにカードが見えなくなります。</string>
+    <string name="andr36oid_sd2_mount_title">2 つ目の SD カード</string>
+    <string name="andr36oid_sd2_restart_off">スロットを完全にオフにするには再起動してください。それまでカードは取り出されたままです。</string>
+    <string name="andr36oid_sd2_restart_on">スロットを再び使うには再起動してください。</string>
+</resources>

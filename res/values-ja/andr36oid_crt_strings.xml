@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_crt_curvature">画面の湾曲</string>
+    <string name="andr36oid_crt_enable">CRT 効果を使う</string>
+    <string name="andr36oid_crt_glow">グロー</string>
+    <string name="andr36oid_crt_gpu_category">グラフィックチップの効果</string>
+    <string name="andr36oid_crt_gpu_mask">蛍光体マスク</string>
+    <string name="andr36oid_crt_gpu_mask_summary">実験的な機能で、ゲームが大幅に遅くなることがあります。赤・緑・青のストライプです。上のアパーチャーグリルとスロットマスクの形式を置き換えます</string>
+    <string name="andr36oid_crt_gpu_note">これらの値のどれかが 0 より大きいと、グラフィックチップは毎フレーム画面全体を描き直します。特に 720x720 の画面では、ゲームが大幅に遅くなることがあります。</string>
+    <string name="andr36oid_crt_gpu_slow">実験的な機能で、ゲームが大幅に遅くなることがあります</string>
+    <string name="andr36oid_crt_intro">この効果は、メニューを含め画面全体に適用されます。スクリーンショットや画面録画には映りません。</string>
+    <string name="andr36oid_crt_layers_note">スキャンラインは画面の 3 つのハードウェアレイヤーのうち 1 つを使います。動画の上にメニューを表示するなど、レイヤーが多いと、グラフィックチップの負荷が増えることがあります。</string>
+    <string name="andr36oid_crt_lines">スキャンラインとマスク</string>
+    <string name="andr36oid_crt_lines_category">画面ハードウェアのスキャンライン</string>
+    <string name="andr36oid_crt_lines_summary">グラフィックチップではなく、画面ハードウェアが描画します</string>
+    <string name="andr36oid_crt_phase">線を 1 行下にずらす</string>
+    <string name="andr36oid_crt_phase_summary">線がゲームのドットに対して均等に重ならない場合は、これを試してください</string>
+    <string name="andr36oid_crt_pitch">行間隔</string>
+    <string-array name="andr36oid_crt_pitch_entries">
+        <item>自動（240 行のゲーム用）</item>
+        <item>2 行ごと</item>
+        <item>3 行ごと</item>
+        <item>4 行ごと</item>
+    </string-array>
+    <string name="andr36oid_crt_strength">強さ</string>
+    <string name="andr36oid_crt_style">スタイル</string>
+    <string-array name="andr36oid_crt_style_entries">
+        <item>スキャンライン</item>
+        <item>スキャンラインとアパーチャーグリル</item>
+        <item>スロットマスク</item>
+        <item>アパーチャーグリルのみ</item>
+    </string-array>
+    <string name="andr36oid_crt_summary">実験的: スキャンライン、湾曲した画面、古いテレビのようなグロー</string>
+    <string name="andr36oid_crt_tile_added">「CRT 効果」のクイック設定タイルを通知シェードに追加しました</string>
+    <string name="andr36oid_crt_title">CRT 効果</string>
+    <string name="andr36oid_crt_warning">このページのすべての効果は実験的なものです。GPU 効果は RK3326 チップ上でゲームを大幅に遅くすることがあります。画面によっては、効果が正しく表示されない場合があります。</string>
+    <string name="andr36oid_crt_warning_title">実験的</string>
+    <string name="andr36oid_crtoff_afterglow">残光</string>
+    <string name="andr36oid_crtoff_backlight">バックライト</string>
+    <string name="andr36oid_crtoff_backlight_summary">バックライトは線に合わせて明滅し、乱れに合わせてちらつき、グローに合わせて暗くなります</string>
+    <string name="andr36oid_crtoff_category">電源オフのアニメーション</string>
+    <string name="andr36oid_crtoff_flash">フラッシュとグロー</string>
+    <string name="andr36oid_crtoff_flicker">ちらつき</string>
+    <string name="andr36oid_crtoff_flicker_summary">明るさが跳ね上がります</string>
+    <string name="andr36oid_crtoff_glitch">乱れ</string>
+    <string name="andr36oid_crtoff_glitch_note">画面が崩れる前に信号を失います。すべて 0 にすると、きれいに消えます。</string>
+    <string name="andr36oid_crtoff_length">長さ</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>速い (0.4 秒)</item>
+        <item>普通 (0.7 秒)</item>
+        <item>遅い (1.2 秒)</item>
+        <item>もっと遅い (2 秒)</item>
+        <item>スローモーション (4 秒)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_noise">砂嵐</string>
+    <string name="andr36oid_crtoff_noise_summary">画面に雪のようなノイズが広がります</string>
+    <string name="andr36oid_crtoff_note">画面の電源を切るときの動きです。上の CRT 効果がオフでも動作し、ゲーム中は負荷がかかりません。</string>
+    <string name="andr36oid_crtoff_on_backlight_summary">画面が落ち着くまで、バックライトがドンと鳴ってうなります</string>
+    <string name="andr36oid_crtoff_on_category">電源オンのアニメーション</string>
+    <string name="andr36oid_crtoff_on_colour">虹色</string>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>速い (0.6 秒)</item>
+        <item>普通 (1.2 秒)</item>
+        <item>遅い (2 秒)</item>
+        <item>スローモーション (4 秒)</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>なし</item>
+        <item>消磁</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">揺れ</string>
+    <string name="andr36oid_crtoff_roll">ローリング</string>
+    <string name="andr36oid_crtoff_roll_summary">信号を失うと、画面が上にめくれ上がります</string>
+    <string name="andr36oid_crtoff_shape">形</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>線になってから点になる</item>
+        <item>線</item>
+        <item>点に縮む</item>
+    </string-array>
+    <string name="andr36oid_crtoff_split">色ずれ</string>
+    <string name="andr36oid_crtoff_split_summary">端で赤と青がずれて離れていきます</string>
+    <string name="andr36oid_crtoff_style">アニメーション</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>なし</item>
+        <item>黒へフェード</item>
+        <item>古いテレビ</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tear">画面の裂け</string>
+    <string name="andr36oid_crtoff_tear_summary">画面の行が横にずれます</string>
+    <string name="andr36oid_crtoff_tint">線の色</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>白</item>
+        <item>オレンジ</item>
+        <item>緑</item>
+        <item>アンバー</item>
+        <item>青</item>
+    </string-array>
+    <string name="andr36oid_crtoff_try">試す</string>
+    <string name="andr36oid_crtoff_try_summary">今すぐ画面を消します。電源ボタンを押すと再び点灯します。</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_bfi_unlocked">ディスプレイ設定で黒フレーム挿入メニューが解除されました</string>
+    <string name="andr36oid_refresh_trial_keep">維持</string>
+    <plurals name="andr36oid_refresh_trial_message">
+        <item quantity="other">%2$d 秒後に %1$s に戻ります。画面が正しく表示されている場合のみ維持してください。</item>
+    </plurals>
+    <string name="andr36oid_refresh_trial_revert">元に戻す</string>
+    <string name="andr36oid_refresh_trial_title">このリフレッシュレートを維持しますか？</string>
+</resources>

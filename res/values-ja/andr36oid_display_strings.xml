@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="andr36oid_extra_dim_entries">
+        <item>オフ</item>
+        <item>少し暗く</item>
+        <item>暗く</item>
+        <item>かなり暗く</item>
+    </string-array>
+    <string name="andr36oid_extra_dim_title">追加で暗く</string>
+</resources>
