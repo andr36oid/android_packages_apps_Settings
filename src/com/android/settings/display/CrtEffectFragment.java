@@ -58,17 +58,20 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     private static final String PROP_GLOW = "persist.andr36oid.crt.glow";
     private static final String PROP_GPU_MASK = "persist.andr36oid.crt.gpu_mask";
 
-    /** the switch-off animation, read by ColorFade when the screen goes off */
+    /** the switch-off and switch-on animations, read by ColorFade */
     private static final String PROP_OFF = "persist.andr36oid.crtoff.";
     private static final int OFF_NONE = 0;
     private static final int OFF_CRT = 2;
     /** list rows and their ColorFade defaults */
-    private static final String[] OFF_LISTS = {"style", "length", "shape", "tint"};
-    private static final int[] OFF_LIST_DEFAULTS = {OFF_NONE, 700, 0, 0};
+    private static final String[] OFF_LISTS = {"style", "length", "shape", "tint", "on_style",
+            "on_length"};
+    private static final int[] OFF_LIST_DEFAULTS = {OFF_NONE, 700, 0, 0, OFF_NONE, 1200};
+    private static final int ON_LIST = 4;
     /** sliders and their ColorFade defaults */
     private static final String[] OFF_SLIDERS = {"flash", "afterglow", "tear", "split", "noise",
-            "roll", "flicker"};
-    private static final int[] OFF_SLIDER_DEFAULTS = {70, 50, 25, 30, 20, 0, 25};
+            "roll", "flicker", "on_wobble", "on_colour"};
+    private static final int[] OFF_SLIDER_DEFAULTS = {70, 50, 25, 30, 20, 0, 25, 60, 70};
+    private static final int ON_SLIDER = 7;
 
     /** the readers' defaults, keep in step with crt_mask.cpp and SurfaceFlinger.cpp */
     private static final int DEFAULT_STRENGTH = 50;
@@ -122,11 +125,12 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
         }
 
         for (int i = 0; i < OFF_LISTS.length; i++) {
-            mOffLists[i] = findPreference("off_" + OFF_LISTS[i]);
+            mOffLists[i] = findPreference(i >= ON_LIST ? OFF_LISTS[i] : "off_" + OFF_LISTS[i]);
             mOffLists[i].setOnPreferenceChangeListener(this);
         }
         for (int i = 0; i < OFF_SLIDERS.length; i++) {
-            mOffSliders[i] = findPreference("off_" + OFF_SLIDERS[i]);
+            mOffSliders[i] = findPreference(
+                    i >= ON_SLIDER ? OFF_SLIDERS[i] : "off_" + OFF_SLIDERS[i]);
             setUpSlider(mOffSliders[i], 0);
         }
         mOffGlitchNote = findPreference("off_glitch_note");
@@ -171,16 +175,24 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
             mOffSliders[i].setValue(
                     SystemProperties.getInt(PROP_OFF + OFF_SLIDERS[i], OFF_SLIDER_DEFAULTS[i]));
         }
-        updateOffEnabled(SystemProperties.getInt(PROP_OFF + "style", OFF_NONE));
+        updateOffEnabled(SystemProperties.getInt(PROP_OFF + "style", OFF_NONE),
+                SystemProperties.getInt(PROP_OFF + "on_style", OFF_NONE));
     }
 
-    /** Length and Try it for any animation, the rest only for the old TV. */
-    private void updateOffEnabled(int style) {
+    /**
+     * Switch-off: length for any animation, the rest only for the old TV. Switch-on: the
+     * rest only with degauss. Try it with either.
+     */
+    private void updateOffEnabled(int style, int onStyle) {
         mOffLists[1].setEnabled(style != OFF_NONE);
-        mOffTry.setEnabled(style != OFF_NONE);
-        for (int i = 2; i < mOffLists.length; i++) mOffLists[i].setEnabled(style == OFF_CRT);
-        for (SeekBarPreference s : mOffSliders) s.setEnabled(style == OFF_CRT);
+        for (int i = 2; i < ON_LIST; i++) mOffLists[i].setEnabled(style == OFF_CRT);
+        for (int i = 0; i < ON_SLIDER; i++) mOffSliders[i].setEnabled(style == OFF_CRT);
         mOffGlitchNote.setEnabled(style == OFF_CRT);
+        mOffLists[ON_LIST + 1].setEnabled(onStyle != OFF_NONE);
+        for (int i = ON_SLIDER; i < mOffSliders.length; i++) {
+            mOffSliders[i].setEnabled(onStyle != OFF_NONE);
+        }
+        mOffTry.setEnabled(style != OFF_NONE || onStyle != OFF_NONE);
     }
 
     private void updateEnabled(boolean on, boolean lines) {
@@ -221,7 +233,11 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
         }
         for (int i = 0; i < OFF_LISTS.length; i++) {
             if (preference == mOffLists[i]) {
-                if (i == 0) updateOffEnabled(Integer.parseInt((String) newValue));
+                if (i == 0 || i == ON_LIST) {
+                    final int v = Integer.parseInt((String) newValue);
+                    updateOffEnabled(i == 0 ? v : Integer.parseInt(mOffLists[0].getValue()),
+                            i == ON_LIST ? v : Integer.parseInt(mOffLists[ON_LIST].getValue()));
+                }
                 return set(PROP_OFF + OFF_LISTS[i], (String) newValue);
             }
         }

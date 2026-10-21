@@ -215,6 +215,42 @@
             android:title="@string/andr36oid_crtoff_flicker"
             android:summary="@string/andr36oid_crtoff_flicker_summary"
             android:max="100" />
+    </PreferenceCategory>
+
+    <!-- Plays when the screen switches on -->
+    <PreferenceCategory
+        android:key="on_category"
+        android:title="@string/andr36oid_crtoff_on_category">
+
+        <ListPreference
+            android:key="on_style"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_style"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crtoff_on_style_entries"
+            android:entryValues="@array/andr36oid_crtoff_on_style_values" />
+
+        <ListPreference
+            android:key="on_length"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_length"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crtoff_on_length_entries"
+            android:entryValues="@array/andr36oid_crtoff_on_length_values" />
+
+        <SeekBarPreference
+            android:key="on_wobble"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_on_wobble"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="on_colour"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_on_colour"
+            android:max="100" />
 
         <Preference
             android:key="off_try"
