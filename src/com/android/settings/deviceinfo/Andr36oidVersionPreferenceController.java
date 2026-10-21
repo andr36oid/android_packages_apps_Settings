@@ -56,15 +56,15 @@ public class Andr36oidVersionPreferenceController extends BasePreferenceControll
     @Override
     public CharSequence getSummary() {
         final String version = SystemProperties.get(PROPERTY);
-        // the build as in the image's name (system's build time) and where this start
-        // came from: an eMMC install's fstab is fstab.emmc or fstab.emmcsd
+        // the build as in the image's name (system's build time), and on an eMMC start
+        // that it is one: an eMMC install's fstab is fstab.emmc or fstab.emmcsd
         final long built = SystemProperties.getLong("ro.build.date.utc", 0);
         if (built <= 0) return version;
         final SimpleDateFormat f = new SimpleDateFormat("yyyyMMdd-HHmm", Locale.ROOT);
         f.setTimeZone(TimeZone.getTimeZone("UTC"));
         final boolean emmc = SystemProperties.get("ro.boot.fstab_suffix").startsWith("emmc");
         return version + "\n" + mContext.getString(emmc ? R.string.andr36oid_version_build_emmc
-                : R.string.andr36oid_version_build_sd, f.format(new Date(built * 1000)));
+                : R.string.andr36oid_version_build, f.format(new Date(built * 1000)));
     }
 
     @Override

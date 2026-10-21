@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Settings > About console > andr36oid version, second line: the build (as in the image's name, 20261021-2216) and that this start came from the SD card -->
-    <string name="andr36oid_version_build_sd">Build <xliff:g id="build" example="20261021-2216">%1$s</xliff:g>, started from the SD card</string>
+    <!-- Settings > About console > andr36oid version, second line: the build, as in the image's name (20261021-2216), on a start from the SD card -->
+    <string name="andr36oid_version_build">Build <xliff:g id="build" example="20261021-2216">%1$s</xliff:g></string>
     <!-- Settings > About console > andr36oid version, second line: the build, and that this start came from the console's built-in eMMC -->
     <string name="andr36oid_version_build_emmc">Build <xliff:g id="build" example="20261021-2216">%1$s</xliff:g>, started from the eMMC</string>
 </resources>
