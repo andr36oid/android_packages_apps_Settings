@@ -115,4 +115,110 @@
             android:summary="@string/andr36oid_crt_gpu_mask_summary"
             android:max="100" />
     </PreferenceCategory>
+
+    <!-- Plays when the screen switches off; on its own, not tied to Use CRT effect -->
+    <PreferenceCategory
+        android:key="off_category"
+        android:title="@string/andr36oid_crtoff_category">
+
+        <Preference
+            android:key="off_note"
+            android:summary="@string/andr36oid_crtoff_note" />
+
+        <ListPreference
+            android:key="off_style"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_style"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crtoff_style_entries"
+            android:entryValues="@array/andr36oid_crtoff_style_values" />
+
+        <ListPreference
+            android:key="off_length"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_length"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crtoff_length_entries"
+            android:entryValues="@array/andr36oid_crtoff_length_values" />
+
+        <ListPreference
+            android:key="off_shape"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_shape"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crtoff_shape_entries"
+            android:entryValues="@array/andr36oid_crtoff_shape_values" />
+
+        <ListPreference
+            android:key="off_tint"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_tint"
+            android:summary="%s"
+            android:entries="@array/andr36oid_crtoff_tint_entries"
+            android:entryValues="@array/andr36oid_crtoff_tint_values" />
+
+        <SeekBarPreference
+            android:key="off_flash"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_flash"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="off_afterglow"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_afterglow"
+            android:max="100" />
+
+        <Preference
+            android:key="off_glitch_note"
+            android:title="@string/andr36oid_crtoff_glitch"
+            android:summary="@string/andr36oid_crtoff_glitch_note" />
+
+        <SeekBarPreference
+            android:key="off_tear"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_tear"
+            android:summary="@string/andr36oid_crtoff_tear_summary"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="off_split"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_split"
+            android:summary="@string/andr36oid_crtoff_split_summary"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="off_noise"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_noise"
+            android:summary="@string/andr36oid_crtoff_noise_summary"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="off_roll"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_roll"
+            android:summary="@string/andr36oid_crtoff_roll_summary"
+            android:max="100" />
+
+        <SeekBarPreference
+            android:key="off_flicker"
+            android:layout="@layout/preference_widget_seekbar_material"
+            android:persistent="false"
+            android:title="@string/andr36oid_crtoff_flicker"
+            android:summary="@string/andr36oid_crtoff_flicker_summary"
+            android:max="100" />
+
+        <Preference
+            android:key="off_try"
+            android:title="@string/andr36oid_crtoff_try"
+            android:summary="@string/andr36oid_crtoff_try_summary" />
+    </PreferenceCategory>
 </PreferenceScreen>

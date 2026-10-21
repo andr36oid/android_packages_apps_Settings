@@ -61,4 +61,75 @@
     <string name="andr36oid_crt_gpu_mask_summary">Experimental, can slow games down a lot. Red, green and blue stripes; replaces the grille and slot styles above</string>
     <!-- Toast the first time the effect is turned on -->
     <string name="andr36oid_crt_tile_added">CRT effect Quick Tile added to the notification shade</string>
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Switch-off animation</string>
+    <string name="andr36oid_crtoff_note">What the screen does when it switches off. Works without the CRT effect above, and costs nothing while you play.</string>
+    <string name="andr36oid_crtoff_style">Animation</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>None</item>
+        <item>Fade to black</item>
+        <item>Old TV</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Length</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Quick (0.4 s)</item>
+        <item>Normal (0.7 s)</item>
+        <item>Slow (1.2 s)</item>
+        <item>Slower (2 s)</item>
+        <item>Slow motion (4 s)</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_length_values" translatable="false">
+        <item>400</item>
+        <item>700</item>
+        <item>1200</item>
+        <item>2000</item>
+        <item>4000</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Shape</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>A line, then a dot</item>
+        <item>A line</item>
+        <item>Shrinks to a dot</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_shape_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Colour of the line</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>White</item>
+        <item>Orange</item>
+        <item>Green</item>
+        <item>Amber</item>
+        <item>Blue</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_tint_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Flash and glow</string>
+    <string name="andr36oid_crtoff_afterglow">Afterglow</string>
+    <string name="andr36oid_crtoff_glitch">Glitches</string>
+    <string name="andr36oid_crtoff_glitch_note">The picture losing its signal before it collapses. All at zero gives a clean switch-off.</string>
+    <string name="andr36oid_crtoff_tear">Tearing</string>
+    <string name="andr36oid_crtoff_tear_summary">Rows of the picture slip sideways</string>
+    <string name="andr36oid_crtoff_split">Colour split</string>
+    <string name="andr36oid_crtoff_split_summary">Red and blue drift apart at the edges</string>
+    <string name="andr36oid_crtoff_noise">Static</string>
+    <string name="andr36oid_crtoff_noise_summary">Snow over the picture</string>
+    <string name="andr36oid_crtoff_roll">Rolling</string>
+    <string name="andr36oid_crtoff_roll_summary">The picture rolls up as it loses hold</string>
+    <string name="andr36oid_crtoff_flicker">Flicker</string>
+    <string name="andr36oid_crtoff_flicker_summary">The brightness jumps</string>
+    <string name="andr36oid_crtoff_try">Try it</string>
+    <string name="andr36oid_crtoff_try_summary">Switches the screen off now. Press power to switch it back on.</string>
 </resources>

@@ -17,6 +17,8 @@ package com.android.settings.display;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.util.Log;
 
@@ -56,6 +58,18 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     private static final String PROP_GLOW = "persist.andr36oid.crt.glow";
     private static final String PROP_GPU_MASK = "persist.andr36oid.crt.gpu_mask";
 
+    /** the switch-off animation, read by ColorFade when the screen goes off */
+    private static final String PROP_OFF = "persist.andr36oid.crtoff.";
+    private static final int OFF_NONE = 0;
+    private static final int OFF_CRT = 2;
+    /** list rows and their ColorFade defaults */
+    private static final String[] OFF_LISTS = {"style", "length", "shape", "tint"};
+    private static final int[] OFF_LIST_DEFAULTS = {OFF_NONE, 700, 0, 0};
+    /** sliders and their ColorFade defaults */
+    private static final String[] OFF_SLIDERS = {"flash", "afterglow", "tear", "split", "noise",
+            "roll", "flicker"};
+    private static final int[] OFF_SLIDER_DEFAULTS = {70, 50, 25, 30, 20, 0, 25};
+
     /** the readers' defaults, keep in step with crt_mask.cpp and SurfaceFlinger.cpp */
     private static final int DEFAULT_STRENGTH = 50;
     private static final int MIN_STRENGTH = 10;
@@ -71,6 +85,10 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
     private SeekBarPreference mCurvature;
     private SeekBarPreference mGlow;
     private SeekBarPreference mGpuMask;
+    private final ListPreference[] mOffLists = new ListPreference[OFF_LISTS.length];
+    private final SeekBarPreference[] mOffSliders = new SeekBarPreference[OFF_SLIDERS.length];
+    private Preference mOffGlitchNote;
+    private Preference mOffTry;
 
     @Override
     public int getMetricsCategory() {
@@ -102,6 +120,23 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
         for (Preference p : new Preference[] {mEnable, mLines, mStyle, mPitch, mPhase}) {
             p.setOnPreferenceChangeListener(this);
         }
+
+        for (int i = 0; i < OFF_LISTS.length; i++) {
+            mOffLists[i] = findPreference("off_" + OFF_LISTS[i]);
+            mOffLists[i].setOnPreferenceChangeListener(this);
+        }
+        for (int i = 0; i < OFF_SLIDERS.length; i++) {
+            mOffSliders[i] = findPreference("off_" + OFF_SLIDERS[i]);
+            setUpSlider(mOffSliders[i], 0);
+        }
+        mOffGlitchNote = findPreference("off_glitch_note");
+        mOffTry = findPreference("off_try");
+        mOffTry.setOnPreferenceClickListener(p -> {
+            // the same as pressing power, so the animation plays as it will
+            getContext().getSystemService(PowerManager.class)
+                    .goToSleep(SystemClock.uptimeMillis());
+            return true;
+        });
     }
 
     /** Left and right on the d-pad move the bar, and every step shows on screen at once. */
@@ -128,6 +163,24 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
         mGlow.setValue(SystemProperties.getInt(PROP_GLOW, 0));
         mGpuMask.setValue(SystemProperties.getInt(PROP_GPU_MASK, 0));
         updateEnabled(mEnable.isChecked(), mLines.isChecked());
+        for (int i = 0; i < OFF_LISTS.length; i++) {
+            mOffLists[i].setValue(String.valueOf(
+                    SystemProperties.getInt(PROP_OFF + OFF_LISTS[i], OFF_LIST_DEFAULTS[i])));
+        }
+        for (int i = 0; i < OFF_SLIDERS.length; i++) {
+            mOffSliders[i].setValue(
+                    SystemProperties.getInt(PROP_OFF + OFF_SLIDERS[i], OFF_SLIDER_DEFAULTS[i]));
+        }
+        updateOffEnabled(SystemProperties.getInt(PROP_OFF + "style", OFF_NONE));
+    }
+
+    /** Length and Try it for any animation, the rest only for the old TV. */
+    private void updateOffEnabled(int style) {
+        mOffLists[1].setEnabled(style != OFF_NONE);
+        mOffTry.setEnabled(style != OFF_NONE);
+        for (int i = 2; i < mOffLists.length; i++) mOffLists[i].setEnabled(style == OFF_CRT);
+        for (SeekBarPreference s : mOffSliders) s.setEnabled(style == OFF_CRT);
+        mOffGlitchNote.setEnabled(style == OFF_CRT);
     }
 
     private void updateEnabled(boolean on, boolean lines) {
@@ -165,6 +218,17 @@ public class CrtEffectFragment extends SettingsPreferenceFragment
             return set(PROP_GLOW, String.valueOf((Integer) newValue));
         } else if (preference == mGpuMask) {
             return set(PROP_GPU_MASK, String.valueOf((Integer) newValue));
+        }
+        for (int i = 0; i < OFF_LISTS.length; i++) {
+            if (preference == mOffLists[i]) {
+                if (i == 0) updateOffEnabled(Integer.parseInt((String) newValue));
+                return set(PROP_OFF + OFF_LISTS[i], (String) newValue);
+            }
+        }
+        for (int i = 0; i < OFF_SLIDERS.length; i++) {
+            if (preference == mOffSliders[i]) {
+                return set(PROP_OFF + OFF_SLIDERS[i], String.valueOf((Integer) newValue));
+            }
         }
         Log.w(TAG, "Unknown row " + preference.getKey());
         return false;
