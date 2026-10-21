@@ -77,4 +77,17 @@
     <string name="andr36oid_crtoff_flicker_summary">O brilho salta</string>
     <string name="andr36oid_crtoff_try">Experimentar</string>
     <string name="andr36oid_crtoff_try_summary">Desliga o ecrã agora. Prima o botão de energia para o voltar a ligar.</string>
+    <string name="andr36oid_crtoff_on_category">Animação de ligar</string>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>Nenhuma</item>
+        <item>Desmagnetização</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>Rápida (0,6 s)</item>
+        <item>Normal (1,2 s)</item>
+        <item>Lenta (2 s)</item>
+        <item>Câmara lenta (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">Oscilação</string>
+    <string name="andr36oid_crtoff_on_colour">Cores de arco-íris</string>
 </resources>

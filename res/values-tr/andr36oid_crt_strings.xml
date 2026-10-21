@@ -77,4 +77,17 @@
     <string name="andr36oid_crtoff_flicker_summary">Parlaklık zıplar</string>
     <string name="andr36oid_crtoff_try">Dene</string>
     <string name="andr36oid_crtoff_try_summary">Ekranı hemen kapatır. Tekrar açmak için güç tuşuna basın.</string>
+    <string name="andr36oid_crtoff_on_category">Açılış animasyonu</string>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>Yok</item>
+        <item>Manyetik giderme</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>Hızlı (0,6 s)</item>
+        <item>Normal (1,2 s)</item>
+        <item>Yavaş (2 s)</item>
+        <item>Ağır çekim (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">Sallanma</string>
+    <string name="andr36oid_crtoff_on_colour">Gökkuşağı renkleri</string>
 </resources>

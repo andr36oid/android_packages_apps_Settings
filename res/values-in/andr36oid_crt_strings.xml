@@ -77,4 +77,17 @@
     <string name="andr36oid_crtoff_flicker_summary">Kecerahan melompat-lompat</string>
     <string name="andr36oid_crtoff_try">Coba</string>
     <string name="andr36oid_crtoff_try_summary">Matikan layar sekarang. Tekan tombol daya untuk menyalakannya kembali.</string>
+    <string name="andr36oid_crtoff_on_category">Animasi nyala</string>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>Tidak ada</item>
+        <item>Demagnetisasi</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>Cepat (0,6 s)</item>
+        <item>Normal (1,2 s)</item>
+        <item>Lambat (2 s)</item>
+        <item>Gerak lambat (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">Goyang</string>
+    <string name="andr36oid_crtoff_on_colour">Warna pelangi</string>
 </resources>

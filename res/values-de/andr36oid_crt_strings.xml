@@ -77,4 +77,17 @@
     <string name="andr36oid_crtoff_flicker_summary">Die Helligkeit springt</string>
     <string name="andr36oid_crtoff_try">Testen</string>
     <string name="andr36oid_crtoff_try_summary">Schaltet den Bildschirm jetzt aus. Drück die Ein-/Aus-Taste, um ihn wieder einzuschalten.</string>
+    <string name="andr36oid_crtoff_on_category">Einschaltanimation</string>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>Keine</item>
+        <item>Entmagnetisieren</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>Schnell (0,6 s)</item>
+        <item>Normal (1,2 s)</item>
+        <item>Langsam (2 s)</item>
+        <item>Zeitlupe (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">Wackeln</string>
+    <string name="andr36oid_crtoff_on_colour">Regenbogenfarben</string>
 </resources>

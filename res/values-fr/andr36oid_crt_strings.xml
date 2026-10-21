@@ -77,4 +77,17 @@
     <string name="andr36oid_crtoff_flicker_summary">La luminosité saute</string>
     <string name="andr36oid_crtoff_try">Essayer</string>
     <string name="andr36oid_crtoff_try_summary">Éteint l’écran maintenant. Appuie sur le bouton marche/arrêt pour le rallumer.</string>
+    <string name="andr36oid_crtoff_on_category">Animation d’allumage</string>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>Aucune</item>
+        <item>Démagnétisation</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>Rapide (0,6 s)</item>
+        <item>Normale (1,2 s)</item>
+        <item>Lente (2 s)</item>
+        <item>Ralenti (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">Oscillation</string>
+    <string name="andr36oid_crtoff_on_colour">Couleurs arc-en-ciel</string>
 </resources>

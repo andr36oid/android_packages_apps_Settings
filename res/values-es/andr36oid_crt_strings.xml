@@ -77,4 +77,17 @@
     <string name="andr36oid_crtoff_flicker_summary">El brillo da saltos</string>
     <string name="andr36oid_crtoff_try">Probar</string>
     <string name="andr36oid_crtoff_try_summary">Apaga la pantalla ahora. Pulsa el botón de encendido para volver a encenderla.</string>
+    <string name="andr36oid_crtoff_on_category">Animación de encendido</string>
+    <string-array name="andr36oid_crtoff_on_style_entries">
+        <item>Ninguna</item>
+        <item>Desmagnetizar</item>
+    </string-array>
+    <string-array name="andr36oid_crtoff_on_length_entries">
+        <item>Rápida (0,6 s)</item>
+        <item>Normal (1,2 s)</item>
+        <item>Lenta (2 s)</item>
+        <item>Cámara lenta (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_on_wobble">Balanceo</string>
+    <string name="andr36oid_crtoff_on_colour">Colores del arcoíris</string>
 </resources>
