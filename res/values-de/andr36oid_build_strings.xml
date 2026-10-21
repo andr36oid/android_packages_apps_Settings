@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_build_title">andr36oid-Build</string>
+    <string name="andr36oid_started_from_title">Gestartet von</string>
+    <string name="andr36oid_started_from_sd">SD-Karte</string>
+    <string name="andr36oid_started_from_emmc">Integrierter eMMC-Speicher</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_build_title">Nomor versi andr36oid</string>
+    <string name="andr36oid_started_from_title">Dimulai dari</string>
+    <string name="andr36oid_started_from_sd">Kartu SD</string>
+    <string name="andr36oid_started_from_emmc">eMMC bawaan</string>
+</resources>

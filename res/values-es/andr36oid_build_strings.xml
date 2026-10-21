@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_build_title">Número de compilación andr36oid</string>
+    <string name="andr36oid_started_from_title">Iniciado desde</string>
+    <string name="andr36oid_started_from_sd">Tarjeta SD</string>
+    <string name="andr36oid_started_from_emmc">eMMC integrada</string>
+</resources>

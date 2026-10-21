@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_build_title">Номер сборки andr36oid</string>
+    <string name="andr36oid_started_from_title">Запущено с</string>
+    <string name="andr36oid_started_from_sd">SD-карта</string>
+    <string name="andr36oid_started_from_emmc">Встроенная eMMC</string>
+</resources>

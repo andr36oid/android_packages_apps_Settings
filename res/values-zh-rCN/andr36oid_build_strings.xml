@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_build_title">andr36oid 版本号</string>
+    <string name="andr36oid_started_from_title">启动来源</string>
+    <string name="andr36oid_started_from_sd">SD 卡</string>
+    <string name="andr36oid_started_from_emmc">内置 eMMC</string>
+</resources>

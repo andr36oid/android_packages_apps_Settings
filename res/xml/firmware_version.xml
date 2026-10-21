@@ -90,6 +90,23 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
 
+    <!-- andr36oid build, as in the image's name -->
+    <Preference
+        android:key="andr36oid_build"
+        android:title="@string/andr36oid_build_title"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.Andr36oidBuildPreferenceController"/>
+
+    <!-- andr36oid: started from the SD card or the eMMC -->
+    <Preference
+        android:key="andr36oid_started_from"
+        android:title="@string/andr36oid_started_from_title"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.Andr36oidStartedFromPreferenceController"/>
+
     <!-- Build date -->
     <Preference
         android:key="os_build_date"

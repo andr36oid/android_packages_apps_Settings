@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings > About console > Android version: title of the andr36oid build, as in the image's name (20261021-2216) -->
+    <string name="andr36oid_build_title">andr36oid build</string>
+    <!-- Settings > About console > Android version: title of where this start came from -->
+    <string name="andr36oid_started_from_title">Started from</string>
+    <!-- Settings > About console > Android version > Started from: the SD card in the console -->
+    <string name="andr36oid_started_from_sd">SD card</string>
+    <!-- Settings > About console > Android version > Started from: the console's built-in eMMC -->
+    <string name="andr36oid_started_from_emmc">Built-in eMMC</string>
+</resources>

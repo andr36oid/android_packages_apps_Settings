@@ -24,13 +24,7 @@ import android.text.TextUtils;
 
 import androidx.preference.Preference;
 
-import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.TimeZone;
 
 /**
  * Shows the andr36oid release the console runs, e.g. v2026-09-26-release. Tapping it rolls
@@ -55,16 +49,7 @@ public class Andr36oidVersionPreferenceController extends BasePreferenceControll
 
     @Override
     public CharSequence getSummary() {
-        final String version = SystemProperties.get(PROPERTY);
-        // the build as in the image's name (system's build time), and on an eMMC start
-        // that it is one: an eMMC install's fstab is fstab.emmc or fstab.emmcsd
-        final long built = SystemProperties.getLong("ro.build.date.utc", 0);
-        if (built <= 0) return version;
-        final SimpleDateFormat f = new SimpleDateFormat("yyyyMMdd-HHmm", Locale.ROOT);
-        f.setTimeZone(TimeZone.getTimeZone("UTC"));
-        final boolean emmc = SystemProperties.get("ro.boot.fstab_suffix").startsWith("emmc");
-        return version + "\n" + mContext.getString(emmc ? R.string.andr36oid_version_build_emmc
-                : R.string.andr36oid_version_build, f.format(new Date(built * 1000)));
+        return SystemProperties.get(PROPERTY);
     }
 
     @Override
