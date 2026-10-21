@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Máscara de fósforo</string>
     <string name="andr36oid_crt_gpu_mask_summary">Experimental, puede ralentizar mucho los juegos. Franjas rojas, verdes y azules; sustituye los estilos de rejilla y ranuras anteriores</string>
     <string name="andr36oid_crt_tile_added">Botón rápido de efecto CRT añadido al panel de notificaciones</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Animación de apagado</string>
+    <string name="andr36oid_crtoff_note">Lo que hace la pantalla al apagarse. Funciona sin el efecto CRT de arriba y no consume recursos mientras juegas.</string>
+    <string name="andr36oid_crtoff_style">Animación</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Ninguna</item>
+        <item>Fundido a negro</item>
+        <item>Televisor antiguo</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Duración</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Rápida (0,4 s)</item>
+        <item>Normal (0,7 s)</item>
+        <item>Lenta (1,2 s)</item>
+        <item>Más lenta (2 s)</item>
+        <item>Cámara lenta (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Forma</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Una línea y luego un punto</item>
+        <item>Una línea</item>
+        <item>Se encoge hasta un punto</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Color de la línea</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Blanco</item>
+        <item>Naranja</item>
+        <item>Verde</item>
+        <item>Ámbar</item>
+        <item>Azul</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Destello y brillo</string>
+    <string name="andr36oid_crtoff_afterglow">Remanencia</string>
+    <string name="andr36oid_crtoff_glitch">Fallos</string>
+    <string name="andr36oid_crtoff_glitch_note">La imagen pierde la señal antes de colapsar. Con todo a cero, el apagado es limpio.</string>
+    <string name="andr36oid_crtoff_tear">Desgarro</string>
+    <string name="andr36oid_crtoff_tear_summary">Las filas de la imagen se desplazan a un lado</string>
+    <string name="andr36oid_crtoff_split">Separación de color</string>
+    <string name="andr36oid_crtoff_split_summary">El rojo y el azul se separan en los bordes</string>
+    <string name="andr36oid_crtoff_noise">Estática</string>
+    <string name="andr36oid_crtoff_noise_summary">Nieve sobre la imagen</string>
+    <string name="andr36oid_crtoff_roll">Desplazamiento</string>
+    <string name="andr36oid_crtoff_roll_summary">La imagen se enrolla hacia arriba al perder la señal</string>
+    <string name="andr36oid_crtoff_flicker">Parpadeo</string>
+    <string name="andr36oid_crtoff_flicker_summary">El brillo da saltos</string>
+    <string name="andr36oid_crtoff_try">Probar</string>
+    <string name="andr36oid_crtoff_try_summary">Apaga la pantalla ahora. Pulsa el botón de encendido para volver a encenderla.</string>
 </resources>

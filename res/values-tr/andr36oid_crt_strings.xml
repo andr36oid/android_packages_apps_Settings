@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Fosfor maskesi</string>
     <string name="andr36oid_crt_gpu_mask_summary">Deneysel, oyunları ciddi ölçüde yavaşlatabilir. Kırmızı, yeşil ve mavi şeritler; yukarıdaki ızgara ve yarık stillerinin yerini alır</string>
     <string name="andr36oid_crt_tile_added">CRT efekti hızlı ayarı bildirim paneline eklendi</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Kapanma animasyonu</string>
+    <string name="andr36oid_crtoff_note">Ekranın kapanırken ne yaptığı. Yukarıdaki CRT efekti kapalıyken de çalışır ve oyun sırasında kaynak harcamaz.</string>
+    <string name="andr36oid_crtoff_style">Animasyon</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Yok</item>
+        <item>Siyaha solma</item>
+        <item>Eski TV</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Süre</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Hızlı (0,4 s)</item>
+        <item>Normal (0,7 s)</item>
+        <item>Yavaş (1,2 s)</item>
+        <item>Daha yavaş (2 s)</item>
+        <item>Ağır çekim (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Şekil</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Önce bir çizgi, sonra nokta</item>
+        <item>Bir çizgi</item>
+        <item>Bir noktaya küçülür</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Çizgi rengi</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Beyaz</item>
+        <item>Turuncu</item>
+        <item>Yeşil</item>
+        <item>Kehribar</item>
+        <item>Mavi</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Parlama ve ışıltı</string>
+    <string name="andr36oid_crtoff_afterglow">Artık ışıma</string>
+    <string name="andr36oid_crtoff_glitch">Bozulmalar</string>
+    <string name="andr36oid_crtoff_glitch_note">Görüntü çökmeden önce sinyalini kaybeder. Hepsi sıfırdayken temiz bir kapanma olur.</string>
+    <string name="andr36oid_crtoff_tear">Görüntü yırtılması</string>
+    <string name="andr36oid_crtoff_tear_summary">Görüntünün satırları yana kayar</string>
+    <string name="andr36oid_crtoff_split">Renk ayrışması</string>
+    <string name="andr36oid_crtoff_split_summary">Kırmızı ve mavi kenarlarda birbirinden ayrılır</string>
+    <string name="andr36oid_crtoff_noise">Parazit</string>
+    <string name="andr36oid_crtoff_noise_summary">Görüntünün üzerinde kar</string>
+    <string name="andr36oid_crtoff_roll">Kayma</string>
+    <string name="andr36oid_crtoff_roll_summary">Sinyal kaybolurken görüntü yukarı doğru kayar</string>
+    <string name="andr36oid_crtoff_flicker">Titreme</string>
+    <string name="andr36oid_crtoff_flicker_summary">Parlaklık zıplar</string>
+    <string name="andr36oid_crtoff_try">Dene</string>
+    <string name="andr36oid_crtoff_try_summary">Ekranı hemen kapatır. Tekrar açmak için güç tuşuna basın.</string>
 </resources>

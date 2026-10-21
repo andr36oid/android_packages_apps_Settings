@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">荧光条纹</string>
     <string name="andr36oid_crt_gpu_mask_summary">实验性功能，可能导致游戏大幅变慢。模拟红、绿、蓝荧光条纹，替代上方的栅格和槽孔样式</string>
     <string name="andr36oid_crt_tile_added">CRT 效果快捷开关已添加到通知栏</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">关机动画</string>
+    <string name="andr36oid_crtoff_note">屏幕关闭时的显示效果。无需开启上方的 CRT 效果也能使用，游戏时不会增加开销。</string>
+    <string name="andr36oid_crtoff_style">动画</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>无</item>
+        <item>渐隐至黑</item>
+        <item>老式电视</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">时长</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>快速（0.4 秒）</item>
+        <item>正常（0.7 秒）</item>
+        <item>慢速（1.2 秒）</item>
+        <item>较慢（2 秒）</item>
+        <item>慢动作（4 秒）</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">形状</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>先一条线，再一个点</item>
+        <item>一条线</item>
+        <item>缩成一个点</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">线条颜色</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>白色</item>
+        <item>橙色</item>
+        <item>绿色</item>
+        <item>琥珀色</item>
+        <item>蓝色</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">闪光与辉光</string>
+    <string name="andr36oid_crtoff_afterglow">余辉</string>
+    <string name="andr36oid_crtoff_glitch">故障</string>
+    <string name="andr36oid_crtoff_glitch_note">画面在崩溃前先失去信号。全部设为零即为干净的关机效果。</string>
+    <string name="andr36oid_crtoff_tear">撕裂</string>
+    <string name="andr36oid_crtoff_tear_summary">画面的行向侧面错位滑动</string>
+    <string name="andr36oid_crtoff_split">色彩分离</string>
+    <string name="andr36oid_crtoff_split_summary">红色和蓝色在边缘处向外分开</string>
+    <string name="andr36oid_crtoff_noise">静电噪点</string>
+    <string name="andr36oid_crtoff_noise_summary">画面上布满雪花</string>
+    <string name="andr36oid_crtoff_roll">滚动</string>
+    <string name="andr36oid_crtoff_roll_summary">失去信号时画面向上滚动</string>
+    <string name="andr36oid_crtoff_flicker">闪烁</string>
+    <string name="andr36oid_crtoff_flicker_summary">亮度跳动</string>
+    <string name="andr36oid_crtoff_try">试一试</string>
+    <string name="andr36oid_crtoff_try_summary">立即关闭屏幕。按电源键可重新开启。</string>
 </resources>

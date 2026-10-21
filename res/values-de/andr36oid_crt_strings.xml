@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Phosphormaske</string>
     <string name="andr36oid_crt_gpu_mask_summary">Experimentell, kann Spiele stark verlangsamen. Rote, grüne und blaue Streifen; ersetzt die Streifen- und Schlitzmasken oben</string>
     <string name="andr36oid_crt_tile_added">Kachel „Röhrenbildschirm-Effekt“ zu den Schnelleinstellungen hinzugefügt</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Ausschaltanimation</string>
+    <string name="andr36oid_crtoff_note">Was der Bildschirm beim Ausschalten macht. Funktioniert auch ohne den Röhrenbildschirm-Effekt oben und kostet beim Spielen nichts.</string>
+    <string name="andr36oid_crtoff_style">Animation</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Keine</item>
+        <item>Ausblenden nach Schwarz</item>
+        <item>Alter Fernseher</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Dauer</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Schnell (0,4 s)</item>
+        <item>Normal (0,7 s)</item>
+        <item>Langsam (1,2 s)</item>
+        <item>Langsamer (2 s)</item>
+        <item>Zeitlupe (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Form</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Eine Linie, dann ein Punkt</item>
+        <item>Eine Linie</item>
+        <item>Schrumpft zu einem Punkt</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Farbe der Linie</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Weiß</item>
+        <item>Orange</item>
+        <item>Grün</item>
+        <item>Bernstein</item>
+        <item>Blau</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Blitz und Leuchten</string>
+    <string name="andr36oid_crtoff_afterglow">Nachleuchten</string>
+    <string name="andr36oid_crtoff_glitch">Störungen</string>
+    <string name="andr36oid_crtoff_glitch_note">Das Bild verliert das Signal, bevor es zusammenfällt. Alles auf null ergibt ein sauberes Ausschalten.</string>
+    <string name="andr36oid_crtoff_tear">Bildrisse</string>
+    <string name="andr36oid_crtoff_tear_summary">Zeilen des Bildes rutschen seitlich weg</string>
+    <string name="andr36oid_crtoff_split">Farbversatz</string>
+    <string name="andr36oid_crtoff_split_summary">Rot und Blau driften an den Rändern auseinander</string>
+    <string name="andr36oid_crtoff_noise">Rauschen</string>
+    <string name="andr36oid_crtoff_noise_summary">Schnee über dem Bild</string>
+    <string name="andr36oid_crtoff_roll">Rollen</string>
+    <string name="andr36oid_crtoff_roll_summary">Das Bild rollt nach oben weg, während es das Signal verliert</string>
+    <string name="andr36oid_crtoff_flicker">Flackern</string>
+    <string name="andr36oid_crtoff_flicker_summary">Die Helligkeit springt</string>
+    <string name="andr36oid_crtoff_try">Testen</string>
+    <string name="andr36oid_crtoff_try_summary">Schaltet den Bildschirm jetzt aus. Drück die Ein-/Aus-Taste, um ihn wieder einzuschalten.</string>
 </resources>

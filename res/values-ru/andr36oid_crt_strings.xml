@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Люминофорная маска</string>
     <string name="andr36oid_crt_gpu_mask_summary">Экспериментально, может сильно замедлять игры. Красные, зелёные и синие полосы; заменяет решётку и щелевую маску выше</string>
     <string name="andr36oid_crt_tile_added">Плитка «Эффект ЭЛТ» добавлена в панель уведомлений</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Анимация выключения</string>
+    <string name="andr36oid_crtoff_note">Что делает экран при выключении. Работает без эффекта ЭЛТ выше и не нагружает систему во время игры.</string>
+    <string name="andr36oid_crtoff_style">Анимация</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Нет</item>
+        <item>Затухание до чёрного</item>
+        <item>Старый телевизор</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Длительность</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Быстро (0,4 с)</item>
+        <item>Обычно (0,7 с)</item>
+        <item>Медленно (1,2 с)</item>
+        <item>Медленнее (2 с)</item>
+        <item>Замедленно (4 с)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Форма</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Линия, затем точка</item>
+        <item>Линия</item>
+        <item>Сжимается в точку</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Цвет линии</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Белый</item>
+        <item>Оранжевый</item>
+        <item>Зелёный</item>
+        <item>Янтарный</item>
+        <item>Синий</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Вспышка и свечение</string>
+    <string name="andr36oid_crtoff_afterglow">Послесвечение</string>
+    <string name="andr36oid_crtoff_glitch">Помехи</string>
+    <string name="andr36oid_crtoff_glitch_note">Изображение теряет сигнал, прежде чем сжаться. Всё на нуле даёт чистое выключение.</string>
+    <string name="andr36oid_crtoff_tear">Разрывы</string>
+    <string name="andr36oid_crtoff_tear_summary">Строки изображения смещаются в сторону</string>
+    <string name="andr36oid_crtoff_split">Расщепление цвета</string>
+    <string name="andr36oid_crtoff_split_summary">Красный и синий расходятся по краям</string>
+    <string name="andr36oid_crtoff_noise">Статика</string>
+    <string name="andr36oid_crtoff_noise_summary">Снег поверх изображения</string>
+    <string name="andr36oid_crtoff_roll">Прокрутка</string>
+    <string name="andr36oid_crtoff_roll_summary">Изображение уходит вверх, теряя сигнал</string>
+    <string name="andr36oid_crtoff_flicker">Мерцание</string>
+    <string name="andr36oid_crtoff_flicker_summary">Яркость скачет</string>
+    <string name="andr36oid_crtoff_try">Проверить</string>
+    <string name="andr36oid_crtoff_try_summary">Выключает экран сейчас. Нажмите кнопку питания, чтобы включить его снова.</string>
 </resources>

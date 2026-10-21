@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Masker fosfor</string>
     <string name="andr36oid_crt_gpu_mask_summary">Eksperimental, dapat membuat game jauh lebih lambat. Garis merah, hijau, dan biru; menggantikan gaya kisi dan celah di atas</string>
     <string name="andr36oid_crt_tile_added">Tombol cepat Efek CRT ditambahkan ke panel notifikasi</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Animasi mati</string>
+    <string name="andr36oid_crtoff_note">Yang dilakukan layar saat dimatikan. Berfungsi tanpa efek CRT di atas dan tidak membebani saat bermain.</string>
+    <string name="andr36oid_crtoff_style">Animasi</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Tidak ada</item>
+        <item>Memudar ke hitam</item>
+        <item>TV tabung lama</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Durasi</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Cepat (0,4 s)</item>
+        <item>Normal (0,7 s)</item>
+        <item>Lambat (1,2 s)</item>
+        <item>Lebih lambat (2 s)</item>
+        <item>Gerak lambat (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Bentuk</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Satu garis, lalu titik</item>
+        <item>Satu garis</item>
+        <item>Menyusut jadi titik</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Warna garis</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Putih</item>
+        <item>Oranye</item>
+        <item>Hijau</item>
+        <item>Kuning kecokelatan</item>
+        <item>Biru</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Kilatan dan pendar</string>
+    <string name="andr36oid_crtoff_afterglow">Pendar sisa</string>
+    <string name="andr36oid_crtoff_glitch">Gangguan</string>
+    <string name="andr36oid_crtoff_glitch_note">Gambar kehilangan sinyal sebelum runtuh. Semua di nol menghasilkan mati yang bersih.</string>
+    <string name="andr36oid_crtoff_tear">Robekan gambar</string>
+    <string name="andr36oid_crtoff_tear_summary">Baris gambar bergeser ke samping</string>
+    <string name="andr36oid_crtoff_split">Pemisahan warna</string>
+    <string name="andr36oid_crtoff_split_summary">Merah dan biru menjauh di tepi</string>
+    <string name="andr36oid_crtoff_noise">Statis</string>
+    <string name="andr36oid_crtoff_noise_summary">Salju menutupi gambar</string>
+    <string name="andr36oid_crtoff_roll">Bergulir</string>
+    <string name="andr36oid_crtoff_roll_summary">Gambar menggulung ke atas saat kehilangan sinyal</string>
+    <string name="andr36oid_crtoff_flicker">Kedip</string>
+    <string name="andr36oid_crtoff_flicker_summary">Kecerahan melompat-lompat</string>
+    <string name="andr36oid_crtoff_try">Coba</string>
+    <string name="andr36oid_crtoff_try_summary">Matikan layar sekarang. Tekan tombol daya untuk menyalakannya kembali.</string>
 </resources>

@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Maska luminoforu</string>
     <string name="andr36oid_crt_gpu_mask_summary">Eksperymentalne, może znacznie spowolnić gry. Czerwone, zielone i niebieskie paski; zastępuje wybrane powyżej maski paskowe i szczelinowe</string>
     <string name="andr36oid_crt_tile_added">Kafelek Efekt CRT dodany do panelu powiadomień</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Animacja wyłączania</string>
+    <string name="andr36oid_crtoff_note">Co robi ekran podczas wyłączania. Działa bez efektu CRT powyżej i nie obciąża gry podczas grania.</string>
+    <string name="andr36oid_crtoff_style">Animacja</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Brak</item>
+        <item>Zanikanie do czerni</item>
+        <item>Stary telewizor</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Długość</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Szybka (0,4 s)</item>
+        <item>Normalna (0,7 s)</item>
+        <item>Wolna (1,2 s)</item>
+        <item>Wolniejsza (2 s)</item>
+        <item>Zwolniona (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Kształt</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Linia, potem kropka</item>
+        <item>Linia</item>
+        <item>Kurczy się do kropki</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Kolor linii</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Biały</item>
+        <item>Pomarańczowy</item>
+        <item>Zielony</item>
+        <item>Bursztynowy</item>
+        <item>Niebieski</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Błysk i poświata</string>
+    <string name="andr36oid_crtoff_afterglow">Powidok</string>
+    <string name="andr36oid_crtoff_glitch">Zakłócenia</string>
+    <string name="andr36oid_crtoff_glitch_note">Obraz traci sygnał, zanim się zwinie. Wszystko na zero daje czyste wyłączenie.</string>
+    <string name="andr36oid_crtoff_tear">Rozrywanie obrazu</string>
+    <string name="andr36oid_crtoff_tear_summary">Wiersze obrazu przesuwają się w bok</string>
+    <string name="andr36oid_crtoff_split">Rozszczepienie kolorów</string>
+    <string name="andr36oid_crtoff_split_summary">Czerwień i błękit rozjeżdżają się na krawędziach</string>
+    <string name="andr36oid_crtoff_noise">Szum</string>
+    <string name="andr36oid_crtoff_noise_summary">Śnieg na obrazie</string>
+    <string name="andr36oid_crtoff_roll">Przewijanie</string>
+    <string name="andr36oid_crtoff_roll_summary">Obraz zwija się w górę, tracąc sygnał</string>
+    <string name="andr36oid_crtoff_flicker">Migotanie</string>
+    <string name="andr36oid_crtoff_flicker_summary">Jasność skacze</string>
+    <string name="andr36oid_crtoff_try">Wypróbuj</string>
+    <string name="andr36oid_crtoff_try_summary">Wyłącza ekran teraz. Naciśnij przycisk zasilania, aby go znowu włączyć.</string>
 </resources>

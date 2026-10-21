@@ -29,4 +29,52 @@
     <string name="andr36oid_crt_gpu_mask">Masque de phosphores</string>
     <string name="andr36oid_crt_gpu_mask_summary">Expérimental, peut fortement ralentir les jeux. Bandes rouges, vertes et bleues ; remplace les styles à grille et à fentes ci-dessus</string>
     <string name="andr36oid_crt_tile_added">Raccourci Effet CRT ajouté au volet des notifications</string>
+
+    <!-- Switch-off animation: plays when the screen switches off, persist.andr36oid.crtoff.* -->
+    <string name="andr36oid_crtoff_category">Animation d’extinction</string>
+    <string name="andr36oid_crtoff_note">Ce que fait l’écran à l’extinction. Fonctionne sans l’effet CRT ci-dessus et ne consomme rien pendant le jeu.</string>
+    <string name="andr36oid_crtoff_style">Animation</string>
+    <string-array name="andr36oid_crtoff_style_entries">
+        <item>Aucune</item>
+        <item>Fondu au noir</item>
+        <item>Ancienne télévision</item>
+    </string-array>
+    <string name="andr36oid_crtoff_length">Durée</string>
+    <string-array name="andr36oid_crtoff_length_entries">
+        <item>Rapide (0,4 s)</item>
+        <item>Normale (0,7 s)</item>
+        <item>Lente (1,2 s)</item>
+        <item>Plus lente (2 s)</item>
+        <item>Ralenti (4 s)</item>
+    </string-array>
+    <string name="andr36oid_crtoff_shape">Forme</string>
+    <string-array name="andr36oid_crtoff_shape_entries">
+        <item>Une ligne, puis un point</item>
+        <item>Une ligne</item>
+        <item>Se réduit à un point</item>
+    </string-array>
+    <string name="andr36oid_crtoff_tint">Couleur de la ligne</string>
+    <string-array name="andr36oid_crtoff_tint_entries">
+        <item>Blanc</item>
+        <item>Orange</item>
+        <item>Vert</item>
+        <item>Ambre</item>
+        <item>Bleu</item>
+    </string-array>
+    <string name="andr36oid_crtoff_flash">Flash et lueur</string>
+    <string name="andr36oid_crtoff_afterglow">Rémanence</string>
+    <string name="andr36oid_crtoff_glitch">Parasites</string>
+    <string name="andr36oid_crtoff_glitch_note">L’image perd le signal avant de s’effondrer. Tout à zéro donne une extinction nette.</string>
+    <string name="andr36oid_crtoff_tear">Déchirement</string>
+    <string name="andr36oid_crtoff_tear_summary">Des lignes de l’image glissent sur le côté</string>
+    <string name="andr36oid_crtoff_split">Décalage des couleurs</string>
+    <string name="andr36oid_crtoff_split_summary">Le rouge et le bleu s’écartent sur les bords</string>
+    <string name="andr36oid_crtoff_noise">Neige</string>
+    <string name="andr36oid_crtoff_noise_summary">De la neige recouvre l’image</string>
+    <string name="andr36oid_crtoff_roll">Défilement</string>
+    <string name="andr36oid_crtoff_roll_summary">L’image remonte en défilant quand elle perd le signal</string>
+    <string name="andr36oid_crtoff_flicker">Scintillement</string>
+    <string name="andr36oid_crtoff_flicker_summary">La luminosité saute</string>
+    <string name="andr36oid_crtoff_try">Essayer</string>
+    <string name="andr36oid_crtoff_try_summary">Éteint l’écran maintenant. Appuie sur le bouton marche/arrêt pour le rallumer.</string>
 </resources>
