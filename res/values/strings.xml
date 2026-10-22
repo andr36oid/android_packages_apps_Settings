@@ -12254,4 +12254,8 @@
     <string name="hint_bar_select">Select</string>
     <string name="hint_bar_back">Back</string>
     <string name="hint_bar_search">Search</string>
+
+    <!-- Battery setting for the voltage advisory -->
+    <string name="andr36oid_low_voltage_warning_title">Low voltage note</string>
+    <string name="andr36oid_low_voltage_warning_summary">Show a small note over apps when battery voltage is low and the CPU may be throttled</string>
 </resources>

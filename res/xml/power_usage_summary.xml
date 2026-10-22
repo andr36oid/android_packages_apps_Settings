@@ -58,6 +58,12 @@
         android:summary="@string/fast_charging_summary"
         settings:controller="com.android.settings.fuelgauge.FastChargingPreferenceController"/>
 
+    <SwitchPreference
+        android:key="andr36oid_low_voltage_warning"
+        android:title="@string/andr36oid_low_voltage_warning_title"
+        android:summary="@string/andr36oid_low_voltage_warning_summary"
+        settings:controller="com.android.settings.fuelgauge.LowVoltageWarningPreferenceController" />
+
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="last_full_charge"
         android:title="@string/battery_last_full_charge"
