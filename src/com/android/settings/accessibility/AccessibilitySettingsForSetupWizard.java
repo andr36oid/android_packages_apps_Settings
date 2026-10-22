@@ -94,18 +94,18 @@ public class AccessibilitySettingsForSetupWizard extends SettingsPreferenceFragm
         mDisplayMagnificationPreference = findPreference(DISPLAY_MAGNIFICATION_PREFERENCE);
         mScreenReaderPreference = findPreference(SCREEN_READER_PREFERENCE);
         mSelectToSpeakPreference = findPreference(SELECT_TO_SPEAK_PREFERENCE);
+        // andr36oid: no TalkBack or magnification on the first start's page; they don't suit
+        // a handheld without a touchscreen
+        getPreferenceScreen().removePreference(mScreenReaderPreference);
+        getPreferenceScreen().removePreference(mDisplayMagnificationPreference);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        updateAccessibilityServicePreference(mScreenReaderPreference,
-                SCREEN_READER_PACKAGE_NAME, SCREEN_READER_SERVICE_NAME,
-                VolumeShortcutToggleScreenReaderPreferenceFragmentForSetupWizard.class.getName());
         updateAccessibilityServicePreference(mSelectToSpeakPreference,
                 SELECT_TO_SPEAK_PACKAGE_NAME, SELECT_TO_SPEAK_SERVICE_NAME,
                 VolumeShortcutToggleSelectToSpeakPreferenceFragmentForSetupWizard.class.getName());
-        configureMagnificationPreferenceIfNeeded(mDisplayMagnificationPreference);
     }
 
     @Override
