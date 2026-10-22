@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_setup_button_mapping">ボタン割り当て（ベータ）</string>
+    <string name="andr36oid_setup_joystick_mouse">ジョイスティックマウス</string>
+    <string name="andr36oid_setup_kernel_tweaks">カーネル調整</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_setup_button_mapping">Mapowanie przycisków (beta)</string>
+    <string name="andr36oid_setup_joystick_mouse">Mysz na gałkach</string>
+    <string name="andr36oid_setup_kernel_tweaks">Ustawienia jądra</string>
+</resources>

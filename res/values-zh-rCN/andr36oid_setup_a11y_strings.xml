@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="andr36oid_setup_button_mapping">按键映射（Beta）</string>
+    <string name="andr36oid_setup_joystick_mouse">摇杆鼠标</string>
+    <string name="andr36oid_setup_kernel_tweaks">内核调整</string>
+</resources>

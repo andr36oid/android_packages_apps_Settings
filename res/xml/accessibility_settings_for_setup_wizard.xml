@@ -56,4 +56,29 @@
         android:persistent="true"
         android:summary="@string/talkback_summary" />
 
+    <!-- andr36oid: set up the controls (and the hardware) before anything else -->
+    <Preference
+        android:key="andr36oid_button_mapping"
+        android:title="@string/andr36oid_setup_button_mapping">
+        <intent
+            android:targetPackage="org.andr36oid.buttonmapper"
+            android:targetClass="org.andr36oid.buttonmapper.ButtonMappingActivity" />
+    </Preference>
+
+    <Preference
+        android:key="andr36oid_joystick_mouse"
+        android:title="@string/andr36oid_setup_joystick_mouse">
+        <intent
+            android:targetPackage="com.gameconsole.joymouse"
+            android:targetClass="com.gameconsole.joymouse.SettingsActivity" />
+    </Preference>
+
+    <Preference
+        android:key="andr36oid_kernel_tweaks"
+        android:title="@string/andr36oid_setup_kernel_tweaks">
+        <intent
+            android:targetPackage="org.andr36oid.kerneltweaks"
+            android:targetClass="org.andr36oid.kerneltweaks.KernelTweaksActivity" />
+    </Preference>
+
 </PreferenceScreen>

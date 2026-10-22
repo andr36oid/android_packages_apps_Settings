@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- andr36oid: controls and Kernel Tweaks on the first start's accessibility page; the apps' own names -->
+<resources>
+    <string name="andr36oid_setup_button_mapping">Button mapping (beta)</string>
+    <string name="andr36oid_setup_joystick_mouse">Joystick mouse</string>
+    <string name="andr36oid_setup_kernel_tweaks">Kernel Tweaks</string>
+</resources>
