@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Autoriser la connexion"</string>
     <string name="andr36oid_low_voltage_warning_title">Note de tension faible</string>
     <string name="andr36oid_low_voltage_warning_summary">Afficher une petite note par-dessus les applications lorsque la tension de la batterie est faible et que le CPU peut être ralenti</string>
+    <string name="hotfix_title">Correctifs</string>
+    <string name="hotfix_summary">Appliquer des correctifs depuis BOOT ou EASYROMS et voir les résultats de ce démarrage</string>
+    <string name="hotfix_enabled">Appliquer les correctifs</string>
+    <string name="hotfix_enabled_summary">Les changements prennent effet après un redémarrage. Activer cette option efface aussi la protection du démarrage.</string>
+    <string name="hotfix_help">Placez les fichiers .fix.zip approuvés dans le dossier des correctifs sur BOOT ou EASYROMS. BOOT est prioritaire si les deux contiennent le même correctif. Les correctifs correspondants sont appliqués à chaque démarrage. Maintenez Start+Select lors de la mise sous tension pour les ignorer pendant un démarrage.</string>
+    <string name="hotfix_entries">Résultats de ce démarrage</string>
+    <string name="hotfix_none">Aucun correctif trouvé lors de ce démarrage</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Appliqué</string>
+    <string name="hotfix_skipped">Ignoré</string>
+    <string name="hotfix_failed">Échec</string>
+    <string name="hotfix_ok">Script terminé correctement</string>
+    <string name="hotfix_build">Pour une autre build</string>
+    <string name="hotfix_disabled">Correctifs désactivés</string>
+    <string name="hotfix_paused">Désactivés après deux démarrages incomplets. Activez les correctifs pour réessayer.</string>
+    <string name="hotfix_safe">Démarrage sans échec</string>
+    <string name="hotfix_invalid">Archive non valide, trop volumineuse ou impossible à décompresser</string>
+    <string name="hotfix_timeout">Le script a dépassé 30 secondes</string>
+    <string name="hotfix_exit">Le script a renvoyé une erreur</string>
+    <string name="hotfix_limit">Limite du nombre de correctifs ou de leur taille totale atteinte pour ce démarrage</string>
+    <string name="hotfix_counter">Enregistrement du compteur de démarrage impossible</string>
+    <string name="hotfix_storage">Préparation du stockage impossible</string>
+    <string name="hotfix_unavailable">Source ou état des correctifs indisponible</string>
+    <string name="hotfix_duplicate">Le même correctif est sur BOOT ; BOOT est prioritaire</string>
 </resources>

@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Hubungkan"</string>
     <string name="andr36oid_low_voltage_warning_title">Catatan tegangan rendah</string>
     <string name="andr36oid_low_voltage_warning_summary">Tampilkan catatan kecil di atas aplikasi saat tegangan baterai rendah dan CPU mungkin dibatasi</string>
+    <string name="hotfix_title">Perbaikan</string>
+    <string name="hotfix_summary">Terapkan perbaikan dari BOOT atau EASYROMS dan lihat hasil boot ini</string>
+    <string name="hotfix_enabled">Terapkan perbaikan</string>
+    <string name="hotfix_enabled_summary">Perubahan berlaku setelah dimulai ulang. Mengaktifkan ini juga menghapus perlindungan boot.</string>
+    <string name="hotfix_help">Letakkan file .fix.zip tepercaya di folder perbaikan pada BOOT atau EASYROMS. BOOT diprioritaskan jika keduanya memiliki perbaikan yang sama. Perbaikan yang cocok diterapkan pada setiap boot. Tahan Start+Select saat menyalakan untuk melewatinya pada satu boot.</string>
+    <string name="hotfix_entries">Hasil boot ini</string>
+    <string name="hotfix_none">Tidak ada perbaikan yang ditemukan pada boot ini</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Diterapkan</string>
+    <string name="hotfix_skipped">Dilewati</string>
+    <string name="hotfix_failed">Gagal</string>
+    <string name="hotfix_ok">Skrip selesai dengan sukses</string>
+    <string name="hotfix_build">Untuk versi lain</string>
+    <string name="hotfix_disabled">Perbaikan dinonaktifkan</string>
+    <string name="hotfix_paused">Dinonaktifkan setelah dua boot tidak selesai. Aktifkan perbaikan untuk mencoba lagi.</string>
+    <string name="hotfix_safe">Boot aman</string>
+    <string name="hotfix_invalid">Arsip tidak valid, terlalu besar, atau tidak dapat diekstrak</string>
+    <string name="hotfix_timeout">Skrip melebihi 30 detik</string>
+    <string name="hotfix_exit">Skrip mengembalikan kesalahan</string>
+    <string name="hotfix_limit">Batas jumlah atau total ukuran perbaikan tercapai untuk boot ini</string>
+    <string name="hotfix_counter">Tidak dapat menyimpan penghitung boot</string>
+    <string name="hotfix_storage">Tidak dapat menyiapkan penyimpanan</string>
+    <string name="hotfix_unavailable">Sumber atau status perbaikan tidak tersedia</string>
+    <string name="hotfix_duplicate">Perbaikan yang sama ada di BOOT; BOOT diprioritaskan</string>
 </resources>

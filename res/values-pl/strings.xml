@@ -5163,4 +5163,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Połącz"</string>
     <string name="andr36oid_low_voltage_warning_title">Uwaga o niskim napięciu</string>
     <string name="andr36oid_low_voltage_warning_summary">Pokazuj małą uwagę nad aplikacjami, gdy napięcie baterii jest niskie i CPU może zostać ograniczony</string>
+    <string name="hotfix_title">Poprawki</string>
+    <string name="hotfix_summary">Stosuj poprawki z BOOT lub EASYROMS i wyświetlaj wyniki tego uruchomienia</string>
+    <string name="hotfix_enabled">Stosuj poprawki</string>
+    <string name="hotfix_enabled_summary">Zmiany zaczną działać po ponownym uruchomieniu. Włączenie tej opcji wyczyści też ochronę rozruchu.</string>
+    <string name="hotfix_help">Umieść zaufane pliki .fix.zip w folderze poprawek na BOOT lub EASYROMS. Jeśli ta sama poprawka jest w obu miejscach, BOOT ma pierwszeństwo. Pasujące poprawki są stosowane przy każdym uruchomieniu. Przy włączaniu przytrzymaj Start+Select, aby pominąć je podczas jednego uruchomienia.</string>
+    <string name="hotfix_entries">Wyniki tego uruchomienia</string>
+    <string name="hotfix_none">Nie znaleziono poprawek podczas tego uruchomienia</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Zastosowano</string>
+    <string name="hotfix_skipped">Pominięto</string>
+    <string name="hotfix_failed">Niepowodzenie</string>
+    <string name="hotfix_ok">Skrypt zakończył się pomyślnie</string>
+    <string name="hotfix_build">Dla innej kompilacji</string>
+    <string name="hotfix_disabled">Poprawki są wyłączone</string>
+    <string name="hotfix_paused">Wyłączono po dwóch uruchomieniach, które się nie zakończyły. Włącz poprawki, aby spróbować ponownie.</string>
+    <string name="hotfix_safe">Bezpieczne uruchomienie</string>
+    <string name="hotfix_invalid">Archiwum jest nieprawidłowe, za duże lub nie można go rozpakować</string>
+    <string name="hotfix_timeout">Skrypt przekroczył 30 sekund</string>
+    <string name="hotfix_exit">Skrypt zwrócił błąd</string>
+    <string name="hotfix_limit">Osiągnięto limit liczby poprawek lub ich łącznego rozmiaru dla tego uruchomienia</string>
+    <string name="hotfix_counter">Nie można zapisać licznika rozruchów</string>
+    <string name="hotfix_storage">Nie można przygotować pamięci</string>
+    <string name="hotfix_unavailable">Źródło poprawek lub ich stan są niedostępne</string>
+    <string name="hotfix_duplicate">Ta sama poprawka jest na BOOT; BOOT ma pierwszeństwo</string>
 </resources>

@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"连接"</string>
     <string name="andr36oid_low_voltage_warning_title">低电压提示</string>
     <string name="andr36oid_low_voltage_warning_summary">电池电压低且 CPU 可能降频时，在应用上方显示小提示</string>
+    <string name="hotfix_title">热修复</string>
+    <string name="hotfix_summary">应用 BOOT 或 EASYROMS 上的修复，并查看本次启动的结果</string>
+    <string name="hotfix_enabled">应用热修复</string>
+    <string name="hotfix_enabled_summary">更改将在重启后生效。开启此选项还会清除启动保护。</string>
+    <string name="hotfix_help">将可信的 .fix.zip 文件放入 BOOT 或 EASYROMS 上的热修复文件夹。如果两者都有相同的修复，则 BOOT 优先。每次启动都会应用匹配的修复。开机时按住 Start+Select，可在本次启动中跳过修复。</string>
+    <string name="hotfix_entries">本次启动的结果</string>
+    <string name="hotfix_none">本次启动未找到热修复</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">已应用</string>
+    <string name="hotfix_skipped">已跳过</string>
+    <string name="hotfix_failed">失败</string>
+    <string name="hotfix_ok">脚本已成功完成</string>
+    <string name="hotfix_build">适用于其他版本</string>
+    <string name="hotfix_disabled">热修复已关闭</string>
+    <string name="hotfix_paused">因两次启动未完成而关闭。请开启热修复后重试。</string>
+    <string name="hotfix_safe">安全启动</string>
+    <string name="hotfix_invalid">压缩包无效、过大或无法解压</string>
+    <string name="hotfix_timeout">脚本运行超过 30 秒</string>
+    <string name="hotfix_exit">脚本返回错误</string>
+    <string name="hotfix_limit">本次启动已达到热修复数量或总大小限制</string>
+    <string name="hotfix_counter">无法保存启动计数器</string>
+    <string name="hotfix_storage">无法准备存储空间</string>
+    <string name="hotfix_unavailable">热修复来源或状态不可用</string>
+    <string name="hotfix_duplicate">BOOT 上有相同的修复；BOOT 优先</string>
 </resources>

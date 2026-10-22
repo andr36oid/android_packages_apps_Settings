@@ -5163,4 +5163,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Подключиться"</string>
     <string name="andr36oid_low_voltage_warning_title">Примечание о низком напряжении</string>
     <string name="andr36oid_low_voltage_warning_summary">Показывать небольшое примечание поверх приложений при низком напряжении батареи, когда ЦП может снизить частоту</string>
+    <string name="hotfix_title">Исправления</string>
+    <string name="hotfix_summary">Применять исправления с BOOT или EASYROMS и показывать результаты этого запуска</string>
+    <string name="hotfix_enabled">Применять исправления</string>
+    <string name="hotfix_enabled_summary">Изменения вступают в силу после перезапуска. Включение этой функции также снимает защиту загрузки.</string>
+    <string name="hotfix_help">Поместите доверенные файлы .fix.zip в папку исправлений на BOOT или EASYROMS. Если одинаковое исправление есть на обоих носителях, приоритет у BOOT. Подходящие исправления применяются при каждом запуске. Удерживайте Start+Select при включении питания, чтобы пропустить их в одном запуске.</string>
+    <string name="hotfix_entries">Результаты этого запуска</string>
+    <string name="hotfix_none">В этом запуске исправления не найдены</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Применено</string>
+    <string name="hotfix_skipped">Пропущено</string>
+    <string name="hotfix_failed">Ошибка</string>
+    <string name="hotfix_ok">Скрипт успешно завершен</string>
+    <string name="hotfix_build">Для другой сборки</string>
+    <string name="hotfix_disabled">Исправления отключены</string>
+    <string name="hotfix_paused">Отключено после двух незавершенных запусков. Включите исправления, чтобы повторить попытку.</string>
+    <string name="hotfix_safe">Безопасный запуск</string>
+    <string name="hotfix_invalid">Архив недействителен, слишком велик или не удалось распаковать</string>
+    <string name="hotfix_timeout">Скрипт выполнялся более 30 секунд</string>
+    <string name="hotfix_exit">Скрипт вернул ошибку</string>
+    <string name="hotfix_limit">Для этого запуска достигнут лимит количества исправлений или их общего размера</string>
+    <string name="hotfix_counter">Не удалось сохранить счетчик загрузки</string>
+    <string name="hotfix_storage">Не удалось подготовить хранилище</string>
+    <string name="hotfix_unavailable">Источник или состояние исправлений недоступны</string>
+    <string name="hotfix_duplicate">То же исправление находится на BOOT; приоритет у BOOT</string>
 </resources>

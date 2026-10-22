@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Conectar"</string>
     <string name="andr36oid_low_voltage_warning_title">Nota de tensão baixa</string>
     <string name="andr36oid_low_voltage_warning_summary">Mostrar uma pequena nota sobre as aplicações quando a tensão da bateria estiver baixa e o CPU puder ser limitado</string>
+    <string name="hotfix_title">Correções</string>
+    <string name="hotfix_summary">Aplicar correções a partir de BOOT ou EASYROMS e ver os resultados deste arranque</string>
+    <string name="hotfix_enabled">Aplicar correções</string>
+    <string name="hotfix_enabled_summary">As alterações entram em vigor depois de reiniciar. Ativar esta opção também limpa a proteção do arranque.</string>
+    <string name="hotfix_help">Coloque ficheiros .fix.zip fidedignos na pasta de correções de BOOT ou EASYROMS. Se ambos tiverem a mesma correção, BOOT tem prioridade. As correções correspondentes são aplicadas em cada arranque. Mantenha Start+Select premidos ao ligar para as ignorar num arranque.</string>
+    <string name="hotfix_entries">Resultados deste arranque</string>
+    <string name="hotfix_none">Não foram encontradas correções neste arranque</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Aplicada</string>
+    <string name="hotfix_skipped">Ignorada</string>
+    <string name="hotfix_failed">Falhou</string>
+    <string name="hotfix_ok">Script concluído com êxito</string>
+    <string name="hotfix_build">Para outra compilação</string>
+    <string name="hotfix_disabled">As correções estão desativadas</string>
+    <string name="hotfix_paused">Desativadas depois de dois arranques que não terminaram. Ative as correções para tentar novamente.</string>
+    <string name="hotfix_safe">Arranque seguro</string>
+    <string name="hotfix_invalid">O arquivo é inválido, demasiado grande ou não foi possível descompactá-lo</string>
+    <string name="hotfix_timeout">O script excedeu 30 segundos</string>
+    <string name="hotfix_exit">O script devolveu um erro</string>
+    <string name="hotfix_limit">Foi atingido o limite de quantidade ou tamanho total das correções neste arranque</string>
+    <string name="hotfix_counter">Não foi possível guardar o contador de arranque</string>
+    <string name="hotfix_storage">Não foi possível preparar o armazenamento</string>
+    <string name="hotfix_unavailable">A origem ou o estado das correções não está disponível</string>
+    <string name="hotfix_duplicate">A mesma correção está em BOOT; BOOT tem prioridade</string>
 </resources>

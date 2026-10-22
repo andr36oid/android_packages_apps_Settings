@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Bağlan"</string>
     <string name="andr36oid_low_voltage_warning_title">Düşük voltaj notu</string>
     <string name="andr36oid_low_voltage_warning_summary">Pil voltajı düşük olduğunda ve CPU yavaşlatılabildiğinde uygulamaların üzerinde küçük bir not göster</string>
+    <string name="hotfix_title">Düzeltmeler</string>
+    <string name="hotfix_summary">BOOT veya EASYROMS üzerindeki düzeltmeleri uygulayın ve bu başlatmanın sonuçlarını görün</string>
+    <string name="hotfix_enabled">Düzeltmeleri uygula</string>
+    <string name="hotfix_enabled_summary">Değişiklikler yeniden başlatıldıktan sonra geçerli olur. Bunu açmak, önyükleme korumasını da kaldırır.</string>
+    <string name="hotfix_help">Güvenilir .fix.zip dosyalarını BOOT veya EASYROMS üzerindeki düzeltme klasörüne yerleştirin. Aynı düzeltme ikisinde de varsa BOOT önceliklidir. Eşleşen düzeltmeler her başlatmada uygulanır. Bir başlatmada bunları atlamak için güç verirken Start+Select tuşlarını basılı tutun.</string>
+    <string name="hotfix_entries">Bu başlatmanın sonuçları</string>
+    <string name="hotfix_none">Bu başlatmada düzeltme bulunamadı</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Uygulandı</string>
+    <string name="hotfix_skipped">Atlandı</string>
+    <string name="hotfix_failed">Başarısız</string>
+    <string name="hotfix_ok">Komut dosyası başarıyla tamamlandı</string>
+    <string name="hotfix_build">Farklı bir derleme için</string>
+    <string name="hotfix_disabled">Düzeltmeler kapalı</string>
+    <string name="hotfix_paused">İki başlatma tamamlanamadıktan sonra kapatıldı. Tekrar denemek için düzeltmeleri açın.</string>
+    <string name="hotfix_safe">Güvenli başlatma</string>
+    <string name="hotfix_invalid">Arşiv geçersiz, çok büyük veya paketten çıkarılamadı</string>
+    <string name="hotfix_timeout">Komut dosyası 30 saniyeyi aştı</string>
+    <string name="hotfix_exit">Komut dosyası hata döndürdü</string>
+    <string name="hotfix_limit">Bu başlatma için düzeltme sayısı veya toplam boyut sınırına ulaşıldı</string>
+    <string name="hotfix_counter">Önyükleme sayacı kaydedilemedi</string>
+    <string name="hotfix_storage">Depolama hazırlanamadı</string>
+    <string name="hotfix_unavailable">Düzeltme kaynağı veya durumu kullanılamıyor</string>
+    <string name="hotfix_duplicate">Aynı düzeltme BOOT üzerinde var; BOOT önceliklidir</string>
 </resources>

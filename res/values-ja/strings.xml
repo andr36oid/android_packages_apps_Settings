@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"接続"</string>
     <string name="andr36oid_low_voltage_warning_title">低電圧に関する注記</string>
     <string name="andr36oid_low_voltage_warning_summary">バッテリー電圧が低く、CPUが制限される可能性があるときに、アプリの上に小さな注記を表示します</string>
+    <string name="hotfix_title">ホットフィックス</string>
+    <string name="hotfix_summary">BOOT または EASYROMS の修正を適用し、この起動の結果を表示</string>
+    <string name="hotfix_enabled">ホットフィックスを適用</string>
+    <string name="hotfix_enabled_summary">変更は再起動後に反映されます。これを有効にすると、ブート保護も解除されます。</string>
+    <string name="hotfix_help">信頼できる .fix.zip ファイルを BOOT または EASYROMS のホットフィックスフォルダに置きます。両方に同じ修正がある場合は BOOT が優先されます。一致する修正は起動のたびに適用されます。電源投入時に Start+Select を長押しすると、1 回の起動でスキップできます。</string>
+    <string name="hotfix_entries">この起動の結果</string>
+    <string name="hotfix_none">この起動でホットフィックスは見つかりませんでした</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">適用済み</string>
+    <string name="hotfix_skipped">スキップ</string>
+    <string name="hotfix_failed">失敗</string>
+    <string name="hotfix_ok">スクリプトは正常に完了しました</string>
+    <string name="hotfix_build">別のビルド用</string>
+    <string name="hotfix_disabled">ホットフィックスは無効です</string>
+    <string name="hotfix_paused">2 回の起動で完了しなかったため無効にしました。再試行するにはホットフィックスを有効にしてください。</string>
+    <string name="hotfix_safe">セーフスタート</string>
+    <string name="hotfix_invalid">アーカイブが無効、サイズ超過、または展開できません</string>
+    <string name="hotfix_timeout">スクリプトが 30 秒を超えました</string>
+    <string name="hotfix_exit">スクリプトがエラーを返しました</string>
+    <string name="hotfix_limit">この起動でホットフィックスの数または合計サイズの上限に達しました</string>
+    <string name="hotfix_counter">ブートカウンターを保存できませんでした</string>
+    <string name="hotfix_storage">ストレージを準備できませんでした</string>
+    <string name="hotfix_unavailable">ホットフィックスのソースまたは状態を利用できません</string>
+    <string name="hotfix_duplicate">同じ修正が BOOT にあります。BOOT が優先されます</string>
 </resources>

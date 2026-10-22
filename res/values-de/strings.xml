@@ -4982,4 +4982,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Verbinden"</string>
     <string name="andr36oid_low_voltage_warning_title">Hinweis zu niedriger Spannung</string>
     <string name="andr36oid_low_voltage_warning_summary">Kleine Notiz über Apps anzeigen, wenn die Batteriespannung niedrig ist und die CPU möglicherweise gedrosselt wird</string>
+    <string name="hotfix_title">Hotfixes</string>
+    <string name="hotfix_summary">Fixes auf BOOT oder EASYROMS anwenden und Ergebnisse dieses Starts anzeigen</string>
+    <string name="hotfix_enabled">Hotfixes anwenden</string>
+    <string name="hotfix_enabled_summary">Änderungen werden nach einem Neustart wirksam. Wenn du dies aktivierst, wird auch der Boot-Schutz gelöscht.</string>
+    <string name="hotfix_help">Lege vertrauenswürdige .fix.zip-Dateien im Hotfix-Ordner auf BOOT oder EASYROMS ab. BOOT hat Vorrang, wenn beide denselben Fix enthalten. Passende Fixes werden bei jedem Start angewendet. Halte beim Einschalten Start+Select gedrückt, um sie bei einem Start zu überspringen.</string>
+    <string name="hotfix_entries">Ergebnisse dieses Starts</string>
+    <string name="hotfix_none">Bei diesem Start wurden keine Hotfixes gefunden</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Angewendet</string>
+    <string name="hotfix_skipped">Übersprungen</string>
+    <string name="hotfix_failed">Fehlgeschlagen</string>
+    <string name="hotfix_ok">Skript erfolgreich abgeschlossen</string>
+    <string name="hotfix_build">Für einen anderen Build</string>
+    <string name="hotfix_disabled">Hotfixes sind deaktiviert</string>
+    <string name="hotfix_paused">Nach zwei nicht abgeschlossenen Starts deaktiviert. Aktiviere Hotfixes, um es erneut zu versuchen.</string>
+    <string name="hotfix_safe">Sicherer Start</string>
+    <string name="hotfix_invalid">Archiv ist ungültig, zu groß oder konnte nicht entpackt werden</string>
+    <string name="hotfix_timeout">Skript dauerte länger als 30 Sekunden</string>
+    <string name="hotfix_exit">Skript hat einen Fehler zurückgegeben</string>
+    <string name="hotfix_limit">Limit für die Anzahl oder Gesamtgröße der Hotfixes für diesen Start erreicht</string>
+    <string name="hotfix_counter">Boot-Zähler konnte nicht gespeichert werden</string>
+    <string name="hotfix_storage">Speicher konnte nicht vorbereitet werden</string>
+    <string name="hotfix_unavailable">Hotfix-Quelle oder -Status ist nicht verfügbar</string>
+    <string name="hotfix_duplicate">Derselbe Fix befindet sich auf BOOT; BOOT hat Vorrang</string>
 </resources>

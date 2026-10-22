@@ -4981,4 +4981,28 @@
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Conectar"</string>
     <string name="andr36oid_low_voltage_warning_title">Nota sobre voltaje bajo</string>
     <string name="andr36oid_low_voltage_warning_summary">Mostrar una pequeña nota sobre las aplicaciones cuando el voltaje de la batería sea bajo y la CPU pueda ralentizarse</string>
+    <string name="hotfix_title">Parches</string>
+    <string name="hotfix_summary">Aplicar parches desde BOOT o EASYROMS y ver los resultados de este inicio</string>
+    <string name="hotfix_enabled">Aplicar parches</string>
+    <string name="hotfix_enabled_summary">Los cambios surtirán efecto después de reiniciar. Al activar esta opción también se borra la protección de arranque.</string>
+    <string name="hotfix_help">Coloca archivos .fix.zip de confianza en la carpeta de parches de BOOT o EASYROMS. BOOT tiene prioridad si ambos contienen el mismo parche. Los parches coincidentes se aplican en cada inicio. Mantén pulsados Start+Select al encender para omitirlos durante un inicio.</string>
+    <string name="hotfix_entries">Resultados de este inicio</string>
+    <string name="hotfix_none">No se encontraron parches en este inicio</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Aplicado</string>
+    <string name="hotfix_skipped">Omitido</string>
+    <string name="hotfix_failed">Error</string>
+    <string name="hotfix_ok">El script ha terminado correctamente</string>
+    <string name="hotfix_build">Para otra compilación</string>
+    <string name="hotfix_disabled">Los parches están desactivados</string>
+    <string name="hotfix_paused">Se desactivaron después de que dos inicios no terminaran. Activa los parches para volver a intentarlo.</string>
+    <string name="hotfix_safe">Inicio seguro</string>
+    <string name="hotfix_invalid">El archivo no es válido, es demasiado grande o no se ha podido descomprimir</string>
+    <string name="hotfix_timeout">El script superó los 30 segundos</string>
+    <string name="hotfix_exit">El script devolvió un error</string>
+    <string name="hotfix_limit">Se alcanzó el límite de cantidad o tamaño total de parches para este inicio</string>
+    <string name="hotfix_counter">No se ha podido guardar el contador de arranque</string>
+    <string name="hotfix_storage">No se ha podido preparar el almacenamiento</string>
+    <string name="hotfix_unavailable">La fuente o el estado de los parches no están disponibles</string>
+    <string name="hotfix_duplicate">El mismo parche está en BOOT; BOOT tiene prioridad</string>
 </resources>
