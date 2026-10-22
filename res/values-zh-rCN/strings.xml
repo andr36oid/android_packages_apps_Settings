@@ -4979,4 +4979,6 @@
     <string name="bluetooth_connect_access_dialog_content" msgid="4336436466468405850">"“<xliff:g id="DEVICE_NAME_0">%1$s</xliff:g>”想连接到此手机。\n\n您之前没有连接过“<xliff:g id="DEVICE_NAME_1">%2$s</xliff:g>”。"</string>
     <string name="bluetooth_connect_access_dialog_negative" msgid="4944672755226375059">"不连接"</string>
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"连接"</string>
+    <string name="andr36oid_low_voltage_warning_title">低电压提示</string>
+    <string name="andr36oid_low_voltage_warning_summary">电池电压低且 CPU 可能降频时，在应用上方显示小提示</string>
 </resources>

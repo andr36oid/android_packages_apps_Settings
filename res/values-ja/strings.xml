@@ -4979,4 +4979,6 @@
     <string name="bluetooth_connect_access_dialog_content" msgid="4336436466468405850">"<xliff:g id="DEVICE_NAME_0">%1$s</xliff:g> がこのスマートフォンに接続しようとしています。\n\nこれまでに <xliff:g id="DEVICE_NAME_1">%2$s</xliff:g> に接続したことはありません。"</string>
     <string name="bluetooth_connect_access_dialog_negative" msgid="4944672755226375059">"接続しない"</string>
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"接続"</string>
+    <string name="andr36oid_low_voltage_warning_title">低電圧に関する注記</string>
+    <string name="andr36oid_low_voltage_warning_summary">バッテリー電圧が低く、CPUが制限される可能性があるときに、アプリの上に小さな注記を表示します</string>
 </resources>

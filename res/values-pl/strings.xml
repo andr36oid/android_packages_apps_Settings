@@ -5161,4 +5161,6 @@
     <string name="bluetooth_connect_access_dialog_content" msgid="4336436466468405850">"<xliff:g id="DEVICE_NAME_0">%1$s</xliff:g> chce połączyć się z tym telefonem.\n\nTwój telefon nigdy wcześniej nie był połączony z urządzeniem <xliff:g id="DEVICE_NAME_1">%2$s</xliff:g>."</string>
     <string name="bluetooth_connect_access_dialog_negative" msgid="4944672755226375059">"Nie łącz"</string>
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Połącz"</string>
+    <string name="andr36oid_low_voltage_warning_title">Uwaga o niskim napięciu</string>
+    <string name="andr36oid_low_voltage_warning_summary">Pokazuj małą uwagę nad aplikacjami, gdy napięcie baterii jest niskie i CPU może zostać ograniczony</string>
 </resources>

@@ -4979,4 +4979,6 @@
     <string name="bluetooth_connect_access_dialog_content" msgid="4336436466468405850">"<xliff:g id="DEVICE_NAME_0">%1$s</xliff:g> souhaite se connecter à ce téléphone.\n\nC\'est la première fois que votre téléphone se connecte à <xliff:g id="DEVICE_NAME_1">%2$s</xliff:g>."</string>
     <string name="bluetooth_connect_access_dialog_negative" msgid="4944672755226375059">"Refuser la connexion"</string>
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Autoriser la connexion"</string>
+    <string name="andr36oid_low_voltage_warning_title">Note de tension faible</string>
+    <string name="andr36oid_low_voltage_warning_summary">Afficher une petite note par-dessus les applications lorsque la tension de la batterie est faible et que le CPU peut être ralenti</string>
 </resources>
