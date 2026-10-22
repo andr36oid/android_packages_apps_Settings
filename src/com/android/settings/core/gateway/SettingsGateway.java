@@ -141,6 +141,7 @@ import com.android.settings.security.SecuritySettings;
 import com.android.settings.shortcut.CreateShortcut;
 import com.android.settings.sound.MediaControlsSettings;
 import com.android.settings.support.SupportDashboardActivity;
+import com.android.settings.system.HotfixSettings;
 import com.android.settings.system.ResetDashboardFragment;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settings.tts.TextToSpeechSettings;
@@ -280,6 +281,7 @@ public class SettingsGateway {
             WifiInfo.class.getName(),
             MasterClear.class.getName(),
             ResetDashboardFragment.class.getName(),
+            HotfixSettings.class.getName(),
             CrtEffectFragment.class.getName(),
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),

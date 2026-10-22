@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/hotfix_title">
+
+    <SwitchPreference
+        android:key="hotfix_enabled"
+        android:title="@string/hotfix_enabled"
+        android:summary="@string/hotfix_enabled_summary" />
+
+    <Preference
+        android:summary="@string/hotfix_help"
+        android:selectable="false" />
+
+    <PreferenceCategory
+        android:key="hotfix_entries"
+        android:title="@string/hotfix_entries" />
+
+</PreferenceScreen>

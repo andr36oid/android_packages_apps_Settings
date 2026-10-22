@@ -12258,4 +12258,29 @@
     <!-- Battery setting for the voltage advisory -->
     <string name="andr36oid_low_voltage_warning_title">Low voltage note</string>
     <string name="andr36oid_low_voltage_warning_summary">Show a small note over apps when battery voltage is low and the CPU may be throttled</string>
+
+    <string name="hotfix_title">Hotfixes</string>
+    <string name="hotfix_summary">Release fixes on BOOT or EASYROMS and results from this start</string>
+    <string name="hotfix_enabled">Apply hotfixes</string>
+    <string name="hotfix_enabled_summary">Changes take effect after a restart. Turning this on also clears boot protection.</string>
+    <string name="hotfix_help">Place trusted .fix.zip files in the hotfix folder on BOOT or EASYROMS. BOOT wins if both have the same fix. Matching fixes are applied on every start. Hold Start+Select at power-on to skip them for one start.</string>
+    <string name="hotfix_entries">Results from this start</string>
+    <string name="hotfix_none">No hotfixes found at this start</string>
+    <string name="hotfix_entry_summary">%1$s\n%2$s: %3$s\n%4$s</string>
+    <string name="hotfix_ran">Applied</string>
+    <string name="hotfix_skipped">Skipped</string>
+    <string name="hotfix_failed">Failed</string>
+    <string name="hotfix_ok">Script finished successfully</string>
+    <string name="hotfix_build">For a different build</string>
+    <string name="hotfix_disabled">Hotfixes are switched off</string>
+    <string name="hotfix_paused">Switched off after two starts did not finish. Turn hotfixes on to try again.</string>
+    <string name="hotfix_safe">Safe start</string>
+    <string name="hotfix_invalid">Archive is invalid, too large or could not be unpacked</string>
+    <string name="hotfix_timeout">Script exceeded 30 seconds</string>
+    <string name="hotfix_exit">Script returned an error</string>
+    <string name="hotfix_limit">Hotfix count or total size limit reached for this start</string>
+    <string name="hotfix_counter">Could not save the boot counter</string>
+    <string name="hotfix_storage">Could not prepare storage</string>
+    <string name="hotfix_unavailable">Hotfix source or status is unavailable</string>
+    <string name="hotfix_duplicate">The same fix is on BOOT; BOOT takes priority</string>
 </resources>
